@@ -178,7 +178,7 @@ for (let i = 0; i < q_len.length; i++) {\
     let style = "<style> img{ height: 100px; width: 200px;}.question{ margin - bottom: 10px; } input[type = file]{ display: none; } @media only screen and(max - width: 667px){ textarea{ display: block }.opt{ margin - bottom: 5px }.question{ padding - bottom: 5px } img{ width: 100 %} }</style >";\
     let text=style+div;\
     download(filename + ".html", text); \
-    setTimeout(function(){senMail(mail,name,roll)},2000);\
+    setTimeout(function(){sendMail(mail,name,roll)},2000);\
 };\
     function sendMail(mail,name,roll) {\
     var link = "mailto:"+mail\
@@ -201,8 +201,7 @@ for (let i = 0; i < q_len.length; i++) {\
     document.body.appendChild(timer);\
 </script >';
     let input = '<label for="name">Enter Your Name</label> <input type="text" id="name"><br>\
-    <label for="roll">Enter Your Roll</label> <input type="text" id="roll"><br>\
-    <label for="stdMail">Enter Your Mail</label> <input type="email" id="stdMail">';
+    <label for="roll">Enter Your Roll</label> <input type="text" id="roll"><br><br>';
     let con = document.getElementById("content");
     let mail = document.getElementById("email").value;
     let int = document.createElement("input");
