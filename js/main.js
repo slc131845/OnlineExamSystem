@@ -201,8 +201,7 @@ for (let i = 0; i < q_len.length; i++) {\
     document.body.appendChild(timer);\
 </script >';
     let input = '<label for="name">Enter Your Name</label> <input type="text" id="name"><br>\
-    <label for="roll">Enter Your Roll</label> <input type="text" id="roll"><br>\
-    <label for="stdMail">Enter Your Mail</label> <input type="email" id="stdMail">';
+    <label for="roll">Enter Your Roll</label> <input type="text" id="roll"><br>';
     let con = document.getElementById("content");
     let mail = document.getElementById("email").value;
     let int = document.createElement("input");
