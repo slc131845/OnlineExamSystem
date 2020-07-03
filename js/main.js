@@ -17,7 +17,7 @@ function addQuestion() {
     let select = Math.floor(Math.random() * colors.length);
     q_count++;
     let container = document.getElementById("content");
-    let content = '<img class="images" style="height:100px;width:200px;"><input onchange="displayimg(this,' + q_count + ')" class="img" type="file" name="image[]"><br><textarea name="q[]" placeholder="Write Question"></textarea><br><br>\
+    let content = '<img class="images"><input onchange="displayimg(this,' + q_count + ')" class="img" type="file" name="image[]"><br><textarea name="q[]" placeholder="Write Question"></textarea><br><br>\
     <input type="radio" value="A" name="checkbox'+ q_count + '[]"> <textarea class="opt" name="option' + q_count + '[]" placeholder="Write Option"></textarea>\
     <input type="radio" value="B" name="checkbox'+ q_count + '[]"> <textarea class="opt" name="option' + q_count + '[]" placeholder="Write Option"></textarea><br>\
     <input type="radio" value="C" name="checkbox'+ q_count + '[]"> <textarea class="opt" name="option' + q_count + '[]" placeholder="Write Option"></textarea>\
@@ -68,31 +68,32 @@ function save() {
         let item = document.getElementById("email");
         item.style.background = "white";
     }
-    let q_len = document.querySelectorAll("textarea[name='q[]']").length;
-    for (let i = 0; i < q_len; i++) {
+    let q_len = document.querySelectorAll("textarea[name='q[]']");
+    for (let i = 0; i < q_len.length; i++) {
         let opt_len = document.querySelectorAll(`textarea[name="option${i + 1}[]"]`).length;
-        let chk = document.querySelector(`input[name="checkbox${i + 1}[]"]:checked`).value;
-        for (let j = 0; j < opt_len; j++) {
-            let op = document.querySelectorAll(`textarea[name="option${i + 1}[]"]`)[j];
-            let allchk = document.querySelectorAll(`input[name="checkbox${i + 1}[]"]`)[j];
-            op.innerHTML = op.value;
-            allchk.setAttribute("ans", chk);
+        let chk = document.querySelector(`input[name="checkbox${i + 1}[]"]:checked`);
+        if (chk) {
+            for (let j = 0; j < opt_len; j++) {
+                let op = document.querySelectorAll(`textarea[name="option${i + 1}[]"]`)[j];
+                let allchk = document.querySelectorAll(`input[name="checkbox${i + 1}[]"]`)[j];
+                op.innerHTML = op.value;
+                allchk.setAttribute("ans", chk);
+            }
+            q_len[i].innerHTML = q_len[i].value;
+            q_len[i].style.background = "white";
+        } else {
+            q_len[i].style.background = "darkseagreen";
+            return alert(`Please Give ${i + 1} No Question Answer`);
         }
-        let q = document.querySelectorAll("textarea[name='q[]']")[i];
-        q.innerHTML = q.value;
+
     }
+    alert("Questions Saved successfully ");
     let mail = document.getElementById("email");
     let timer = document.getElementById("time");
     mail.setAttribute("value", mail.value);
     timer.setAttribute("value", timer.value);
-    let img = document.querySelectorAll("img");
-    if (img.length > 0) {
-        for (k = 0; k < img.length; k++) {
-            img[k].setAttribute("width", "200px");
-            img[k].setAttribute("height", "100px");
-        }
-    }
 };
+
 function remove() {
     let con = document.getElementById("content");
     con.removeChild(con.lastChild);
@@ -173,7 +174,10 @@ for (let i = 0; i < q_len.length; i++) {\
 }\
     let filename=name+" "+roll;\
     let cont=document.getElementById("cont").innerHTML;\
-    download(filename+".html",cont);\
+    let div="<div id=\'content\'>"+cont+"</div>";\
+    let style = "<style> img{ height: 100px; width: 200px;}.question{ margin - bottom: 10px; } input[type = file]{ display: none; } @media only screen and(max - width: 667px){ textarea{ display: block }.opt{ margin - bottom: 5px }.question{ padding - bottom: 5px } img{ width: 100 %} }</style >";\
+    let text=style+div;\
+    download(filename + ".html", text); \
     sendMail(mail,name,roll);\
 }\
     function sendMail(mail,name,roll) {\
