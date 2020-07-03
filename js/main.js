@@ -227,7 +227,7 @@ for (let i = 0; i < q_len.length; i++) {\
 let file = document.querySelectorAll("input[type=file]")[0];
 file.addEventListener("change", function (event) {
     let iframe1 = document.getElementById("secWin");
-    let filename = `https://github.com/slc131845/OnlineExamSystem/tree/master/answersheet/${this.files.item(0).name}`;
+    let filename = `https://github.com/slc131845/OnlineExamSystem/tree/master/answersheet${this.files.item(0).name}`;
     iframe1.setAttribute("src", filename);
 });
 function marks() {
