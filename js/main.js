@@ -120,6 +120,7 @@ function download(filename, text) {
 
 function print() {
     let script = '<script>\
+    alert("Please Fill Up Name And Roll First");\
     let picfile=document.querySelectorAll("input[type=file]");\
     for(let i=0;i<picfile.length;i++){\
         picfile[i].style.display="none";\
@@ -188,7 +189,7 @@ for (let i = 0; i < q_len.length; i++) {\
     let style = "<style> img{ height: 100px; width: 200px;}.question{ margin - bottom: 10px; } input[type = file]{ display: none; } @media only screen and(max - width: 667px){ textarea{ display: block }.opt{ margin - bottom: 5px }.question{ padding - bottom: 5px } img{ width: 100 %} }</style >";\
     let text=style+div;\
     download(filename + ".html", text); \
-    alert("Thanks For Submitting Now Attach The File In The Email That Just Has Been Downloaded");\
+    alert("Thanks For Submitting An Email Window Will appear In A Moment Just Attach The Newly Downloaded File");\
     setTimeout(function(){sendMail(mail,name,roll)},2000);\
 };\
     function sendMail(mail,name,roll) {\
@@ -204,7 +205,7 @@ for (let i = 0; i < q_len.length; i++) {\
     btn.onclick = function () { submit() };\
     document.body.appendChild(btn);\
     let timer=document.createElement("h1");\
-    timer.style.position="absolute";\
+    timer.style.position="fixed";\
     timer.setAttribute("id","timer");\
     timer.style.top = "0";\
     timer.style.right="0";\
