@@ -270,10 +270,12 @@ function marks() {
                 }
             }
         }
+        console.log(d);
         if (d === 4) {
             c++;
             d = 0;
         }
+        d = 0;
     }
     let mark = q_len.length - c;
     let h1 = document.createElement("h1");
