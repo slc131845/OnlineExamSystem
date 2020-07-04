@@ -100,7 +100,12 @@ function remove() {
         q_count = 0;
     }
     let con = document.getElementById("content");
-    con.removeChild(con.lastChild);
+    if (con.hasChildNodes()) {
+        con.removeChild(con.lastChild);
+    } else {
+        return alert("No Element To Delete");
+    }
+
 };
 
 function download(filename, text) {
