@@ -95,6 +95,10 @@ function save() {
 };
 
 function remove() {
+    q_count--;
+    if (q_count <= 0) {
+        q_count = 0;
+    }
     let con = document.getElementById("content");
     con.removeChild(con.lastChild);
 };
@@ -134,6 +138,7 @@ function print() {
     if (sec ===0) {\
             if(min===0){\
                 clearInterval(inter);\
+                alert("Your Exam Time Has Been Finished");\
                 return submit();\
             }else{\
                 min--;\
@@ -178,13 +183,14 @@ for (let i = 0; i < q_len.length; i++) {\
     let style = "<style> img{ height: 100px; width: 200px;}.question{ margin - bottom: 10px; } input[type = file]{ display: none; } @media only screen and(max - width: 667px){ textarea{ display: block }.opt{ margin - bottom: 5px }.question{ padding - bottom: 5px } img{ width: 100 %} }</style >";\
     let text=style+div;\
     download(filename + ".html", text); \
+    alert("Thanks For Submitting Now Attach The File In The Email That Just Has Been Downloaded");\
     setTimeout(function(){sendMail(mail,name,roll)},2000);\
 };\
     function sendMail(mail,name,roll) {\
     var link = "mailto:"+mail\
         + "?cc=riyad303030@gmail.com"\
-        + "&subject=" + escape(name+" Submitted Ansersheet")\
-        + "&body=" + escape("My Roll Is"+roll)\
+        + "&subject=" + escape("Submitted Answersheet By "+name)\
+        + "&body=" + escape("My Roll Is "+roll)\
         ;\
     window.location.href = link;\
 };\
@@ -220,7 +226,7 @@ for (let i = 0; i < q_len.length; i++) {\
     let cons = con.innerHTML;
     let subname = document.getElementById("subName").value;
     let examName = document.getElementById("ExamName").value;
-    let div = '<div id="cont"><center><h1>' + examName + '<br>' + subname + '</h1></center>' + cons + '</div>';
+    let div = '<div id="cont"><center><h1>Savar Laboratory College Online Exam System<br>' + examName + '<br>' + subname + '</h1></center>' + cons + '</div>';
     let style = '<style>img{height: 100px;width:200px;}.question{margin-bottom:10px;}input[type=file]{display:none;}@media only screen and (max-width:667px){textarea{display:block}.opt{margin-bottom:5px}.question{padding-bottom:5px}img{width:100%}}</style>';
     let text = style + div + input + script;
     let filename = subname + " " + examName;
