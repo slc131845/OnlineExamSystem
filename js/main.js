@@ -77,7 +77,7 @@ function save() {
                 let op = document.querySelectorAll(`textarea[name="option${i + 1}[]"]`)[j];
                 let allchk = document.querySelectorAll(`input[name="checkbox${i + 1}[]"]`)[j];
                 op.innerHTML = op.value;
-                allchk.setAttribute("ans", chk);
+                allchk.setAttribute("ans", chk.value);
             }
             q_len[i].innerHTML = q_len[i].value;
             q_len[i].style.background = "white";
@@ -255,7 +255,7 @@ function marks() {
         let radio_len = innerDoc.querySelectorAll(`input[name="checkbox${i + 1}[]"]`);
         for (let j = 0; j < op_len.length; j++) {
             console.log(radio_len[j]);
-            if (radio_len[j].checked) {
+            if (!radio_len[j].disabled) {
                 if (radio_len[j].value === radio_len[j].getAttribute("ans")) {
                     op_len[j].style.background = "green";
                 } else {
