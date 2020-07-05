@@ -36,6 +36,24 @@ function save() {
     let sub = document.getElementById("subName").value;
     let exname = document.getElementById("ExamName").value;
     let email = document.getElementById("email").value;
+    let examNum = document.getElementById("ExamNum").value;
+    let teaName = document.getElementById("Teaname").value;
+    if (!teaName) {
+        let item = document.getElementById("Teaname");
+        item.style.background = "lightpink";
+        return alert("Enter Teacher Name");
+    } else {
+        let item = document.getElementById("Teaname");
+        item.style.background = "white";
+    }
+    if (!examNum) {
+        let item = document.getElementById("ExamNum");
+        item.style.background = "lightpink";
+        return alert("Enter Exam Number");
+    } else {
+        let item = document.getElementById("ExamNum");
+        item.style.background = "white";
+    }
     if (!sub) {
         let item = document.getElementById("subName");
         item.style.background = "lightpink";
@@ -186,7 +204,7 @@ for (let i = 0; i < q_len.length; i++) {\
     let filename=name+" "+roll;\
     let cont=document.getElementById("cont").innerHTML;\
     let div="<div id=\'content\'>"+cont+"</div>";\
-    let style = "<style> img{ height: 100px; width: 200px;}.question{ margin - bottom: 10px; } input[type = file]{ display: none; } @media only screen and(max - width: 667px){ textarea{ display: block }.opt{ margin - bottom: 5px }.question{ padding - bottom: 5px } img{ width: 100 %} }</style >";\
+    let style = \'<style>img{ height: 100px; width: 200px;}.question{ margin-bottom: 10px; } input[type = file]{ display: none; } @media only screen and(max-width: 667px){#timer{ top: 180px!important; font-size: 1rem; }#exnumHead{ top: 150px!important; font-size: 1rem; } h1{ display: block } textarea{ display: block }.opt{ margin-bottom: 5px }.question{ padding-bottom: 5px } img{ width: 100%} }</style>\';\
     let text=style+div;\
     download(filename + ".html", text); \
     alert("Thanks For Submitting An Email Window Will appear In A Moment Just Attach The Newly Downloaded File");\
@@ -213,6 +231,7 @@ for (let i = 0; i < q_len.length; i++) {\
     let h1=document.createElement("h1");\
     h1.innerHTML = "Exam Number: "+document.getElementById("exnum").value;\
     h1.style.position = "absolute";\
+    h1.setAttribute("id","exnumHead");\
     h1.style.left = "0";\
     h1.style.top = "30px";\
     document.body.appendChild(h1);\
@@ -237,7 +256,7 @@ for (let i = 0; i < q_len.length; i++) {\
     con.appendChild(doctimeinp);
     let exnum = document.getElementById("ExamNum").value;
     let exnuminp = document.createElement("input");
-    exnuminp.id = "exnum";
+    exnuminp.setAttribute("id", "exnum");
     exnuminp.type = "text";
     exnuminp.setAttribute("value", exnum);
     exnuminp.style.display = "none";
@@ -245,10 +264,11 @@ for (let i = 0; i < q_len.length; i++) {\
     let cons = con.innerHTML;
     let subname = document.getElementById("subName").value;
     let examName = document.getElementById("ExamName").value;
-    let div = '<div id="cont"><center><h1 style="margin-bottom:30px;">Savar Laboratory College Online Exam System<br><br><br>' + examName + '<br>' + subname + '</h1></center>' + cons + '</div>';
-    let style = '<style>img{height: 100px;width:200px;}.question{margin-bottom:10px;}input[type=file]{display:none;}@media only screen and (max-width:667px){textarea{display:block}.opt{margin-bottom:5px}.question{padding-bottom:5px}img{width:100%}}</style>';
+    let div = '<div id="cont"><center><h1 style="margin-bottom:50px;">Savar Laboratory College Online Exam System<br><br><br>' + examName + '<br>' + subname + '</h1></center>' + cons + '</div>';
+    let style = '<style>img{height: 100px;width:200px;}.question{margin-bottom:10px;}input[type=file]{display:none;}@media only screen and (max-width:667px){#timer{top:180px !important;font-size:1rem;}#exnumHead{top:150px !important;font-size:1rem;}h1{display:block}textarea{display:block}.opt{margin-bottom:5px}.question{padding-bottom:5px}img{width:100%}}</style>';
     let text = style + div + input + script;
-    let filename = subname + " " + examName;
+    let teachername = document.getElementById("Teaname").value;
+    let filename = teachername + " " + subname + " " + examName;
     download(filename + ".html", text);
 };
 
