@@ -204,7 +204,7 @@ for (let i = 0; i < q_len.length; i++) {\
     let filename=name+" "+roll;\
     let cont=document.getElementById("cont").innerHTML;\
     let div="<div id=\'content\'>"+cont+"</div>";\
-    let style = \'<style>img{ height: 100px; width: 200px;}.question{ margin-bottom: 10px; } input[type = file]{ display: none; } @media only screen and(max-width: 667px){#timer{ top: 180px!important; font-size: 1rem; }#exnumHead{ top: 150px!important; font-size: 1rem; } h1{ display: block } textarea{ display: block }.opt{ margin-bottom: 5px }.question{ padding-bottom: 5px }}</style>\';\
+    let style = "<style>img{ height: 100px; width: 200px;}.question{ margin-bottom: 10px; } input[type = file]{ display: none; } @media only screen and (max-width: 667px){#timer{ top: 180px !important; font-size: 1rem; }#exnumHead{ top: 150px !important; font-size: 1rem; } h1{ display: block; } textarea{ display: block; } .opt{ margin-bottom: 5px } .question{ padding-bottom: 5px }}</style>";\
     let text=style+div;\
     download(filename + ".html", text); \
     alert("Thanks For Submitting An Email Window Will appear In A Moment Just Attach The Newly Downloaded File");\
@@ -265,7 +265,7 @@ for (let i = 0; i < q_len.length; i++) {\
     let subname = document.getElementById("subName").value;
     let examName = document.getElementById("ExamName").value;
     let div = '<div id="cont"><center><h1 style="margin-bottom:50px;">Savar Laboratory College Online Exam System<br><br><br>' + examName + '<br>' + subname + '</h1></center>' + cons + '</div>';
-    let style = '<style>img{height: 100px;width:200px;}.question{margin-bottom:10px;}input[type=file]{display:none;}@media only screen and (max-width:667px){#timer{top:180px !important;font-size:1rem;}#exnumHead{top:150px !important;font-size:1rem;}h1{display:block}textarea{display:block}.opt{margin-bottom:5px}.question{padding-bottom:5px}}</style>';
+    let style = '<style>img{height: 100px;width:200px;} .question{margin-bottom:10px;} input[type=file]{display:none;}@media only screen and (max-width:667px){#timer{top:180px !important;font-size:1rem;}#exnumHead{top:150px !important;font-size:1rem;}h1{display:block}textarea{display:block;} .opt{margin-bottom:5px;} .question{padding-bottom:5px;}}</style>';
     let text = style + div + input + script;
     let teachername = document.getElementById("Teaname").value;
     let filename = teachername + " " + subname + " " + examName;
