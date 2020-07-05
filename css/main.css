@@ -28,7 +28,8 @@ body {
 }
 
 button,
-input[type=file] {
+input[type=file],
+input[type=email] {
     font-size: 1rem;
 }
 
