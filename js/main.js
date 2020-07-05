@@ -207,9 +207,15 @@ for (let i = 0; i < q_len.length; i++) {\
     let timer=document.createElement("h1");\
     timer.style.position="fixed";\
     timer.setAttribute("id","timer");\
-    timer.style.top = "0";\
+    timer.style.top = "30px";\
     timer.style.right="0";\
     timer.innerHTML="Exam Ends In: ";\
+    let h1=document.createElement("h1");\
+    h1.innerHTML = "Exam Number: "+document.getElementById("exnum").value;\
+    h1.style.position = "absolute";\
+    h1.style.left = "0";\
+    h1.style.top = "30px";\
+    document.body.appendChild(h1);\
     document.body.appendChild(timer);\
 </script >';
     let input = '<label for="name">Enter Your Name</label> <input type="text" id="name"><br>\
@@ -229,10 +235,17 @@ for (let i = 0; i < q_len.length; i++) {\
     doctimeinp.setAttribute("value", timeIn);
     doctimeinp.style.display = "none";
     con.appendChild(doctimeinp);
+    let exnum = document.getElementById("ExamNum").value;
+    let exnuminp = document.createElement("input");
+    exnuminp.id = "exnum";
+    exnuminp.type = "text";
+    exnuminp.setAttribute("value", exnum);
+    exnuminp.style.display = "none";
+    con.appendChild(exnuminp);
     let cons = con.innerHTML;
     let subname = document.getElementById("subName").value;
     let examName = document.getElementById("ExamName").value;
-    let div = '<div id="cont"><center><h1>Savar Laboratory College Online Exam System<br>' + examName + '<br>' + subname + '</h1></center>' + cons + '</div>';
+    let div = '<div id="cont"><center><h1 style="margin-bottom:30px;">Savar Laboratory College Online Exam System<br><br><br>' + examName + '<br>' + subname + '</h1></center>' + cons + '</div>';
     let style = '<style>img{height: 100px;width:200px;}.question{margin-bottom:10px;}input[type=file]{display:none;}@media only screen and (max-width:667px){textarea{display:block}.opt{margin-bottom:5px}.question{padding-bottom:5px}img{width:100%}}</style>';
     let text = style + div + input + script;
     let filename = subname + " " + examName;
