@@ -16,10 +16,14 @@
         </center>
     </div>
     <div id="formPart">
+        <label for="Teaname">Enter Teacher Name</label>
+        <input type="text" id="Teaname" name="teaName" value="" placeholder="Enter Teacher Name">
         <label for="subName">Enter Subject Name</label>
         <input type="text" id="subName" name="subjectName" value="" placeholder="Enter Subject Name">
         <label for="ExamName">Enter Exam Name</label>
-        <input type="text" id="ExamName" name="exName" value="" placeholder="Enter Exam Name">
+        <input type="text" id="ExamName" name="exName" value="" placeholder="Enter Exam Name"><br><br>
+        <label for="ExamNum">Enter Exam Number</label>
+        <input type="text" id="ExamNum" name="exNum" value="" placeholder="Enter Exam Number">
         <label for="time">Enter Exam Time</label>
         <input type="text" id="time" name="timer" placeholder="Enter Time Value">
         <label for="email">Enter Submission Email Address</label>
@@ -32,7 +36,7 @@
         <button id="ad" onclick="addQuestion()" name="add" value="Add">Add</button>
         <button id="rm" onclick="remove()" name="remove" value="remove">Remove</button>
         <button id="sv" onclick="save()" name="save" value="save">Save</button>
-        <button id="pr" onclick="print()" name="print" value="print">Print</button>
+        <button id="pr" onclick="print()" name="print" value="print">Download</button>
         <button id="mr" onclick="marks()" name="marks" value="marks">Marks</button>
         <input type="file" id="infile" name="filename">
     </div>
