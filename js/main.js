@@ -270,7 +270,48 @@ for (let i = 0; i < q_len.length; i++) {\
     let teachername = document.getElementById("Teaname").value;
     let filename = teachername + " " + subname + " " + examName;
     download(filename + ".html", text);
+    let subHead = document.createElement("h1");
+    subHead.setAttribute("id", "subhead");
+    subHead.innerHTML = "Upload File To :";
+    let combtn = document.createElement("button");
+    combtn.setAttribute("id", "combtn");
+    combtn.style.marginRight = "5px";
+    combtn.setAttribute("onclick", "window.open('https://github.com/slc131845/OnlineCommonQusetionBank/tree/master/Questions','_blank')");
+    combtn.innerHTML = "Common";
+    let scibtn = document.createElement("button");
+    scibtn.setAttribute("id", "scibtn");
+    scibtn.style.marginRight = "5px";
+    scibtn.setAttribute("onclick", "window.open('https://github.com/slc131845/OnlineQuestionBankScience/tree/master/Questions','_blank')");
+    scibtn.innerHTML = "Science";
+    let bsbtn = document.createElement("button");
+    bsbtn.setAttribute("id", "bsbtn");
+    bsbtn.style.marginRight = "5px";
+    bsbtn.setAttribute("onclick", "window.open('https://github.com/slc131845/OnlineQuestionBankBS/tree/master/Questions','_blank')");
+    bsbtn.innerHTML = "Bussiness";
+    let hubtn = document.createElement("button");
+    hubtn.setAttribute("id", "hubtn");
+    hubtn.setAttribute("onclick", "window.open('https://github.com/slc131845/OnlineQuestionBankHumanities/tree/master/Questions','_blank')");
+    hubtn.innerHTML = "Humanities";
+    document.body.appendChild(subHead);
+    document.body.appendChild(combtn);
+    document.body.appendChild(scibtn);
+    document.body.appendChild(bsbtn);
+    document.body.appendChild(hubtn);
+    setTimeout(removeElement, 60000);
 };
+
+function removeElement() {
+    let subHead = document.getElementById("subhead");
+    let combtn = document.getElementById("combtn");
+    let scibtn = document.getElementById("scibtn");
+    let bsbtn = document.getElementById("bsbtn");
+    let hubtn = document.getElementById("hubtn");
+    subHead.parentNode.removeChild(subHead);
+    combtn.parentNode.removeChild(combtn);
+    scibtn.parentNode.removeChild(scibtn);
+    bsbtn.parentNode.removeChild(bsbtn);
+    hubtn.parentNode.removeChild(hubtn);
+}
 
 let file = document.querySelectorAll("input[type=file]")[0];
 file.addEventListener("change", function (event) {
