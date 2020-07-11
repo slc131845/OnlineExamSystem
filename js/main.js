@@ -325,46 +325,68 @@ function removeElement() {
 
 let file = document.querySelectorAll("input[type=file]")[0];
 file.addEventListener("change", function (event) {
-    let iframe1 = document.getElementById("secWin");
-    let filename = `answersheet/${this.files.item(0).name}`;
-    iframe1.setAttribute("src", filename);
+    console.log(file.files.length);
+    for (let i = 0; i < file.files.length; i++) {
+        let frame = document.createElement("iframe");
+        frame.setAttribute("class", "secwin");
+        frame.style.height = "100vh";
+        frame.style.width = "100%";
+        let filename = `answersheet/${this.files.item(i).name}`;
+        frame.setAttribute("src", filename);
+        document.getElementById("frames").appendChild(frame);
+    }
+
 });
+
 function marks() {
     let c = 0, d = 0;
-    let iframe = document.getElementById('secWin');
-    let innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-    let q_len = innerDoc.querySelectorAll('textarea[name="q[]"]');
-    for (let i = 0; i < q_len.length; i++) {
-        let op_len = innerDoc.querySelectorAll(`textarea[name="option${i + 1}[]"]`);
-        let radio_len = innerDoc.querySelectorAll(`input[name="checkbox${i + 1}[]"]`);
-        for (let j = 0; j < op_len.length; j++) {
-            console.log(radio_len[j]);
-            if (!radio_len[j].disabled) {
-                if (radio_len[j].value === radio_len[j].getAttribute("ans")) {
-                    op_len[j].style.background = "green";
-                } else {
-                    op_len[j].style.background = "red";
-                    c++;
+    let iframe = document.getElementsByClassName('secwin');
+    for (let k = 0; k < iframe.length; k++) {
+        let innerDoc = iframe[k].contentDocument || iframe[k].contentWindow.document;
+        let q_len = innerDoc.querySelectorAll('textarea[name="q[]"]');
+        for (let i = 0; i < q_len.length; i++) {
+            let op_len = innerDoc.querySelectorAll(`textarea[name="option${i + 1}[]"]`);
+            let radio_len = innerDoc.querySelectorAll(`input[name="checkbox${i + 1}[]"]`);
+            for (let j = 0; j < op_len.length; j++) {
+                console.log(radio_len[j]);
+                if (!radio_len[j].disabled) {
+                    if (radio_len[j].value === radio_len[j].getAttribute("ans")) {
+                        op_len[j].style.background = "green";
+                    } else {
+                        op_len[j].style.background = "red";
+                        c++;
+                    }
+                }
+                if (radio_len[j].disabled) {
+                    d++;
+                    if (radio_len[j].value === radio_len[j].getAttribute("ans")) {
+                        op_len[j].style.background = "green";
+                    }
                 }
             }
-            if (radio_len[j].disabled) {
-                d++;
-                if (radio_len[j].value === radio_len[j].getAttribute("ans")) {
-                    op_len[j].style.background = "green";
-                }
+            console.log(d);
+            if (d === 4) {
+                c++;
+                d = 0;
             }
-        }
-        console.log(d);
-        if (d === 4) {
-            c++;
             d = 0;
         }
+        let mark = q_len.length - c;
+        let h1 = document.createElement("h1");
+        let stName = iframe[k].getAttribute("src");
+        stName = stName.replace("answersheet/", "").replace(".html", "");
+        h1.innerHTML = stName + ' Obtained Marks: <font style= "color:red;">' + mark + '</font>';
+        document.getElementById("result").appendChild(h1);
+        c = 0;
         d = 0;
     }
-    let mark = q_len.length - c;
-    let h1 = document.createElement("h1");
-    h1.innerHTML = 'Obtained Marks: <font style= "color:red;">' + mark + '</font>';
-    document.body.appendChild(h1);
 };
+
+function downloadResult() {
+    let cont = document.getElementById("result").innerHTML;
+    let section = prompt("Please Enter Section Name:", "XI SCI A");
+    let filename = section ? section : "XI SCI A";
+    download(filename + ".html", cont);
+}
 
 
