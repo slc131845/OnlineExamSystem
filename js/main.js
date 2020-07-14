@@ -163,7 +163,6 @@ function print() {
     var inter;\
     window.onload = function() {\
     let time = document.getElementById("time").value;\
-    console.log(time);\
     let tm=time.split(":");\
     var min=Number(tm[0]);\
     var sec=Number(tm[1]);\
@@ -181,7 +180,6 @@ function print() {
         sec--;\
         let time=document.getElementById("timer");\
         time.innerHTML="Exam Ends In: "+min + " : " + sec;\
-        console.log(typeof(sec));\
     }, 1000);\
 };\
     function download(filename, text) {\
@@ -287,45 +285,71 @@ for (let i = 0; i < q_len.length; i++) {\
     combtn.setAttribute("id", "combtn");
     combtn.style.marginRight = "5px";
     combtn.setAttribute("onclick", "window.open('https://github.com/slc131845/OnlineCommonQusetionBank/tree/master/Questions','_blank')");
-    combtn.innerHTML = "Common";
+    combtn.innerHTML = "HSC Common";
     let scibtn = document.createElement("button");
     scibtn.setAttribute("id", "scibtn");
     scibtn.style.marginRight = "5px";
     scibtn.setAttribute("onclick", "window.open('https://github.com/slc131845/OnlineQuestionBankScience/tree/master/Questions','_blank')");
-    scibtn.innerHTML = "Science";
+    scibtn.innerHTML = "HSC Science";
     let bsbtn = document.createElement("button");
     bsbtn.setAttribute("id", "bsbtn");
     bsbtn.style.marginRight = "5px";
     bsbtn.setAttribute("onclick", "window.open('https://github.com/slc131845/OnlineQuestionBankBS/tree/master/Questions','_blank')");
-    bsbtn.innerHTML = "Bussiness";
+    bsbtn.innerHTML = "HSC Bussiness";
     let hubtn = document.createElement("button");
     hubtn.setAttribute("id", "hubtn");
+    hubtn.style.marginRight = "5px";
     hubtn.setAttribute("onclick", "window.open('https://github.com/slc131845/OnlineQuestionBankHumanities/tree/master/Questions','_blank')");
-    hubtn.innerHTML = "Humanities";
+    hubtn.innerHTML = "HSC Humanities";
+    let ninecombtn = document.createElement("button");
+    ninecombtn.setAttribute("id", "ninecombtn");
+    ninecombtn.style.marginRight = "5px";
+    ninecombtn.setAttribute("onclick", "window.open('https://github.com/slc131845/nineCommon/tree/master/Questions','_blank')");
+    ninecombtn.innerHTML = "Nine Common";
+    let ninescibtn = document.createElement("button");
+    ninescibtn.setAttribute("id", "ninescibtn");
+    ninescibtn.style.marginRight = "5px";
+    ninescibtn.setAttribute("onclick", "window.open('https://github.com/slc131845/nineScience/tree/master/Questions','_blank')");
+    ninescibtn.innerHTML = "Nine Science";
+    let ninebsbtn = document.createElement("button");
+    ninebsbtn.setAttribute("id", "ninebsbtn");
+    ninebsbtn.style.marginRight = "5px";
+    ninebsbtn.setAttribute("onclick", "window.open('https://github.com/slc131845/nineBS/tree/master/Questions','_blank')");
+    ninebsbtn.innerHTML = "Nine Bussiness";
+    let tencombtn = document.createElement("button");
+    tencombtn.setAttribute("id", "tencombtn");
+    tencombtn.style.marginRight = "5px";
+    tencombtn.setAttribute("onclick", "window.open('https://github.com/slc131845/tenCommon/tree/master/Questions','_blank')");
+    tencombtn.innerHTML = "Ten Common";
+    let tenscibtn = document.createElement("button");
+    tenscibtn.setAttribute("id", "tenscibtn");
+    tenscibtn.style.marginRight = "5px";
+    tenscibtn.setAttribute("onclick", "window.open('https://github.com/slc131845/tenScience/tree/master/Questions','_blank')");
+    tenscibtn.innerHTML = "Ten Science";
+    let tenbsbtn = document.createElement("button");
+    tenbsbtn.setAttribute("id", "tenbsbtn");
+    tenbsbtn.setAttribute("onclick", "window.open('https://github.com/slc131845/tenBS/tree/master/Questions','_blank')");
+    tenbsbtn.innerHTML = "Ten Bussiness";
+    let br1 = document.createElement("br");
+    let br2 = document.createElement("br");
     document.body.appendChild(subHead);
     document.body.appendChild(combtn);
     document.body.appendChild(scibtn);
     document.body.appendChild(bsbtn);
     document.body.appendChild(hubtn);
-    setTimeout(removeElement, 60000);
+    document.body.appendChild(ninecombtn);
+    document.body.appendChild(br1);
+    document.body.appendChild(br2);
+    document.body.appendChild(ninescibtn);
+    document.body.appendChild(ninebsbtn);
+    document.body.appendChild(tencombtn);
+    document.body.appendChild(tenscibtn);
+    document.body.appendChild(tenbsbtn);
 };
 
-function removeElement() {
-    let subHead = document.getElementById("subhead");
-    let combtn = document.getElementById("combtn");
-    let scibtn = document.getElementById("scibtn");
-    let bsbtn = document.getElementById("bsbtn");
-    let hubtn = document.getElementById("hubtn");
-    subHead.parentNode.removeChild(subHead);
-    combtn.parentNode.removeChild(combtn);
-    scibtn.parentNode.removeChild(scibtn);
-    bsbtn.parentNode.removeChild(bsbtn);
-    hubtn.parentNode.removeChild(hubtn);
-}
 
 let file = document.querySelectorAll("input[type=file]")[0];
 file.addEventListener("change", function (event) {
-    console.log(file.files.length);
     for (let i = 0; i < file.files.length; i++) {
         let frame = document.createElement("iframe");
         frame.setAttribute("class", "secwin");
@@ -348,7 +372,6 @@ function marks() {
             let op_len = innerDoc.querySelectorAll(`textarea[name="option${i + 1}[]"]`);
             let radio_len = innerDoc.querySelectorAll(`input[name="checkbox${i + 1}[]"]`);
             for (let j = 0; j < op_len.length; j++) {
-                console.log(radio_len[j]);
                 if (!radio_len[j].disabled) {
                     if (radio_len[j].value === radio_len[j].getAttribute("ans")) {
                         op_len[j].style.background = "green";
@@ -364,7 +387,6 @@ function marks() {
                     }
                 }
             }
-            console.log(d);
             if (d === 4) {
                 c++;
                 d = 0;
@@ -387,6 +409,6 @@ function downloadResult() {
     let section = prompt("Please Enter Section Name:", "XI SCI A");
     let filename = section ? section : "XI SCI A";
     download(filename + ".html", cont);
-}
+};
 
 
