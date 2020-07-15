@@ -1,4 +1,4 @@
-window.location.reload(true)
+
 var q_count = 0;
 function displayimg(e, i) {
     if (e.files[0]) {
