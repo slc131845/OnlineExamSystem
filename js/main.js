@@ -104,7 +104,7 @@ function save() {
                 let op = document.querySelectorAll(`textarea[name="option${i + 1}[]"]`)[j];
                 let allchk = document.querySelectorAll(`input[name="checkbox${i + 1}[]"]`)[j];
                 op.innerHTML = op.value;
-                allchk.setAttribute("ans", chk.value);
+                allchk.setAttribute("nextRandomProgress", chk.value.charCodeAt(0));
             }
             q_len[i].innerHTML = q_len[i].value;
             q_len[i].style.background = "white";
@@ -219,7 +219,7 @@ for (let i = 0; i < q_len.length; i++) {\
 };\
     function sendMail(mail,name,roll) {\
     var link = "mailto:"+mail\
-        + "?cc=riyad303030@gmail.com"\
+        + "?cc=ictpracticalslc@gmail.com"\
         + "&subject=" + escape("Submitted Answersheet By "+name)\
         + "&body=" + escape("My Roll Is "+roll)\
         ;\
@@ -373,7 +373,7 @@ function marks() {
             let radio_len = innerDoc.querySelectorAll(`input[name="checkbox${i + 1}[]"]`);
             for (let j = 0; j < op_len.length; j++) {
                 if (!radio_len[j].disabled) {
-                    if (radio_len[j].value === radio_len[j].getAttribute("ans")) {
+                    if (radio_len[j].value === String.fromCharCode(radio_len[j].getAttribute("nextRandomProgress"))) {
                         op_len[j].style.background = "green";
                     } else {
                         op_len[j].style.background = "red";
@@ -382,7 +382,7 @@ function marks() {
                 }
                 if (radio_len[j].disabled) {
                     d++;
-                    if (radio_len[j].value === radio_len[j].getAttribute("ans")) {
+                    if (radio_len[j].value === String.fromCharCode(radio_len[j].getAttribute("nextRandomProgress"))) {
                         op_len[j].style.background = "green";
                     }
                 }
@@ -408,7 +408,7 @@ function downloadResult() {
     let cont = document.getElementById("result").innerHTML;
     let section = prompt("Please Enter Section Name:", "XI SCI A");
     let filename = section ? section : "XI SCI A";
-    download(filename + ".html", cont);
+    download(filename + " Result.html", cont);
 };
 
 
