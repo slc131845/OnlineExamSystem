@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp217617wmm;
+        Fri, 17 Jul 2020 23:35:28 -0700 (PDT)
+X-Received: by 2002:a05:6e02:8e3:: with SMTP id n3mr13990443ilt.259.1595054128842;
+        Fri, 17 Jul 2020 23:35:28 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595054128; cv=none;
+        d=google.com; s=arc-20160816;
+        b=YjM382DrkQsuMSa5A9rvDlRKjqaPL2s8kEbTTdPROPPm8BZ7TFBJ3C0AOZ/i38yPfx
+         tPHD+/7Uj9ngqItDj6uBKgveODF4P86CbPyXUynccRFPJ7T97A3g1JxM2dNMeUnDCSp/
+         7KxxzPZe5qukzEQopD/GTXzDeJhX2pUYGhT5DRz78HIC1uW7YDGl3wD3tBzqGb4n3pyQ
+         BA0hXbh7RGD0Zm7+pdCCKUvl6WPkz3u4GbjiK44HHDSKNMI5fMlWUIjaJaHpHgX4Ujv+
+         r2n2wW8Nhcvq1XFOVMyWlunIkY7dnon9zr3EvNNrNPwt3OWFSjnj4COsqej16uj5QcWl
+         6neg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=IImLK/wxdeK2yjO3ULPrgOSRwbD9xqiLy1Wz0HUxCN8=;
+        b=eys71PjbIGNFGCjKo7VD/tzRkUpMe1gnf6deQFR+VVY9GSmE/CwvDugIgepqJVrV/i
+         /wuqs4Ka1R8xiq+XJVzS36HcHL4JfltHQnxUvJYjKDymXKZ3xLA+5wzRfUEJNqkXELOd
+         4KAiryhvmmovlsRh1d0TPolHqfVWFiNy556SmOT3pGiWnp+UWBcbTT2uyZHxcsD4jZFV
+         8tSGoCRAVszYBL/LW4+Z3gKcdxiLEzyE62cDYNoFm3xJfXs7NbVWbnHbI9dh1UnlGWvM
+         6OsVCOgWaw8F7ntPS2HFoTg2ar+XSOuRe8PCcBriCnvYtzpPlXoAQuwI7yZWQr4t09fo
+         oO3g==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=hUcE0FFm;
+       spf=pass (google.com: domain of snigdhad893@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=snigdhad893@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <snigdhad893@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id k15sor8617021ili.62.2020.07.17.23.35.28
+        (Google Transport Security);
+        Fri, 17 Jul 2020 23:35:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of snigdhad893@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=hUcE0FFm;
+       spf=pass (google.com: domain of snigdhad893@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=snigdhad893@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=IImLK/wxdeK2yjO3ULPrgOSRwbD9xqiLy1Wz0HUxCN8=;
+        b=hUcE0FFmuNHhlPK3BsHB/UKTQEJzX9cSHsaatVCrw6Brs2qzlyRmqO7HUyNMaTHt9+
+         dyBN66oms1yf3SmHhCnmbP+6CExSvgE0tYovIZ+qMxeqSXTrT/c+g8djuypdmKynWOIl
+         rqO7Ram79VRneQ9q0yloFQT4p961xYZkQr9T6EMr5A8wGsSpuMnENLp47fBxgAvFbRzU
+         LKmDPlgPWLJcHlb+B2wgDkDQDZn8fx/D7d+yNYnI6BISlqfm1U9JyAcxRMDfdtFiNdk/
+         FH7pJXnpJPLU4A+lvmSBAImgtVH+8M5DlxuwEkkfrng7MymYEfyCtRTE812cpUie/xfK
+         s3Mg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=IImLK/wxdeK2yjO3ULPrgOSRwbD9xqiLy1Wz0HUxCN8=;
+        b=hsLYqC11+spDxELfYikXLpZKN/znfPBYn1u2ulSUP/Th+JxYoP5c4C1o5ZlcF9dWEI
+         X6+uuTQU7JRM6Y5/M8bl5UQJQlERXQUKZPPTFGTW8y/vu0xyl6gw06MdCIG1zNIbJwLa
+         1DuMb6W5tIvw/FEj932KD3N5r6T63LachMiVsKIt0Uj7lk7B8UbLgBpDAW7q2yju7RpO
+         3hPTIGQ9FUU7pTqnvU+di1iPOstqFHMhS08OpeIwFc8ZZAOPqAWy1bvpzxtW65WKdZC/
+         rsUfPXrZVPSCqN068x0dA96musFJHoj8UWke3nkaAFsPwH3l4ZhwAvY6ao9tY7fVvOEx
+         PJuw==
+X-Gm-Message-State: AOAM530WwVOV1Br7IIPrc6C5nEadg96yiscQn/rhkl5vqwWRxRmPZUe6
+	zrMR3cLidmwb2x4H2EgotJw3tFPZSUXtKspDbY03zA==
+X-Google-Smtp-Source: ABdhPJy8trrHfy4sBuOejcnPLtd/h5O10pbHiGwrnCjBRKHdDO7InRx179ttqObRXYcAfonAP5som2zhG9V3tvcFzzs=
+X-Received: by 2002:a92:9a97:: with SMTP id c23mr13473337ill.258.1595054128402;
+ Fri, 17 Jul 2020 23:35:28 -0700 (PDT)
+MIME-Version: 1.0
+From: Snigdha Das <snigdhad893@gmail.com>
+Date: Sat, 18 Jul 2020 12:35:16 +0600
+Message-ID: <CAEwYcUN0aTHRkooT23t7CixgHsbjKx=ZMCRy5MdGMoGrcU6iJQ@mail.gmail.com>
+Subject: Submitted Answersheet By Snigdha Das
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000b8946905aab17afb"
+
+--000000000000b8946905aab17afb
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199225
+
+--000000000000b8946905aab17afb
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199225=C2=A0</div>
+
+--000000000000b8946905aab17afb--

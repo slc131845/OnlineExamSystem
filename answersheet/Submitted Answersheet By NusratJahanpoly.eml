@@ -1,0 +1,81 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp217295wmm;
+        Fri, 17 Jul 2020 23:34:35 -0700 (PDT)
+X-Received: by 2002:a05:6602:449:: with SMTP id e9mr12988554iov.71.1595054075472;
+        Fri, 17 Jul 2020 23:34:35 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595054075; cv=none;
+        d=google.com; s=arc-20160816;
+        b=0pB+wYs5emE68JSGdQQfMJwkDoeDTkmUVhSsfbA50i8+CvtZBGcCPNG6I/GOzneclE
+         g7CIduU4aKnTad8dXRtgQ6kBNPugVz9DepPor2UpB+l8DXfKOuF183+SfxuMZLEhPmAA
+         1WLTzZXCjqa5eUgBtmEbJ6WF8FxhDD522vECQemFolV6Z/kteoXrUzEeYvActys5T2hm
+         RxTtMVyYLai7A/xK0IapKNh7zrv3ggKwwL9nliWvvBvBE0NmaW//DJzn/DBFk5CDdSPf
+         NemDl6au5eqz1MLV46C+vmG48Bs9LASMVhDdxjqN668S51nyjeg7vWBnqE5xWzCD0n80
+         GFcA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=DT+iXiUZv3otgxdkslhEKvQNQG7UmtppQe77UHePr2Y=;
+        b=H61EJhvegMFsOYS3tq9S3jFcrI4dsx78NcWSv/Yl+kNGwRLM5oIYrWCxmmnBiwvzwo
+         L/qyGOytwEwHxyKhNmtgIwF9lmsDAw7qMCCrBWgORU2AEks5at8uIaBuooDoJ970c3+z
+         5uyqAwB7h/z8KgTrH+HxYeM60wnoX3KzFMeTNZvl2/CQ6PQs/H4xWV2kwEdUgakQLbw0
+         3UcsENkEaAFYxc85elKFspMEKri/z+2PNTIFrfIeA3IKKdvGrY5MSBu548lbzyBidtqX
+         /U4dk+R6krPFivBY/APtj1emGSmzguivxSPsw6zLFLqbGcgCAImmMexe6FWuSl8QkXVl
+         ZMEw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=QsDfbsSq;
+       spf=pass (google.com: domain of polynusrat001@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=polynusrat001@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <polynusrat001@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id c86sor8708854ilg.115.2020.07.17.23.34.35
+        (Google Transport Security);
+        Fri, 17 Jul 2020 23:34:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of polynusrat001@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=QsDfbsSq;
+       spf=pass (google.com: domain of polynusrat001@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=polynusrat001@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=DT+iXiUZv3otgxdkslhEKvQNQG7UmtppQe77UHePr2Y=;
+        b=QsDfbsSqfAWeziX0pW5ANCYCEUbqQJyxl9qU3p1FCJjHjSjEPO3Wvl1vH046aGdgF5
+         +iYIF2CxnWXPawIHd7cJjlU8lwmgQ3b2/JAn42vAo4rmlTYKVkw0xn72nmjrS6/sUyX4
+         fyHdY7usmepB/7b3h1LsTTMZq+tJIwORxlaHkiIF0v2pNrlPtnQqQhYn5oj1deSQYqKC
+         Gg06NcSc4QWYZ2B/mYdw6TziU6j0jcD16/Jy/2kCmBVwGWJ1NDQzBfXHHdx0ZplY2VCm
+         SHYF70jANot5V888wO33HNl/mv3xpTZCTM5TukITCLYP6dW3QK9X/rqPvezIq0EjfglB
+         Kkig==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=DT+iXiUZv3otgxdkslhEKvQNQG7UmtppQe77UHePr2Y=;
+        b=aGevoYdxznqVLF4RxrmzxVaHZcQQwgXxcNXkkkOI3SBLGViPUqnHFKoyy0uti87XW/
+         PVYPffzmNCw6mrFLyGUp7nJ2YxsYgTO9DlLo+KgPJ6nSJGRajk66W+4y5bIvewaEwRSn
+         Fo9NUtG78WlyThQwGkvJu1wDSWxs9t+/hsYR4U680WBfFMVuXyg/eTxnpQO1/KrhtlJb
+         EP4kBDNZ5JALkzMyUYQsoJcJMILBJn9dWCs721wuuFH9QeBWU3jTbdbZBrg/iWs2P1h5
+         Uv6gKSC4cAtHGUh5IDddSKeBWrOuv3T7L+RtiqJB2IniIgema5IOU6/9700YepMj1Chj
+         dSFQ==
+X-Gm-Message-State: AOAM532E5mfN0kTGh8saAnYq9FIM2y7DppCcdMGn8uVynXqmQrJYz1Xv
+	d6C7n9vsLCsUNe4g7uUplNM2DE6yv/AcNTyre++Iig==
+X-Google-Smtp-Source: ABdhPJzUF9OZKjD0hdQ3cavnhmvlX94iTxE1cDIW6w2qAQBkFGCS0xRNSKhAh4jpYSgcZbVQ4GUs8SwrSkPf7q16kfM=
+X-Received: by 2002:a92:340d:: with SMTP id b13mr13794522ila.78.1595054074971;
+ Fri, 17 Jul 2020 23:34:34 -0700 (PDT)
+MIME-Version: 1.0
+From: Nusrat Poly <polynusrat001@gmail.com>
+Date: Sat, 18 Jul 2020 12:34:20 +0600
+Message-ID: <CAP5CZokgPmy69NdaSLJpJXbCxswGywFohz28Z9RhsmUBCDUe8Q@mail.gmail.com>
+Subject: Submitted Answersheet By NusratJahanpoly
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="00000000000089511305aab1770d"
+
+--00000000000089511305aab1770d
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199220
+
+--00000000000089511305aab1770d
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="auto">My Roll Is 199220</div>
+
+--00000000000089511305aab1770d--

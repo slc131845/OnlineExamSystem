@@ -1,0 +1,85 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp220376wmm;
+        Fri, 17 Jul 2020 23:43:29 -0700 (PDT)
+X-Received: by 2002:a25:98c6:: with SMTP id m6mr19585944ybo.521.1595054609020;
+        Fri, 17 Jul 2020 23:43:29 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595054609; cv=none;
+        d=google.com; s=arc-20160816;
+        b=i2WHEL+bhbPL9xAQGZuGQ8zTG1ztE2NVzxMy45ckrAh3lBpzkvY2K7yC2rl4Lw1rW0
+         AdjzWKjssnpFxBSZlDRFfI6OrV+07KtzZXZkylwLBmLXQKHhN7Skw0GGFBil1j7wgNQr
+         TL1tUt3v+D5HKMHrC0E0UzeOWIp+3s0Z+cUTjqhOlQn0/jSFIEF0yKGgmE21gH+UzYnG
+         vlfk6b0GoChCdAZXI3L9kubb13PuKilM8zZN5L6+YdGsz4Bhz0UinxHqsOb/o0Q+7OqM
+         T0VUOjGZLpj3/KbUXnHfVtOfnGoVLadJwNyJqSxcptxD5kIv7b8I0Yt1tkDxcuLFMItU
+         0ufQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=vJiFvgZiHyr9nZcPMdEblJpC75MSKOvaSMoiDQzDyVs=;
+        b=W3Z7Yba9KYDidQABePhfsW84qm7bqpRK0ioS8k4kpamdULyuE0pDz5jXhohIvGBZ9D
+         5p5jSc3qv+yFi4x1K1f/Fi76gUSJru8tYQWDfN8mDncra3MbvJ+jFOJjjLyqHNif7+d4
+         TSnDHip2q73rE29t0nxiPd4MrXM8VWVrgV/XrjEX2WAd8n77hC2Bi4uDEbk95xgZfyVQ
+         YsZ7fQwZyMJzP0Hgt/xxabZnWNWx98j0P4dC6pKJ50X3Wz61HnxNxzpAXmfucSCvPT7j
+         pniwW81e1cf8un3ZQz02zDijBWFPh9xvVjZdE8hb462VU3fxljhZ4ZdoowhRLJNCMnP2
+         qwyg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=HdSIfkVh;
+       spf=pass (google.com: domain of asamissfatemaakter@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=asamissfatemaakter@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <asamissfatemaakter@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id r4sor7759686ybm.40.2020.07.17.23.43.28
+        (Google Transport Security);
+        Fri, 17 Jul 2020 23:43:29 -0700 (PDT)
+Received-SPF: pass (google.com: domain of asamissfatemaakter@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=HdSIfkVh;
+       spf=pass (google.com: domain of asamissfatemaakter@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=asamissfatemaakter@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=vJiFvgZiHyr9nZcPMdEblJpC75MSKOvaSMoiDQzDyVs=;
+        b=HdSIfkVhV32Taqvf5Z4djfDvzhrTVJ9rFHzXfLd8AnFRCIo9WEuCiufdEHIbW2B3bU
+         mO3BQ8mY8z6pEArAKhkNfQm5T5wFYM5xGiQvo6SsFibSMyqtSVKso21JV4rQLkyHVbzz
+         QU6hhUG/PfnoMcZ2T5Ksqt9gOAWyFtG7z/YOSxJhN4J2z/NhlbvE5FHs2GK2nDU2iepi
+         iPxyPiUEo+rJfB9v8/9NyXJOzMd+M0A//U6lI0N/yCWPT/UadkJGBA1mVQ8ZZ0YCp3vZ
+         QafSa+kvLiRGNl5wnzCYLfFrFPsTBvxK4Xn28dtOfhKuDwNcdKMwHuCXt9zxTe91ZfTr
+         Zztw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=vJiFvgZiHyr9nZcPMdEblJpC75MSKOvaSMoiDQzDyVs=;
+        b=f2Vl0ixhmPItPcGuQ24LMejoFXsDDNa8ZdfFw7m4Z6ktgHfuNlTprJ1XE9yzxRgG4e
+         KJF8BhuNC3GWDNOjquDotHncFNUdscbs5ohRUQaXJph/En2FX6iJM8Nno+5K8QlWDq3w
+         TJr4Mdx2NU+oQBIxZVxVNBhq4sltvth7pTnLEBeufqZH/1ys0VtSbGKNwV1xmfVxMPyZ
+         a2nAxxPpk86R7ULtQsdoCcYT6+At9CCuMyeAbbPIsYrE8tXKkoYkenWpURDal3+7QJLn
+         cPE7IViCEU9a1SS/ZzdpqyclZjsOedgjVyxBlKLRR5R8n+i+rq8bFcsYkUFYy4vYvABO
+         IU7g==
+X-Gm-Message-State: AOAM530tV6fAXmXr7BqVwOxfKNYgQojpXIJd0jAnS122HtYBb6N5KQIm
+	V53enINbinaRpTnYvl9uy+HvDzIBXAhNzv1u7f341g==
+X-Google-Smtp-Source: ABdhPJxZu/HcheaJQgL41o8JMSBaB2aSmdhDkQym9yVMvLNHDS98eWs9NrIY01lBkg4HemH4GNwgv401yKNLhh/hCZY=
+X-Received: by 2002:a25:b5c8:: with SMTP id d8mr18774750ybg.115.1595054608387;
+ Fri, 17 Jul 2020 23:43:28 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 2002:a25:5ec2:0:0:0:0:0 with HTTP; Fri, 17 Jul 2020 23:43:27
+ -0700 (PDT)
+Received: by 2002:a25:5ec2:0:0:0:0:0 with HTTP; Fri, 17 Jul 2020 23:43:27
+ -0700 (PDT)
+From: Miss fatema akter Asa <asamissfatemaakter@gmail.com>
+Date: Fri, 17 Jul 2020 23:43:27 -0700
+Message-ID: <CABW=ZJa_haB7p8FKr0h-OoscReL1M_PQzdRfJUBSqi0eeTgxAA@mail.gmail.com>
+Subject: Submitted Answersheet By Fatema Akter
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="00000000000054953b05aab19710"
+
+--00000000000054953b05aab19710
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199267
+
+--00000000000054953b05aab19710
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="auto">My Roll Is 199267</div>
+
+--00000000000054953b05aab19710--

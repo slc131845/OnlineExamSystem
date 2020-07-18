@@ -1,0 +1,83 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp219302wmm;
+        Fri, 17 Jul 2020 23:40:13 -0700 (PDT)
+X-Received: by 2002:a63:de4b:: with SMTP id y11mr11413349pgi.26.1595054413361;
+        Fri, 17 Jul 2020 23:40:13 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595054413; cv=none;
+        d=google.com; s=arc-20160816;
+        b=rZdvTQ8PsRtzD5WLmGnz0XFOSlg+eK57DhfnbVwD8NG4iVGZzDpm4cfkmGMplMdrrq
+         vFQv7c1JmO1WotsnRQtO80Wg/Rz99KqzV/mvZ/X54CN58sJGEHg1g0aKulbQ9pFKc2AB
+         QijeqYZf6ccl9jGxEm352i4NJ6rbuCHnhcwceYP24u6GnXLH26r/PLs7dDU8O21nWbxY
+         h1BKpp6U3Z8P4olRjfBlqIgfl4VbogoqyTVNLVNepHykOoBX/uC+jE5lKpay+umeiOfH
+         AXu0l077XiYrjF683rba2sKPVvDMFbLeL8FnCe9ogoeerrEnRsfx/0/7Nev4jWbP0Z5h
+         j/xA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:cc:to:from:message-id
+         :subject:date:dkim-signature;
+        bh=z067j/J+xdOf50m93qi3msyToeDFpZSRnDWVrgGb/D4=;
+        b=Pjy6btRh73AYk0V2s5vrfPDoEQZzeyoCrxaedG7gDw2+ZkMUQ5UUeO+PlveeBDWDVh
+         uCM1chQIhPtspk3t93MUEzKe7PxbPxcexmRukkIAP23o/FFBsoDzzUYUi0G/mqkgmvYW
+         rmG8MJRxPcZcCNUjvrWmyGG5Pr0l21TYycGoMlm2Pterh6Zw8VFgEwxcC87bGt7qp59y
+         G2LzQeJ7gV6d+uMCoxE7dM9tDFwpERYSgwWFQvcfwUPvyk+6KCVg3Wxiu02mYehA0YM7
+         pmjBkp/m4dF5Ob3xvoeseXfj5tVNkid+LPWlNOwI3Q0OTtG+UMFnSum35DIeGLfiP1ir
+         9vsg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=n79EH+fv;
+       spf=pass (google.com: domain of www.nabedullislamshafin@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=www.nabedullislamshafin@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <www.nabedullislamshafin@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id d8sor6724612pja.43.2020.07.17.23.40.13
+        (Google Transport Security);
+        Fri, 17 Jul 2020 23:40:13 -0700 (PDT)
+Received-SPF: pass (google.com: domain of www.nabedullislamshafin@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=n79EH+fv;
+       spf=pass (google.com: domain of www.nabedullislamshafin@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=www.nabedullislamshafin@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=date:subject:message-id:from:to:cc:mime-version
+         :content-transfer-encoding;
+        bh=z067j/J+xdOf50m93qi3msyToeDFpZSRnDWVrgGb/D4=;
+        b=n79EH+fvbg/j5dPAUwcE1Jk0D5LwgO6bkc3mdlU8pDSHdIXhoG5pOQYngmeMhd+hjC
+         EectlStaxVmpiE7LE6OiXshivBrLxBwrehPIdexQHUXqqMzUal9xQVkixAiZPUctaIc4
+         AzU5E6eVWgppo0F/YZxmpe249I9fdXI+EO1H0z15xRU+Q4bXApJUy7BLWh0GbRKkMW5S
+         LB8qFNDFhYk5VYVDpJ4hd67FJC3MRwmgilzVcapMuxj7r4MBvYCdohPOcU/5WzIy21v6
+         RZVuxo+B5N6kO2oPnfSvIupsuy2H8Z9AtLNJxv20zsksODzCe3Sh8bwk3ut0uSUIkq5O
+         5Dkw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:date:subject:message-id:from:to:cc:mime-version
+         :content-transfer-encoding;
+        bh=z067j/J+xdOf50m93qi3msyToeDFpZSRnDWVrgGb/D4=;
+        b=npG9qymH4fxgWCMy+p0vq6wCEFjN41V/jkLDlX2d8GdyBttC7y/KKdzeo+OMWH/rRz
+         w8QKb1+DM9DC3YXHUqqSUpxs7HN3azV83Ne17L6M37eR8RFILAA79y2dY9+r+xzEf11G
+         1euZY5MAAWdwguThqFqbAOrUPFBpgvXJcl6p3ITT5LzmND2ghxbu7HKi42XTP3GkuRcO
+         fm2qUZNWoY73GUhq4sIKunbNguFmWD8fp4gTzkBsELegnlArQ77Y1zSlbj42lyB9TNgE
+         kYFd83yT/AUhcRr1T+pzkFZFD1Kc7hmetp+RyPzLq3TZdLnlTIp/FAUQCaKQ3NZMk/+x
+         9xvw==
+X-Gm-Message-State: AOAM530Mps7bxzqGyEHjY/cobcZ6qQoiZVmfWkMET4+188k1EQ1vYK/K
+	WJTCMu5Njz+vNfBKsvrMrg0IVqIyecs=
+X-Google-Smtp-Source: ABdhPJzXQjVfn22kHbihL5voVrHHkqqoQwfsYTTdi2QG0jvpBIqNyIjpZRSBkUhBskTRNZKupMh+Ug==
+X-Received: by 2002:a17:90a:1345:: with SMTP id y5mr6138124pjf.68.1595054412810;
+        Fri, 17 Jul 2020 23:40:12 -0700 (PDT)
+Return-Path: <www.nabedullislamshafin@gmail.com>
+Received: from [192.168.0.103] ([103.124.110.150])
+        by smtp.gmail.com with ESMTPSA id h18sm9621114pfr.186.2020.07.17.23.40.10
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 17 Jul 2020 23:40:12 -0700 (PDT)
+Date: Sat, 18 Jul 2020 12:40:08 +0600
+Subject: Submitted Answersheet By Nabedull islam shafin
+X-Priority: 3
+Message-ID: <-n08a0t-2ykayt-pknp95-2aaq44x0ro6fvqd2tt-w4yf3c-hzeo34-kalqt3fec5y1-mlunc8-23obi6jxsoqr1sjcba-c6y7m0wqmuwbxmbfqx-y1gvbr-v3wnq3-my1jz9v4dvv7-fwztjl-uzcncghgprty.1595054408494@email.android.com>
+From: Nabedull Islam <www.nabedullislamshafin@gmail.com>
+To: "zishanrahman1977@gmail.com" <zishanrahman1977@gmail.com>
+Cc: "ictpracticalslc@gmail.com" <ictpracticalslc@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGRpdiBkaXI9ImF1dG8iPk15IFJvbGwgSXMgMTk5MDIyPGJyIC8+PGJyIC8+U2VudCBmcm9tIG15
+IEh1YXdlaSBwaG9uZTwvZGl2Pg==
+
