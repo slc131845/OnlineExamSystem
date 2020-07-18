@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp218105wmm;
+        Fri, 17 Jul 2020 23:36:47 -0700 (PDT)
+X-Received: by 2002:a05:620a:4ca:: with SMTP id 10mr12392290qks.2.1595054207465;
+        Fri, 17 Jul 2020 23:36:47 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595054207; cv=none;
+        d=google.com; s=arc-20160816;
+        b=yShhoiH+oLixLewVqkI1iQNR3fqO8sH0G8BI+wjpqY/PopKI9AtwfOSQtqlm29Vj3s
+         xw1IGjC6d2MVixWu/JtsWtEyzYnRnlgQFnZvtvA7oQD0lieJNpIhQJwzMYYItqAE0wud
+         c+fvlfVRrCyBLtv10bsm5zqJqD+tq/MBdSF65AMcRzHPA+JYyJrYfjjMuTMysp4UvVqn
+         DO0ZHmoe/EedkM4NNr0++CTWqDF1soKKULnKrnkKyPAxdTdFIAEW9CDOO04vi3hQLg/l
+         zJFwEImchEBBxtxhhDnZ3Cxniug1hF8SUIUsPMvBt7+XWYqoeueXdNpVN3ebIdM3P5f0
+         xlkA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=JbhgKeEgxUc96gYpNvYD16HP0jQiDEwRt3e53Guwf7I=;
+        b=n74wv7yc6I2eLv0eIpqzwYwKoHfwSsyJcQvERI5FUn+rBOivXwuJcxSFmZsSN1KO1k
+         b8ByGJt/FmnT7hI9xVQE2LaDew3N0jAuuBYEuWXb8x7l+aQGNUZIki/7tnKnl+Yyf/oj
+         28T5u3dCutpEzgpfih+xA+V2xk0gZ/6POWpyvRYjthPbmE4kBIpxtVcAC9DzXLSWUoJd
+         zJ2eO78DuhhfKstW29Uycj5p+nNEHJgIndv67vFLSlwGT4Dg1kdZ3aZPE4d9wQy+Mbyc
+         weSw8hzBiLMTpqDq3zjCaMzY5mtAu7PMGQwWezuWZyo5d5aGd2WQ6k1L6YiQilCzctkB
+         wunA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=A2m3GrTO;
+       spf=pass (google.com: domain of sahankhan199042@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=sahankhan199042@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <sahankhan199042@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id t184sor8083932qkb.22.2020.07.17.23.36.47
+        (Google Transport Security);
+        Fri, 17 Jul 2020 23:36:47 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sahankhan199042@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=A2m3GrTO;
+       spf=pass (google.com: domain of sahankhan199042@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=sahankhan199042@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=JbhgKeEgxUc96gYpNvYD16HP0jQiDEwRt3e53Guwf7I=;
+        b=A2m3GrTOhuQmmM9mqAVKxqnNPXDTIE9InLdBj95YyZAD062oysypMGZXFFJ/Kwa+UE
+         8HaxjMSxhhFcNLULQ2MmRtSLZb7lcC1cBPveGJa0hwF7+nKXsLPVTbToLbxz/kJR7udy
+         D6Zv3NSMLU5mLLezZyIlWJ11iMXufIls6zkdEt1VO4nCS80Fj4aip3FwhdCbnOjPjZLn
+         bCw0PCvFTNn2L5/XzR0LzCQ1CooZ8+gszxFEvLmzzuYEIVSMg1yT33dY6mgmVAgw+4kr
+         dCTGGI75R+sh55wQaKXSTSCAzChbNZdh2ocPD9h/jX3HtBPqX1D87/oSZb3/rOVjyW0r
+         9ZNg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=JbhgKeEgxUc96gYpNvYD16HP0jQiDEwRt3e53Guwf7I=;
+        b=U3BFVsTvt/iWRHqK8nb1haUI5G9cgbDz/7HX7gAYY8rJ0vNAn0XgqXRT1rSVpD8AsG
+         QilzPQkmzkX+3QFDT8rId+a8uDDm+HUAxsGnKm2BFWQTgsz6kBG9qy1OkwEs151bOUhf
+         4bli3NT5W8iZQOaF8fxZQsDJDvppqCJWEKZRLIkRjprsGo2ajL7QaF0sFt/4QE0MzHff
+         Yqht4bAcEjEBM9fuP6B4EnIv42UErGr6RRzUhYxeqUWYRPXgozuKf0cpCG4hwJdPQjFs
+         gX2NFe4+jZfijZbaUHg6c469tM6Bybgi3jtgY9thYwx7G/Sh1EkGp4fL8fvHDuvvrldE
+         4TeQ==
+X-Gm-Message-State: AOAM530q0Tp0sc2vURy5aUvdS32vnj+Thl+kLrntho+ZZGyQ3Q/T7kyk
+	rWFOWkC25CwwfEgWw8mO6FJtzzoQSPcRXdHjwE9262gd
+X-Google-Smtp-Source: ABdhPJz7A5myd89Neie+YkS3qeXSHi9DU85+gd3c0H4x+13nd3Qcu9eP4ku76kX1S3Aip2MODxCmi9mcaPhxYx4yfAo=
+X-Received: by 2002:a37:8283:: with SMTP id e125mr11961889qkd.175.1595054206921;
+ Fri, 17 Jul 2020 23:36:46 -0700 (PDT)
+MIME-Version: 1.0
+From: Sahan Khan <sahankhan199042@gmail.com>
+Date: Sat, 18 Jul 2020 12:36:34 +0600
+Message-ID: <CAESEzYNaUs5DSs45Z4R-R4hv5Anb0uP=ny0XGMgrub30SANb9w@mail.gmail.com>
+Subject: Submitted Answersheet By Sahan khan
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="00000000000066ade905aab17f7d"
+
+--00000000000066ade905aab17f7d
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199042
+
+--00000000000066ade905aab17f7d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199042=C2=A0</div>
+
+--00000000000066ade905aab17f7d--

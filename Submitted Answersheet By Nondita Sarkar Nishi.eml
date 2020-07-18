@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp220706wmm;
+        Fri, 17 Jul 2020 23:44:20 -0700 (PDT)
+X-Received: by 2002:a02:854a:: with SMTP id g68mr14508924jai.24.1595054660116;
+        Fri, 17 Jul 2020 23:44:20 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595054660; cv=none;
+        d=google.com; s=arc-20160816;
+        b=k0mxtQxQmhakq3X6dctKia/jfjCVOVk54E1Emz6kfvWKpODAW07cxeeC4AzKL3hM80
+         IO27JeYlz7goUM2lI3Q3lILaVfgnwpuMNWxXY+KybyFcUH0TsGF8O8LnduO0CBe2555A
+         rTNSbNt8CiNlT/naZq6F1iAgiN0r1I1MovgP0dJBEKyCuwfp4PgkL973DQjo1yu87O5K
+         pyeA7+iHLPq3ekjmIgexyvPfv3OXNFMNVpvsVSmXnkrL/Ejth5h0hAV8WX0Bpxg8MzLK
+         qLwgceLEe/wKiDS7F5F+qKgOYszQ7/QX1kY4lGpWfwmofRt2sA1eX/2zOdyFNAOoPyVS
+         F0sQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=mFx6R+pLSScvIi8t85Svc4/0QCrhhIh9iw8rp/QCq58=;
+        b=XOCHKKdqiGwr6d/2Yt1F4iWbTkrK7xb6XoXv8RBSIA2MfoBXBNQk80EDKzAPjc1Lh1
+         6hl/o+EAkh5qXw84fxAuqLJFr6+BgQs6twczv2pXUbeTPk6P14aZ5dqrCfBmUaSUuVLA
+         SJoiXTEh94YqDkOdxRUDkgTqSxKdzxGMm6n+iNqb0buf0nvCoeJpMjsVrr2JIaOLPr5Q
+         zIa8V5WRCxoMl6xfoil5UhZRG0LAYI/R8ZDoa98GjBQ2SXw6PatylY+j3YKbgWCZIIJq
+         KDE1DPnW68l1r9wEBNClzr2M9BSRx6IO+GjgFoj8lDcpGwyiCCrXLf9ZwM+5Aso7gp+9
+         CiBA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=GBeAUWM9;
+       spf=pass (google.com: domain of iamnonditasarkar@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=iamnonditasarkar@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <iamnonditasarkar@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id u11sor17473424jad.8.2020.07.17.23.44.19
+        (Google Transport Security);
+        Fri, 17 Jul 2020 23:44:20 -0700 (PDT)
+Received-SPF: pass (google.com: domain of iamnonditasarkar@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=GBeAUWM9;
+       spf=pass (google.com: domain of iamnonditasarkar@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=iamnonditasarkar@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=mFx6R+pLSScvIi8t85Svc4/0QCrhhIh9iw8rp/QCq58=;
+        b=GBeAUWM9ajsGGToKrDM6VJJ28IJF2JIhgL8UW3gbYq3080Jhmyjw0a4pJpmbQTnNJM
+         dXe8Rtl7RnQ3ZpOELHieRU7rvEhHseSUitP7Sgc8fnCOFQEENkfsSI6QywfDbHXhhaDt
+         4hPAXAxPtY3fb+erq6SUlDWp1iC9pF3/xD+KzUKu4I4ikLLbhJpU5NX+iRWzmeEyhEA2
+         3YkeOrGXsRZB5ZGxqx2BO/3Zou1l7Pv96s8GGJHWdf5nqblFCGSINHpn1DG1mID4/AVJ
+         sJMwj7ToBfsUalbKnkKKYX0jQAcK6GfOJ73Qrrg7sfSfMBbnNgC9CYK85NCOTBdRCdx4
+         OYjQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=mFx6R+pLSScvIi8t85Svc4/0QCrhhIh9iw8rp/QCq58=;
+        b=bDwJsZE3i61RA4Wj1Em02J7js+xwQneetFlLYa2/JUtH0pGM36f9GIlzkXJmtjXXD1
+         smu6mhRv9sRBj6ys4lbClf4sjBbDHCzxsmX5c1J7K6BVpxmaQRYmROKkRIWiUdUTPExY
+         CNdL+IEXX4hUFzd96q0r95/jaGUdP//lgAbBguW2xmo7Uy93DIfYi6qFLIL5e5p3jx3+
+         dD4E34eSmdwAc98asILOF5AYXQZsDDlSPiF83himOcXUG+DvPLew7fWs7OeWMiskN7ii
+         F+/08FgQY28EaWQk5zihzNtNQyCKaUzPyNdGcfcT7Q3ARkLnyBi/M/WvIkdpEoYvyQ6q
+         hRkw==
+X-Gm-Message-State: AOAM533qL9VHMRCEf5mu39MI+/f9wpugy/8AX+o5WTSc5oFBeWpfRCOC
+	O/d6I8od2X065eUMEcSO0m5+ruH2zpEweqP6AhGl0w==
+X-Google-Smtp-Source: ABdhPJzHE20wobxgAe9PG34JlAl5bFge7xdJAw6SPWX9gZhvtfyjzqMz1Wlc4T1/l9fWi+OS6XnJsbJK6wlDx2Alz8E=
+X-Received: by 2002:a02:3905:: with SMTP id l5mr15288374jaa.64.1595054659660;
+ Fri, 17 Jul 2020 23:44:19 -0700 (PDT)
+MIME-Version: 1.0
+From: Nondita Sarkar <iamnonditasarkar@gmail.com>
+Date: Sat, 18 Jul 2020 12:44:06 +0600
+Message-ID: <CALOiEKdVoDoCpZgwcsmMPoBB6toPkC26wT_ZFLB3-5_Z2z+2bw@mail.gmail.com>
+Subject: Submitted Answersheet By Nondita Sarkar Nishi
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="00000000000062ec9a05aab19a23"
+
+--00000000000062ec9a05aab19a23
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199209
+
+--00000000000062ec9a05aab19a23
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199209=C2=A0</div>
+
+--00000000000062ec9a05aab19a23--

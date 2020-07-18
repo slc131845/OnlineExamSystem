@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp220855wmm;
+        Fri, 17 Jul 2020 23:44:40 -0700 (PDT)
+X-Received: by 2002:a37:a089:: with SMTP id j131mr11782049qke.424.1595054679949;
+        Fri, 17 Jul 2020 23:44:39 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595054679; cv=none;
+        d=google.com; s=arc-20160816;
+        b=gX0GXun5aI/9EYUOjtnAYZ46xkk6wTCAgU3hjos+PRnS1yn5/ArtqewQERwWN0CwK4
+         GoAjwaw/9zDRs0SUlxamFM1fKR4Yti5neuc9KBLic/89u9PlV7kEhpIwATLsW0eUL47k
+         cQPsR64XfFsc6ht3cw2R2akpDKySkEpehn1oGLhfEALyD9GaVgNv4LAnKxBcbQQMLSER
+         FCNTzqHUWBbb+xwW8xoB4zqpvwF/zBA04h1oRwDgl5G4Ha5yL9QgAEp9laTPn7S65DYK
+         LNuvk4yBKhV/2rCd9Uta1JeORItDfAkIvY9sf8WPpISWViRlxOXHA0Q7QgecEVeOsxk+
+         i3/w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=iKyP4xbF79wql3+uzoxYV/L9K0149Efx47fl+3VteIU=;
+        b=FPR17Jn3SfJRmaeXhGC/3zyotAAz8gu4QlzGUhqsqGwxm9t0YRSFrzFP+n/E7kxM94
+         qj4U1xcuY9vWkyei5QmYpMpDZNlprKlLAuPFFs/WzNLM1ZNCsda/fOs4+GjbUp4S2p9j
+         G/DQ+hl80pP7aeofROUuKcliCogfrI3F36Zn1Xta5qVsZrAG9lk+UR1Ri05+1tB6YQxr
+         gbkJXn8ajHtbxxl5ZzzXoEjCGmTDtJNmZSRelpC0e1BKNqXR5Sg2PdMZi/XQtSaDHf3y
+         k+gHKOiSklFJ6My2E7g+DGenWpU4gO4AszU131zZ414/WqHuY0Ad2ZLfZYex9H+LlFKd
+         mXNQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=HlgTybI8;
+       spf=pass (google.com: domain of newtonchakma31@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=newtonchakma31@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <newtonchakma31@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id i12sor15588198qtj.37.2020.07.17.23.44.39
+        (Google Transport Security);
+        Fri, 17 Jul 2020 23:44:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of newtonchakma31@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=HlgTybI8;
+       spf=pass (google.com: domain of newtonchakma31@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=newtonchakma31@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=iKyP4xbF79wql3+uzoxYV/L9K0149Efx47fl+3VteIU=;
+        b=HlgTybI8lDtgLuq2nVyyX763Iaw6HSrisxAqD3km+IjXOQdCkC7E8hOGXFn6KISTJk
+         hUPE91xUkzJonHUaSq+fQAt5HB5fLDU1JHoSrR5CFRhzpZmuuACYTB4/OYhvDq3PYphJ
+         caxqWrQWmu24ZdU4h4V7Yn3RgNGyQ1IJnWJzqVFqBGm1myFYhUiWP1uGiEWiPzwUSQVs
+         fTcDYzmmla/iqnDABbrlxnuOBLS1QZQyOLsJqv46wZOjuHMY+8UYCcSojf6V6rwNy1ht
+         BrW24pI+87LSwLyl68Nq+q+KM6+l7t+IKd7GCNQDSy53vFsfPMjFPLMtgc8Mg9FD0GVC
+         ZE2Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=iKyP4xbF79wql3+uzoxYV/L9K0149Efx47fl+3VteIU=;
+        b=DNlnRp+K1YTS9fKoTMnJF/mepOH6FKP3QjgxoUNGmvNlMZCpj/R8ezadSmqv1vsKGI
+         +ZaLbMOWFhs5uVh2Ssh5kAHWTlTLEf+ROQjPtRxOftGlcj1RGzfKWIxyUq3pd9gygCQ7
+         3+KjOz0jOnbF7XEmbgKaKXbffTOpr2AUk0qxkxRT7doi6PflFauJ4u4Sd6esQtwL926K
+         394R8og/den5k1v2pC8G0ePfvSJUC6MOfaqIzOO+VXoi7wJfViEm1kSGC1RxUwCCT9SS
+         OGhkTc4Nib8YpdDyos1ncr9mykPykJiYz5h7LikotZb+X/na7DrucGwjWRNo14kT1rEf
+         d/ew==
+X-Gm-Message-State: AOAM533quq79iQtZopGS2pZIHNL/FHL9PuDCEPraTSmEynd/nx0Y5Vgy
+	KPi8NFh46HxUQSwgrHEJp0GPTgr/yRRy0wI8wfb3Wg==
+X-Google-Smtp-Source: ABdhPJwNViMxYWYXR6VqA3tcNtdM3XJzx0JvkG/aBD08sgl7IhWmZvKWeSWlYJ43H9s7e+XsM4n0jxpQvTPkeZ1urlY=
+X-Received: by 2002:ac8:4316:: with SMTP id z22mr13900061qtm.121.1595054679455;
+ Fri, 17 Jul 2020 23:44:39 -0700 (PDT)
+MIME-Version: 1.0
+From: jhon cena <newtonchakma31@gmail.com>
+Date: Sat, 18 Jul 2020 12:44:25 +0600
+Message-ID: <CAOmrqUbt4_R6GW4+G_pL6kYAgdpkhx4yU6WLmrHeocTjoQ1Yhg@mail.gmail.com>
+Subject: Submitted Answersheet By Sumaiya imrose
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="00000000000090fd0b05aab19b0b"
+
+--00000000000090fd0b05aab19b0b
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199205
+
+--00000000000090fd0b05aab19b0b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199205=C2=A0</div>
+
+--00000000000090fd0b05aab19b0b--

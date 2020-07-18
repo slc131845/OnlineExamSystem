@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp220809wmm;
+        Fri, 17 Jul 2020 23:44:30 -0700 (PDT)
+X-Received: by 2002:a4a:e9e9:: with SMTP id w9mr11545058ooc.3.1595054670010;
+        Fri, 17 Jul 2020 23:44:30 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595054670; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Z3d7wXt0ogspQ3AHXCrOZkiZdwVQkZcqgZdU8s46HDl9ebBoyMkBAVrVOL50Jv3PZy
+         Pfn4q0N0mWvIGuXGAFRLrhPdQ1nbg/KH/N8oEDzvh5OhmGf42qeU1uAWsBwB1PyNaewq
+         fGXVQg5oNrjrkRR18qk2wdnP0dVBUX7PIxh9aYhUF394o4iPhh0wN3d9jKSqVVWwLY02
+         p5fLQO/lz5A6LIMtmWY66KCOYmutRR2ngNw4P95y5+w7inApRKBbfkjUylpX+hUhnNXV
+         APfdo+0Hd5NfjwuLuiXZBFtX9TXXovzakRh/yIE+PBb6jGR/6RCcP/rN90AiECjrHkBb
+         ye7A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=AwzlwvMuxmbwAjzdjD6xvO6joDnn+VfcIUXq3blbicc=;
+        b=bBiHBLHIwmyyKN9SZpeKEQY3vcxmV7FLa1WxuPOBkAGpENLTKHJO299LQAnIG7cMlq
+         /QeMtSM6bNc/mbPlpDfJRsFFsX2Veh5yy5S3v0D9H9q3Njx461Fi3GH1xQfFR1U7OnRQ
+         VbWwpQfw1aGIE/JCGg6Kbc9+B6/ZXEBEgBEk8FBYvzhTbzt6lBx05U+c0bAXu9LCaHhy
+         P8LdZGkI+6dzMrny5JJVYEyTNXaw/g1wxZPEkeNSGnD0rsAEOBxKrSaTU0Vd5GXyHQL3
+         wKLpMabLRN0Go72dNIg+KTBFda0sZPZWdr7Gi6EkCBvW4nx2/2GrdAyfeuYYMwYNRD9y
+         mtGg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=RJlfGAkj;
+       spf=pass (google.com: domain of farzanaa902@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=farzanaa902@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <farzanaa902@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id m24sor8451498oie.68.2020.07.17.23.44.29
+        (Google Transport Security);
+        Fri, 17 Jul 2020 23:44:29 -0700 (PDT)
+Received-SPF: pass (google.com: domain of farzanaa902@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=RJlfGAkj;
+       spf=pass (google.com: domain of farzanaa902@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=farzanaa902@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=AwzlwvMuxmbwAjzdjD6xvO6joDnn+VfcIUXq3blbicc=;
+        b=RJlfGAkjLR1NHtTKb4YaWYRcF5iIWr1J6tP2FPlj1bbJpHO5wRkLsCxTTZmZG1Mb54
+         zjgTqsoXk5LyJvD3W09xP3Bp5uxJRyEA7xEfhrBbwFurlynB41N8W1fzs7jgcWBeaHYk
+         pQ4hYcv9vrViRQbqpJIIwRYr+QXSH+NCMdcTVlQdxMVV8d+/A7ZCVjFy5jLzYBCoi4E4
+         BwApTeKi6D+6LIZtfKkavFaypLlU5o1QM1M/tzaOse0Dw8fhk011ie9fcndwhxNd8adW
+         z2LCBdQziOGLeff+7ps/Wrfq6lGMMq7LCu+KuQ4WeLLH+Z5Izs4FX4LhCtW4qi4mw4xI
+         +kHg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=AwzlwvMuxmbwAjzdjD6xvO6joDnn+VfcIUXq3blbicc=;
+        b=UNT1m8jgMOa68w0/qSgkwmJ7pfw9LOz6bPokJHdE6tkrDSrFKhIr387/IDG+rI5nMc
+         zDNiyiOaPbyl2GqA9pPYlwHx7Hf8m4UdbnrCKTY0AmDGM0TzZbu7E4dINMbCfHSI4gSv
+         /7pZ8loS9zIJkPpw1UJam3AMqrQyyl24cuXs/1PWtgZymRJQgDnwOtVAViZiQ8vvzuZf
+         nXmYjpRios6Ch4vjDBCN4xDZBUdBLw54emXHizgncrGOsv++t7I1oo1VX+HxnSM7jurp
+         OxhqXs61gToUHTcuHaaFC36n/ZogHvQfdTxsdckbqtYVB+fSzsCHjHbJ8ka9BDYJsM69
+         SG7w==
+X-Gm-Message-State: AOAM531u5+mQgxHf8OB7REV3Nr19mMYraZbIvLDuCuXIzrdNt88uLiX6
+	BKWl7NGqOfU5Etmew0dHjQFHg9UNkcIwX+JyoUSqCA==
+X-Google-Smtp-Source: ABdhPJxvSIaKbc/lj17cZOJKS/C68uhhihPXZrvrHGzdVslw5bJabLFLxf4fS/id8lUUTEyqDmi8K5A75Pq6R1kC4VE=
+X-Received: by 2002:aca:d643:: with SMTP id n64mr10330782oig.33.1595054669437;
+ Fri, 17 Jul 2020 23:44:29 -0700 (PDT)
+MIME-Version: 1.0
+From: Farzana Akter <farzanaa902@gmail.com>
+Date: Sat, 18 Jul 2020 12:44:17 +0600
+Message-ID: <CAJEsu7Ly0cPa_od2LGWXa9fG6B-QkUv2pkbNFNUXN53A4Zr=9Q@mail.gmail.com>
+Subject: Submitted Answersheet By Farjana akter Bithe
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000f8203c05aab19aef"
+
+--000000000000f8203c05aab19aef
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199259
+
+--000000000000f8203c05aab19aef
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199259=C2=A0</div>
+
+--000000000000f8203c05aab19aef--

@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp215337wmm;
+        Fri, 17 Jul 2020 23:30:14 -0700 (PDT)
+X-Received: by 2002:a17:906:2c18:: with SMTP id e24mr12457702ejh.335.1595053814032;
+        Fri, 17 Jul 2020 23:30:14 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595053814; cv=none;
+        d=google.com; s=arc-20160816;
+        b=xfWTIGheQWO1irRS4m5bQWY8c+0TQlLNdvVl6E2R+hkau6KADQk6uR8qRwfYjZYqRb
+         BkOdgWqpE9RPPG2rOu7lps13AcytpQYn7D+YNPShDXyVOufEQheNDnu8PkD2DArmROhD
+         lT8xibulRD+wnPCdARvggwvTn1EnxEIW/KioXBze9NWjAC+tWhTahRiPNjIB6IPrZhG9
+         MMt6mjWs22Fv5rQ25FMDDB0dAZj0bfD1YdNvAa3JGmneFFTeiUExhiRA0SHZXOtcApJU
+         QsqxQpUwPv4Sk9uy9egjTziaURF9ky15GVkpQd5V2TUgm3PgS2AOIJQURWAq/t8/stzS
+         Vi8A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=c5e1SGLaCWWWpE4u6YnkQIWiUmZGTbhKs+qCe3PhYbg=;
+        b=FjhJR8ovHaFpfwDxlkaFnm4UGbkErzMeR1CP+l/j16ijg981BcyJvJBlK00cjoJp76
+         XsP6sQvA831+bQPsFigeyxqQJpnNMFyrtV2WGCiFUqmkjyoWZ4US+ZdoPCwMSucyvvo8
+         JCtZJRUx0EmGcUimAYKHBXsVe0xTT8+Opog0Sof9HuNJC+Kz9EM4+Xa0S983DfP9V8yF
+         +m8jUZZsoNAwRpAsQiuOrbH5HQF+e/069QPxyVm9UvVoyvF9AHKL1S63YoAbggup1PXk
+         l1sabFtLqH6N1zpCR9fI5sbaiSftYUySlpmeLoj+uHkuLYicYsJ/ZrLHumC6//yZfOAn
+         KzRQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=WmA1h7KK;
+       spf=pass (google.com: domain of bhut.petni122@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=bhut.petni122@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <bhut.petni122@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id a10sor10002603eda.1.2020.07.17.23.30.13
+        (Google Transport Security);
+        Fri, 17 Jul 2020 23:30:14 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bhut.petni122@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=WmA1h7KK;
+       spf=pass (google.com: domain of bhut.petni122@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=bhut.petni122@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=c5e1SGLaCWWWpE4u6YnkQIWiUmZGTbhKs+qCe3PhYbg=;
+        b=WmA1h7KKB/lW30iBIx28m9uuY85KJ+MtOPrL2CwXB35w/sbyO2ETEr2rMYo83tuKyd
+         croxSt8Ptf38x7nIQIx31dxZPC34sO9fiuMpXxLtBPPsZNHqIKtZsdeCiXN3hUH+m+DO
+         5gCYlC8MLH3fARG5SK0kBSmJnJaG84mzucQdIPaKZEnlge+orXkFbnyMaTyyXwjRgSII
+         Xe0W+u3KvpAw3T4lQ99XbQsssXAY3Trn2c/1khWABXKxlhBBNrEzt868lCJSWQOPnWuq
+         hsqBpDV6FBXhfzJETsJ+7pANod5zhrfE0pae7E75xCUHbHihYnZCvksjYXDwcMi+28e+
+         AMmg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=c5e1SGLaCWWWpE4u6YnkQIWiUmZGTbhKs+qCe3PhYbg=;
+        b=ilDLXS+4UzxY1AqcJKOBydXs0RXJukGByf8h7IjQEs63mIjrx+uAfqhMlBlo2jxsBY
+         TzE8gwWTw/kNahVMrNK0FQ1JICxXzZe8O/hxutdfA/fNzhFPmiBLRpYcXXz2u7B36sfS
+         PV2zq7XByG4cf5ycyk5MFuTughNgxkcn+uw6SkPKo0EjeaDoPQvINxPTLC0XEO3wnbYd
+         RJlVzFhHgDsKuq2cs1dLWpO/EtnZFx2iuENJ421ISu9l0Fw9XNnHdmPW0Suqoay+AK+/
+         OFmru0m1m4pDz+i+WpEVbbAHB6xuvdqrvIDJD8n/lQssYyITJNGgL8goyJHZVC+YLnJE
+         BfTw==
+X-Gm-Message-State: AOAM531LVsOUv0IK3EsmtF+TgwFmDIIoVe7cyTNjqjfiulMRPP7Y/nKT
+	F6CKqVLbOwUWqGQiXtVM8vGzgW+uD2Lj/f5d8A5n7g==
+X-Google-Smtp-Source: ABdhPJyfAOkareyg42Iby55nLXcFohyCz66saiuog83OtsR3YHjmc6OU9iP/ruHGYxwJY2omcOteIuLem0zyJleNt4s=
+X-Received: by 2002:a50:f08c:: with SMTP id v12mr12281848edl.119.1595053813294;
+ Fri, 17 Jul 2020 23:30:13 -0700 (PDT)
+MIME-Version: 1.0
+From: Jerin Ahmed <bhut.petni122@gmail.com>
+Date: Sat, 18 Jul 2020 12:30:00 +0600
+Message-ID: <CAAZFPU+zOU9LDG-bY0OoKkU5XTd_FxYqVe_ffRKcrFSaMqyrSQ@mail.gmail.com>
+Subject: Submitted Answersheet By Jakia
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000f0694505aab167ea"
+
+--000000000000f0694505aab167ea
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199241
+
+--000000000000f0694505aab167ea
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199241=C2=A0</div>
+
+--000000000000f0694505aab167ea--
