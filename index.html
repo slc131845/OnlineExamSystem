@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="https://i.ibb.co/DfK9TrZ/favicon.png" />
 </head>
 
-<body>
+<body id="saveContent">
     <div id="banner">
         <center>
             <img src="image/pro.png">
@@ -41,13 +41,14 @@
         <button id="ad" onclick="addQuestion()" name="add" value="Add">Add</button>
         <button id="rm" onclick="remove()" name="remove" value="remove">Remove</button>
         <button id="sv" onclick="save()" name="save" value="save">Save</button>
-        <button id="pr" onclick="print()" name="print" value="print">Download</button>
+        <button id="pr" onclick="print()" name="print" value="print">Download Question</button>
         <button id="mr" onclick="marks()" name="marks" value="marks">Marks</button>
         <input type="file" id="infile" name="filename[]" multiple="multiple">
         <button id="upanswer"
             onclick="window.open('https://github.com/slc131845/OnlineExamSystem/tree/master/answersheet','_blank')"
             name="answer" value="Upload AnswerSheet">Upload AnswerSheet</button>
         <button id="downloadResult" onclick="downloadResult()">Download Result</button>
+        <button id="loadprev" onclick="loadPrev()">Load Previous</button>
     </div>
 
     <div id="frames">
