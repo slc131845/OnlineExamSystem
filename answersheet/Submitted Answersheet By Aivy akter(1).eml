@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp218608wmm;
+        Fri, 17 Jul 2020 23:38:07 -0700 (PDT)
+X-Received: by 2002:a1c:de07:: with SMTP id v7mr12626395wmg.56.1595054287157;
+        Fri, 17 Jul 2020 23:38:07 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595054287; cv=none;
+        d=google.com; s=arc-20160816;
+        b=QDsE/alEiB8Tfw1sLUctLVJCo0wpJBv3HR7vVDQnPkm0+bg6/YoAiDovyoNP6CW3ok
+         zk1IwJ9VEQvPchR/TGNIYwcZmKmbSLyqR68MOr6kVsPf5R2p13u9gH9hcETa7AuqP5je
+         /2Sl541bhXCBOBgU0WqnoHqIad8X87ZlMQMbYWVWzV6MaVeG8C2HjhLFRuUuQByKIeat
+         W6rcLHr3yKaxxohyo7NrsO4U+ookEgICls5fL2UUInjYss42+I70TY7FyrB91fHPgD7Z
+         Ry5aa0HzV7v0L62xtOwjcjbCseNwg4kzXi4IcdI9Pz5hJ7JCu0Ziwi4oecicA5CzTqIt
+         jBGw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=0q9QbYNu3+D4oK5TZEo1TsJExFbadVylSsbHucIL76s=;
+        b=QIEWKKCTNFMnNZg9Yy1W3fJsxxQ9ZJs9TYCCn9mBzW3h7W1K3i6V1/DCmdXD+3EFPH
+         UIIokvOq4ZIz7QB/nSBXffdOsgADSAnRkmBuoHtAllPqcnLkO01+yqGryAvigelC+iWU
+         oDuA/cnEaEBrdLRcmJADzmjCVWYLGXVil6Cop2YyujaFCowoZydlEkDz0eeJtLppqVYm
+         sb7/abUyPqZkKKkWsvTO1i2VPnWqt6vss4skxJ+jY5nA8+D5PThN+JRj/+JyTHGVZv1n
+         lugK3PJZGht5gDANXa/RYZSWbGYhBFGV+2tG2mCVECcwvUA1vqMebxF2V9szBomw84N+
+         cM1A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=oazU15qi;
+       spf=pass (google.com: domain of ahaivy294@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=ahaivy294@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <ahaivy294@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id w9sor5688153wrp.55.2020.07.17.23.38.07
+        (Google Transport Security);
+        Fri, 17 Jul 2020 23:38:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ahaivy294@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=oazU15qi;
+       spf=pass (google.com: domain of ahaivy294@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=ahaivy294@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=0q9QbYNu3+D4oK5TZEo1TsJExFbadVylSsbHucIL76s=;
+        b=oazU15qia7eFHqrcUavyO6/SvYkKYpkGCttsKUS4sNZlBOyiJFjgrz2HE3wma8the0
+         Op7O+A7OTEQcrfBljB/i9ANdep8ZtImAxIWllGkLt4uwgZ78FGwHYCfc3nSVqQIgOeK1
+         tJ1D1QYVQET+qtC4qLsfY7CbhatU2e1pn3M/n4A39VWO/lFYG5d4jJXq0PI6xLem17RY
+         Mrp8xLYLZ9wnr+a3Xj2Epfr6fjuf3wN6vtFmbq+McBPOKjO7ahdbqFzWuCn5IHJZaWm4
+         2889WosyCU7OYpdGpuCBihJyrctYSgYT0NpDWS3aN6GxK09lnCtVElor6Vvko4Ok2s9R
+         gJgQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=0q9QbYNu3+D4oK5TZEo1TsJExFbadVylSsbHucIL76s=;
+        b=Vw3S5/IOU6nt/gPpTrmB6xaTXZoAs/th+W/MHQipF2T4l6USnNDBfyuvFxvGlGdEL6
+         nLrKKJ6zzoC3ftwauXRFR2oC8kwdFMdpyMUA3oZz4fqigpGcXZmvS3eUYnPb1dqaISgf
+         EZZYY8/h6vtIoy80ACrjOWwJoplo2/s83jZ+LfhawPLseAVsEyPmkukIjxxGYmd2CIuU
+         K8M+qE8YCW+ab45pBcd+/ltsQDY6fbAfCCFXuXTKErJsNM21pFwgKC4AUOx7PRbjP6dn
+         6oGXgYEbJ2bCYl+5H+q+OD/OXOoEn7TphEHQgzJnPcN1nJbIAPPb7kWQqAwdFofcky/D
+         MLEA==
+X-Gm-Message-State: AOAM531+PI5tqmvy5IACMXylcfMVksW5eDtauadIGP9+UxHkDjkHZofc
+	hCTkcUO/6vF5ZgjYa8lJxvm9w45wfEDWNGuXI3RnUw==
+X-Google-Smtp-Source: ABdhPJwJOLPcq8XWRX/HC8L7j01L3qSMkLgbxWmzPb+PK2r3Rq8ZLBe6WHrRTz4uQI16nXudJ4UHqUoR9iF4+RCUpbo=
+X-Received: by 2002:adf:8442:: with SMTP id 60mr14541207wrf.276.1595054286716;
+ Fri, 17 Jul 2020 23:38:06 -0700 (PDT)
+MIME-Version: 1.0
+From: aivy ah <ahaivy294@gmail.com>
+Date: Sat, 18 Jul 2020 12:37:53 +0600
+Message-ID: <CAFrZ=EdU2NVVD_0HL2QOxW_kQ5sYPUFRx=b1r9Tgkb3SgYNQEg@mail.gmail.com>
+Subject: Submitted Answersheet By Aivy akter
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="00000000000028587d05aab18440"
+
+--00000000000028587d05aab18440
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199268
+
+--00000000000028587d05aab18440
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199268=C2=A0</div>
+
+--00000000000028587d05aab18440--
