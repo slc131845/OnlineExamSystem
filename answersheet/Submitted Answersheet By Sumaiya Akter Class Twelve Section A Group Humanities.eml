@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp294159wmm;
+        Tue, 21 Jul 2020 23:47:42 -0700 (PDT)
+X-Received: by 2002:adf:b1ca:: with SMTP id r10mr31827344wra.150.1595400462372;
+        Tue, 21 Jul 2020 23:47:42 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595400462; cv=none;
+        d=google.com; s=arc-20160816;
+        b=sg9T26+sfWBasiLtoTHbhEkKHM7dPc1TbhLw1u0QMPzHg8mTU9PlOJ03KisZibpqde
+         jDPZs4RuxzxGjtaxW65nLCO++TILGFuHi6FVHiGQwIWXJDEGxtIyr3M+HnNc9TaiODgv
+         GSWHeKwO7FI359cUEFRR6IXfZDCupDLkOdthyO2bTdpVLgyAL9Rwdfma61gvViyyz4XK
+         J719dedpftJxHHNAqDZF9V9Tvgo6cm5XrO+Lf3p2kc+rTHVUtG+pL6sccVUTLKhDml5y
+         eKpXPmpxzlf0Vl1Nk8wvTZ0vf3KL3xpz6YkzSsrxPrG4EZRGy/bu4u+oiTQ57CjXT37W
+         bSvQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=iDWFXbEOYxddCNG6k4W9rMi2lREO2W4QEdzinrErbJo=;
+        b=dhEWdSIbI/BLQCT++HGGVnu34znwP+WdMsrnwWDfhH2cGuBoH/dl5cy9OuT8i+5Ef3
+         JzJ+qiFpwYt6gICU1BBk55LbaKtBikixijy9RUdKRYfWPL+dcbsrBmw6Lth1LA8C7+r9
+         OQbMpkfeithHCux5J70ro6YdNND5FL1tHrb07em/NKDJlZNJWvbKORbHMw25/dfrhSuo
+         UiW8TXpC5mh4q9gb1zIg819qUQvW6absCcyAnDUdzs8Yyx8/TLmxTYC00LJWC9N4y+bb
+         F94FGGboTVsgj8r7BXuHHtoKGq5t6AdYC91d/mUhRtCuznWORmY4BRH9QILkfh3CLtz5
+         IEHg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=i0gFxs13;
+       spf=pass (google.com: domain of sumaiyafaija@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=sumaiyafaija@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <sumaiyafaija@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id l17sor7168146wru.2.2020.07.21.23.47.42
+        (Google Transport Security);
+        Tue, 21 Jul 2020 23:47:42 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sumaiyafaija@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=i0gFxs13;
+       spf=pass (google.com: domain of sumaiyafaija@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=sumaiyafaija@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=iDWFXbEOYxddCNG6k4W9rMi2lREO2W4QEdzinrErbJo=;
+        b=i0gFxs13CvvPoGV5sC5hUtloMsolcWvzy7ow7jyp+UMVKTF+352aR8dgx0QfEWhy8d
+         OEKSAbuvfTQZZrFI2nMMrI7bt3rhO4SclfDMIx6gFVp5b/ibkomwkGz/cnMavt7ALu0N
+         O1IwJLGT564tNM4kW7ANaDwOAGjS9NB+xVxURFzwWRcz+JH6hmbDoncojXxo2ELh7/by
+         bfp3RZpqbJ3ZxLUqnAVT1A48S2Zm7eoALMsslmOnJfA1zpDpeHtZF4DpaA7+97w00KWw
+         1Iuy66tATuCkueED0GmxC/EhZcNRsI0R2EccWdU8GhTlKdBuMVcNaUkFv6sC7Cl8VHxX
+         pHAQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=iDWFXbEOYxddCNG6k4W9rMi2lREO2W4QEdzinrErbJo=;
+        b=TaMGyaBdMGLhf3OUPLlDhGwRuacEplcoSa123S4cAdnPXo35JnnB4gedLBMfHNbub/
+         udoHMrWtZB96xFmJW7+WUqtwsV2E6Rcucj6N8zly9alG5Dv8q48bkDC1fFrztK1XoUC6
+         CJJ0H/Hk5CV37ZeB/PJGbqd4f6XQ3mgJsMObVFNqlC5rda4IzgCbAcu/swQs/behTJGq
+         sL/jIeQgS3c79Odfl6Vt+LtuZX6bSI/rrBKJJ+pUeMWIY5Vb6SZYbjbctb62YqZ5VNHC
+         Vu4azECI2IayH+Ggcs9cobmnccDIEFWOflq56rsd6T2iv2Kl1VvOhXXFc1NKpUUR7/YK
+         bRWA==
+X-Gm-Message-State: AOAM53148c+5UcdBsS3i6FJ+ExHCU4U3Qnj/pkz26/A+RY4yjRaDTSYT
+	3phIvHSuS/7jGev6C05jeJqsyLugFarrNqh9th4Zmw==
+X-Google-Smtp-Source: ABdhPJyn0mW/iqO1Kxv9+FGtSiqjRCCUFwm0+fa/te8RF7Vl3qkIMp3mrWuORsRaczYv6pUi1O20XOUq9hNu284KVmM=
+X-Received: by 2002:adf:f289:: with SMTP id k9mr12742159wro.203.1595400461909;
+ Tue, 21 Jul 2020 23:47:41 -0700 (PDT)
+MIME-Version: 1.0
+From: Sumaiya Faija <sumaiyafaija@gmail.com>
+Date: Wed, 22 Jul 2020 12:47:27 +0600
+Message-ID: <CADdQkeS1-uvBfFxQKpB=VmUpp+mJove_-7p49=xv+VrYdu1mdw@mail.gmail.com>
+Subject: Submitted Answersheet By Sumaiya Akter Class Twelve Section A Group Humanities
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000ce824105ab021d5b"
+
+--000000000000ce824105ab021d5b
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199271
+
+--000000000000ce824105ab021d5b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199271=C2=A0</div>
+
+--000000000000ce824105ab021d5b--

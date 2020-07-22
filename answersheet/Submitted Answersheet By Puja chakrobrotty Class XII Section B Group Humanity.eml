@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp310653wmm;
+        Wed, 22 Jul 2020 00:14:11 -0700 (PDT)
+X-Received: by 2002:adf:82f6:: with SMTP id 109mr8775764wrc.25.1595402051197;
+        Wed, 22 Jul 2020 00:14:11 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595402051; cv=none;
+        d=google.com; s=arc-20160816;
+        b=wvFZvvj/VNhF/26JaZn0oJFUKvWokPeSucXLcqbZmWkyecJEUBDJVucTVBHbSdPQEU
+         b8DW2I3j27/gbfVhdzHuL7/Rszt85JPCsETisE3xRscwV3xAtdvtaIS5rsNQkfT3T1/+
+         6Vjjn7qj32TyXDgnyXQYyZVgh16gXjgTFJ4CEqTAFaQ+A3EBZ7AGj+Ck3/zZX0BjJf9l
+         0DfQIF8UvidoUBxCS7pl6LgIBqDk/3wc1U+VARiUxf0hfJKUhU+BLBSLYAS7z4elRzTa
+         vPNkTMA/wEzTbJ5XXFxKoHyzaxczbM7K5Q5m8wQ0BcA23FJRA8X+UxKjWiWCH1Gs32eZ
+         eJGw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=KfrMTHSdVEnPO7RHcNwjTKwqEq3qt43o2IIBqyjafSs=;
+        b=q54mF4zJ0XXkPyRjY9zrZaPJ0MQ7MJoU2wwXWj7y2l9ftUqFvp5SD3UwzJweSP0dJb
+         wIidHgHQVsd8L2J/EYFHdOOHRsxbB0rGf6B6lCwCQVilqmrPriqLhxKgHHPHe0xniMng
+         oeK6V7D/nh8c/TJjwcqDVIZIYnyM3bUFVZJaTvGGI8kE6Rp67gokMS4IfJ5hEgg6+X7u
+         rt9jyE85gi6WqyYctlUcGanl+erTUsRdp1p6jt2wMsyBhHSGFYf+htEv6Ca1KD+0aUSs
+         5EskU5G31/YZ9IMrlhwYlCXyFa+WB56AqRlnAqfuRseR1a5Lz0fObYY1h6itd0hURrZ6
+         P0fQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=Hc6ADuWt;
+       spf=pass (google.com: domain of pujachakrobrotty@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=pujachakrobrotty@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <pujachakrobrotty@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id a5sor3047942wmm.0.2020.07.22.00.14.11
+        (Google Transport Security);
+        Wed, 22 Jul 2020 00:14:11 -0700 (PDT)
+Received-SPF: pass (google.com: domain of pujachakrobrotty@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=Hc6ADuWt;
+       spf=pass (google.com: domain of pujachakrobrotty@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=pujachakrobrotty@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=KfrMTHSdVEnPO7RHcNwjTKwqEq3qt43o2IIBqyjafSs=;
+        b=Hc6ADuWtQ32owuuflYZ0gNX2Inv61s7JvAg8YQYBi9sJbK7tR4WkcpUsIQWV5r6Qf+
+         gSIaTJ2n9KkmVRc6Z5T9d7W0uxBOxns3Vdby3y5qRBpN3KgD+JO520gnV1fwAciJI+uS
+         H+wjEWHg1y4fmKUOZfJ1iBjZdUTEgwg7Uw4l06DMI3NWuLqQISyR0a9Wy8j0yMHQ20zy
+         WwdSCoAY2YHa9irlIlZLBUh4rUq5m9EOrAjFZDrT052ajE5vFbHPfbCCTJW3eOgFIOK7
+         SohnaGaXowExOCALuoZZswyboQ53H+7BNg76i+aZHm/gLYER5i6AvV/ZuXcp5DAkk5bX
+         BW1w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=KfrMTHSdVEnPO7RHcNwjTKwqEq3qt43o2IIBqyjafSs=;
+        b=WW4ZUN7A/klS1DnzEqde6h4lhd0XbzlZdSuai3Yp2EAmJcF7be1EOUZtf8AwCB4o4N
+         /kEAL4qgBP4WGHBrb+bb5X4chMhBZalBLFpG4tuReMoCJaHcJnKqDPmahgqSmFAqBdjQ
+         t0kDxyWBOyvml4x6rPi2sdiD7gnfLeYLPwCBuzg3zMVNsRK4hyIg26p/SXR5HSjv/Dz0
+         ydoe1CHLOZ4a6/DvB/QgkQ10mLuvlNrDLleSmVL0VZ5foJgxqAPhSuRXhDAEFytUR8zR
+         NJ1BxeMV49L9QaIbypChSY6B9FBP/zrKYxrgUmkarS4R5UPBdm/MOfVQCi6miF/PmKky
+         NO3Q==
+X-Gm-Message-State: AOAM533vaDQSeSMQs9nCIGreoKCdpqFVsuWf0Hq8ilBG/pqX5htA1oEO
+	d9VSXlX/uVr3u7sygAFNrqnDUNN4UcZ+y+oFTFHIng==
+X-Google-Smtp-Source: ABdhPJxCgbpiHmhG0AnyWWntGmzV8GfBzL1oYgLmHBLeb23btaRx27o2Iwv+cSkpaNgf/EUUNMV/P61+S6+myeAFau4=
+X-Received: by 2002:a1c:dd86:: with SMTP id u128mr7112721wmg.131.1595402050722;
+ Wed, 22 Jul 2020 00:14:10 -0700 (PDT)
+MIME-Version: 1.0
+From: Puja Chakrobrotty <pujachakrobrotty@gmail.com>
+Date: Wed, 22 Jul 2020 13:13:56 +0600
+Message-ID: <CAHoX9_sLgha4-fe81OyznwV-t4d+KG4tY9-oP0pgLe7ogxxYuA@mail.gmail.com>
+Subject: Submitted Answersheet By Puja chakrobrotty Class XII Section B Group Humanity
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="00000000000081e0fe05ab027c80"
+
+--00000000000081e0fe05ab027c80
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199222
+
+--00000000000081e0fe05ab027c80
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199222=C2=A0</div>
+
+--00000000000081e0fe05ab027c80--

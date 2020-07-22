@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp301353wmm;
+        Tue, 21 Jul 2020 23:59:05 -0700 (PDT)
+X-Received: by 2002:a17:907:2489:: with SMTP id zg9mr28189022ejb.48.1595401145356;
+        Tue, 21 Jul 2020 23:59:05 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595401145; cv=none;
+        d=google.com; s=arc-20160816;
+        b=PDc5tf/W3tqIq9TPXUSj6tQPtCKCT8ukXbiskSKOZqWIJ/8/W9BsSrwz5mYucnoLfc
+         MOuQeNA+8v4bmsS8RODNhiqZiQW/9TrnJywjkvQ6Cnevcpwp1093RsRUonAA3nPBNpnL
+         ctHvLRF+bbKxX+Hs1PDFQ/8PzJ0z2Kug/LS3f6J0r8Q2R4pS4AJFwQKm3XSrCcS+8cLt
+         XqWgWHoGN8CAx9XQpx8MkIWLZRLXJ0Zfu+GnhU7HQvAmZWJVmiC/F2C9L5JekA/LUGah
+         DdPbnuiX3aPQxPQchYWCnIWxhdTJ7ojuZtqBJbAl2Wi/Bh3T8TPQOIxRxhN1xbMlIwfs
+         awXQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=WHDfn8BsfR8iPGdElBqZxxbrXJkQ6QQxH/HqkZxsO8Y=;
+        b=wqlXGqOeBFcIDzeLAsKSzZv9v7a/sAhDp5O/n06sgnOkO1czGcSsw3OlrgNfI7nh2x
+         PcoyGeFdcUZERRX+DO6laUBOWPzFdz7rA8sPSJfvDAtBQ68ozz4U46E+PRlXj59bjeZ4
+         cw+kYS+CjXpnughxaB7u0ukV2W+u42Lx89+Q4qx+6ZbW9pw5BlZ5x+qMcThQR90njT8k
+         Fw2EZOw8QJX0wyaxmO7yvIsnwpJ+Zn6pi90HIIcq6Nw2zR7/9jBb/KQrb8qjWwz+x/RY
+         /V4vPmoXcsL7ZHlMPIEG2b+97GPsNq9c0CHGilZV8PF1WDrUzjyLguMT3UjuCGTRVkRj
+         aE/A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=M77Kr5Ad;
+       spf=pass (google.com: domain of moeenkhan2308@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=moeenkhan2308@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <moeenkhan2308@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id b3sor10991697ejp.77.2020.07.21.23.59.05
+        (Google Transport Security);
+        Tue, 21 Jul 2020 23:59:05 -0700 (PDT)
+Received-SPF: pass (google.com: domain of moeenkhan2308@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=M77Kr5Ad;
+       spf=pass (google.com: domain of moeenkhan2308@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=moeenkhan2308@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=WHDfn8BsfR8iPGdElBqZxxbrXJkQ6QQxH/HqkZxsO8Y=;
+        b=M77Kr5AdAfR1QXC5In+E+Bd72jY+MvVg9ya7J9jINKOEEwPRcptQy1gRrjjKcI8KrK
+         pOCOFhXxLF0K+T6HImJo1Yf9GKVJdxTMH9A55oK+60f8DS5E2Qe6AOuqDgmjnH9JRzxg
+         ZRrc3syuRPhS9eu4gNLEXBl7TPap82XtfyOddzeDK5Y+xjrNmj2zCv4+HzaOIg6QURyO
+         TKEy0M1H+WBeFQwx91YKzjgM2euSofT+v4T3pISQHQkE9yrhhpVoHub68sm7RMBONn3s
+         rGCg+cUItu2OMsZmLpqsqNjkq8xBcN4xI1Zl+hBavrFZ/Ed41YVp2UhXoM4qot1Jzhn6
+         Ss/w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=WHDfn8BsfR8iPGdElBqZxxbrXJkQ6QQxH/HqkZxsO8Y=;
+        b=EAM/A9on60KaHPh4liiM9kRKTFw7eHJVms/deqsSU4yn4dsVLYkk77+JjY3/UDqIOo
+         dn7my5GsbCpzqHVBYiymBG6GUIWZnFAWZh2rzPrrs+YJRTfL+gj+2DBOJcT+cXquEjFX
+         IWVZe3J/mK72NqaMHGjBBYwPgbB+oZWZvk8ajir0UrwTIA2l4mwqOqMqDvwZrHD7rsFj
+         XFzJqRMKT98G5/2LqojR9iPRVHCu6SuolxiKY6mcuNWrITsL7nANjQe4JyCm9vMmqRhO
+         M24Ys1tmmcKfLVKUgqb+a9kcux7sENFCUBKj+PSBaOsg+mqno6bu4dMIceBQNWRSgvyj
+         Isdg==
+X-Gm-Message-State: AOAM533EDuZNGEC4PeU1iwTKnbXJNMYjaRNqQAUWxie4mbJnmY4xqg5e
+	wQyB8RMprfGv+eu7fJe5lKnfVgaSr/bl2I8ozUeLRQ==
+X-Google-Smtp-Source: ABdhPJw1AREPcFpAEM6yO/yfVCLkU4KV5b2K3aw8Y65ICCc9nTGJVBoTTyT5v4jjSGYprtVwJrbWScybSqlpFBdiLAY=
+X-Received: by 2002:a17:906:b0d:: with SMTP id u13mr27992408ejg.342.1595401144919;
+ Tue, 21 Jul 2020 23:59:04 -0700 (PDT)
+MIME-Version: 1.0
+From: Moeen Khan <moeenkhan2308@gmail.com>
+Date: Wed, 22 Jul 2020 12:57:03 +0600
+Message-ID: <CAOvL9uoESDEeDRRXfB=NfNBoLr8vrLfxK7zJqbdVLxBbsjrXBQ@mail.gmail.com>
+Subject: Submitted Answersheet By Moeen Khan Class Tweleve Section C Group Humanities
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000846afb05ab0246d1"
+
+--000000000000846afb05ab0246d1
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199044
+
+--000000000000846afb05ab0246d1
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199044=C2=A0</div>
+
+--000000000000846afb05ab0246d1--

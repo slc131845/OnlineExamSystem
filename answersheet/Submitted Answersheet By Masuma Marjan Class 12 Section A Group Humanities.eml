@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp302943wmm;
+        Wed, 22 Jul 2020 00:01:40 -0700 (PDT)
+X-Received: by 2002:a25:1f55:: with SMTP id f82mr49030766ybf.103.1595401300677;
+        Wed, 22 Jul 2020 00:01:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595401300; cv=none;
+        d=google.com; s=arc-20160816;
+        b=SF0k+hwiAb2Grpq71tpdVH+TcPEtTSEGymo4lpE9utxgnhmJSwvU+nf+rbxC+E5HzM
+         BJCFMz/i3Z1wkZ+UAeU0n/FTFSNy0H1BuO5Ix5xvQd6UbTXUZanrcBWVI6fzGxWsXSPV
+         VLbOs+22mBJb/5/LvH0mxdUrfjJdqwgDilyO5UOXuFz77J5A0hJf/LpXE+mIiMM2unmG
+         tTRp63hMCilCiq2FIyfNix4m6zHRgavUFfJRuK0s//KoOGOrHWKXQPbJRe2iLZZU+217
+         FlFSFpBDsXMM5NpfvSvKCnZ//dmg50bLBG3B9m8nSw91+CbYGq36rS8kjV/pQcoA/pbS
+         VJ6Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=eqgvURyT3D1P+ua83CLuhuLiRZT6/Htmv8rLLy0jOAs=;
+        b=aVI0NvqV1GK1V5TRBdXf6lwX/NVNqIQOtqFlF1llT33cmi8rYnHE5HMCFuzICsgywZ
+         oWcRiPkEyp/RczdOouOM3qShOZ5/WJVaQSpxbhqwwTnzck2LaEhAdqnChaC8IjuWsbtP
+         HhD2wobzbzvSOnoJy2IjZ3bsnpOVt9SrytyKLqp/STMHZRjaZHZj7SEdpMRzzdIx58jK
+         wD4VLE917IesRJy5J2Wdna5CohNawrhFnV0Z2KuCnvKipIXNktoIPrjUeOR/z3nHa3nr
+         LYwZdL/bTeoSwUWmeAGuSlEXr/gvnbpjc5N2eRr8rL97LWY5S/8/4cDGp7P04JojivjE
+         NrBg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=gN6LrlD4;
+       spf=pass (google.com: domain of masumamarjan875@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=masumamarjan875@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <masumamarjan875@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id y10sor16606625ybs.99.2020.07.22.00.01.40
+        (Google Transport Security);
+        Wed, 22 Jul 2020 00:01:40 -0700 (PDT)
+Received-SPF: pass (google.com: domain of masumamarjan875@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=gN6LrlD4;
+       spf=pass (google.com: domain of masumamarjan875@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=masumamarjan875@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=eqgvURyT3D1P+ua83CLuhuLiRZT6/Htmv8rLLy0jOAs=;
+        b=gN6LrlD41d+W31DCln8+J5y8S0nw5xRDI1LSGC9nBDnhgrBXIFWGc0rY/nk/rSiosQ
+         2VTSjiftUvQgyoVyfsIINixYaNdYzKfQAWPlTOZtTMrVuhbk2N4yK/I6UPjtQzFFAo22
+         CuZdG5uWPNvTtZOhk/EKUrnUMeSlAc07NLAJiPlogd1XnpucBuLVuMLw9XggUH6sjEms
+         TEjpSid17xNn67F27TpAQgciMp73+QNMWE85zBpJ4yDNQEqeY7ooIjSe+eFHR3ElX5Do
+         GJf+JluItD5PZkX8Ra6Y6OrjoLV4sX5JSyWYvvvpdw4V5pwdh2nXJINVSMk9EzjA15sx
+         EFbQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=eqgvURyT3D1P+ua83CLuhuLiRZT6/Htmv8rLLy0jOAs=;
+        b=TcCT523JwzVfN/GukUR9jZJ3rh/560J+ClsZii3Y/VEFsONcNNRE0EaTRuD2GWGOs8
+         vxRk8PNOfovwSpXpWPQF7vQm/gAj7QcmcVTqBeWgldhsnkx1rkvtI5ZPTp494NCrSTuG
+         Nz6+FSuVcmyjjHSYqfGKFMyupKrbXpK/OLzIO6Q4g9g3SyEe7hILyIpBXxt2ft1JV5zY
+         O6k71EUDFewU30lrIpAyCKCcIaXBRmP6LgCUvI0q5Lhtu8UhXm5WSGX5vpcjlc0ejsLH
+         RvqHRWhe0zJNoiapDif0LiCXRSnmblS5sLb1qu2Nr6uf/MfDcTN0JydmC3K4JuAguTZn
+         EsxA==
+X-Gm-Message-State: AOAM531gcrXmNFq5IMw7R4sb+Fs8djlB+KYrHfCohiZzO7CEUiPHh965
+	PpjMJiF2OyBefQZS2MHAhWhQCtNnNt/ktA0tx0QuPQ==
+X-Google-Smtp-Source: ABdhPJyDiG2OlyNbypeSJlVSGtqQuyTm8gsVRssP9ERyAaM7klFALiJpvDjy+6EctgopBoEEro5byuHmWJh89yBmQeM=
+X-Received: by 2002:a17:90a:110:: with SMTP id b16mr8393694pjb.235.1595401300158;
+ Wed, 22 Jul 2020 00:01:40 -0700 (PDT)
+MIME-Version: 1.0
+From: Masuma Marjan <masumamarjan875@gmail.com>
+Date: Wed, 22 Jul 2020 00:58:34 +0600
+Message-ID: <CAC6NhG0TvKz1Y4midpJGYXcgPtW-S+JhNHLhc4J3Z1Yj6Okx2g@mail.gmail.com>
+Subject: Submitted Answersheet By Masuma Marjan Class 12 Section A Group Humanities
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000c52ba605ab024fd1"
+
+--000000000000c52ba605ab024fd1
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199247
+
+--000000000000c52ba605ab024fd1
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199247=C2=A0</div>
+
+--000000000000c52ba605ab024fd1--

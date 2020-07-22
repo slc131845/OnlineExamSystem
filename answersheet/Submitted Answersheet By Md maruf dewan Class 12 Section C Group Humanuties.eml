@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp298670wmm;
+        Tue, 21 Jul 2020 23:53:35 -0700 (PDT)
+X-Received: by 2002:a9d:6c56:: with SMTP id g22mr29694791otq.280.1595400814919;
+        Tue, 21 Jul 2020 23:53:34 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595400814; cv=none;
+        d=google.com; s=arc-20160816;
+        b=LFUie52ygElrIJ25dy17p83I4wYu2eyF0lGCVuKhoOUFXd/MUQGHR0i3UzXDCgSE2e
+         jL5IUu8H75a5gtBHx7f4hisYr5TDn616EfJGBGzjcOel+9LcsWS/2qubSoYKkT7TzY5Y
+         Qu6ZYQiJ3KURVmzfc6dCLUpnZlM5UY6OEX90dVcN1Nf3Syct8RSsSsoNMTJ5+nqUolt4
+         mwi46V667JENU/HXMqkbijHGv19netRFe196qc8+iXMzMdNq1aGM9/Y5cCnsM5uicUyP
+         1KL65Mx6HcflD0doE2xVjgSL8njZ7KoS5L7K9OpGRIcKFYMVUem9GYiZqQSK4KATbXZ/
+         TPwg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=Qi8D6VzvoBvXz5cBGfVKEbVm+1iIK7PIjn1qZa59pwg=;
+        b=hBbKPOZNqJYIvlcs4tN0UnEAzXh+EMvlccyEzyuioxc9Zq98oIMq8bRKTdcmTHrO+8
+         ebf3zYVtTpqf/j8O6109gE97BDYYXLoM56yp+U1bV/74I/nQgse4C+G4as33X+8bl8HJ
+         +jFWpry+jZXgEGfF1toqZVyuCjqHMyGmMRqj0GLvy3MVeMK7nDunajh2AnJxuTXwa3/P
+         2WeEkZTJItoVxxw3nm+PN25VqiRp7tVgd7gGFXyvx31DPWvR5fcFPotLR3Sy8BXCrlAU
+         qbg0l2UNfa0OuA3oxZpCkctGtJOGZ2F/xIyRazWOg7iwPKRrnqjETDLWPlymu1JlXQB5
+         gDfA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=oviCUeSu;
+       spf=pass (google.com: domain of rmd387353@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=rmd387353@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <rmd387353@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id w3sor17823866oiw.70.2020.07.21.23.53.34
+        (Google Transport Security);
+        Tue, 21 Jul 2020 23:53:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of rmd387353@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=oviCUeSu;
+       spf=pass (google.com: domain of rmd387353@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=rmd387353@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=Qi8D6VzvoBvXz5cBGfVKEbVm+1iIK7PIjn1qZa59pwg=;
+        b=oviCUeSuqzac6kITmsyK+DD1eLhzPGeWQHTRmEGBNe9msiH6LQhKTinTiZ05CDM6IW
+         yOBU6SI02WjZN3qq3gbv1F7N42vPSq7sNLkguDm7dcyfoM0d1ZsPUTE6W2eRlQcdY/Gc
+         YKDGAE/57mtADLhYMe1KIITdvC6MLPEIDnONSVuH0E4/8EXeNUGdHIqarvvwjOahEG3H
+         T4gL2d9zPJbC+IjatFtg/vVSpZ6n4d8LDtyWLkINk6CW6ab5WGO+GMTpJfNGq3J++v88
+         r3qVqOgVQM5VF1KMJuFMym6AmhRBMrLGHeCJtLdRFdYUDx3kaV6dXUtVB7XgUzryVMzj
+         7neQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=Qi8D6VzvoBvXz5cBGfVKEbVm+1iIK7PIjn1qZa59pwg=;
+        b=nFGc4zesJFJ/Jq+j/znvvp4ZLIp/4wHONMN2IuJkigVqS2J6qckJpG2hFubEHn6rFL
+         +y5OyQ17CltR2cyAibBnv+OCMAmu3XnxBSDCtR9M9Y5XY+DSClJ2Bhecp6EQCAYZ6ZVD
+         kfD+cyIb6EkjZWR0MaykX98PrE5hhFE6aWKlwVyEGQjtSL4HMtBpKvSs5ZVoffOvmGyM
+         b+Nz2qk5NIAI6W6Cuu9mJeJzibG96R4jw+tZcPpSgezeEFEIDsCCd4Ijci8qiV78SNPG
+         pP0JP8ycGHwF+kjG9+U57vAjz+6sldPnimT0jdHp0mxLu8VthWrSIVeYhJe1ak0CSaPB
+         uQWg==
+X-Gm-Message-State: AOAM533QxbKMBLJUTQZKmB07qzqk5PECpRb/82i579BZ/jVSe9iefpVo
+	jWUVsQcytQPCPrYk6i6YhnM8U/fpCLgBFA01mKd2DA==
+X-Google-Smtp-Source: ABdhPJxZJiV3sQpdPKKc52He62ComevUZNtnfUj2VX+e9rYM8K4ft1KbdmYHvr/lKUEKNMyYO0KiIAKik1JzDsNXe8Q=
+X-Received: by 2002:a54:4403:: with SMTP id k3mr6306401oiw.16.1595400814350;
+ Tue, 21 Jul 2020 23:53:34 -0700 (PDT)
+MIME-Version: 1.0
+From: Md Roman <rmd387353@gmail.com>
+Date: Wed, 22 Jul 2020 00:53:11 -0600
+Message-ID: <CAFVp4b-EGS1phk-Sj89obCOtiYq4SwdPh4SiwbBRF6hn_jWMpQ@mail.gmail.com>
+Subject: Submitted Answersheet By Md maruf dewan Class 12 Section C Group Humanuties
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000d0532705ab0232aa"
+
+--000000000000d0532705ab0232aa
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199013
+
+--000000000000d0532705ab0232aa
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199013=C2=A0</div>
+
+--000000000000d0532705ab0232aa--

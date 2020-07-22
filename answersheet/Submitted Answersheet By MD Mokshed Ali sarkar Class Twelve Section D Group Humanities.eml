@@ -1,0 +1,95 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp293627wmm;
+        Tue, 21 Jul 2020 23:46:35 -0700 (PDT)
+X-Received: by 2002:ab0:490a:: with SMTP id z10mr10984597uac.115.1595400395449;
+        Tue, 21 Jul 2020 23:46:35 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595400395; cv=none;
+        d=google.com; s=arc-20160816;
+        b=fs5a7FisT1yaWIhGoy2h2hpBbQYv90HKIVBqniFI5BR9i8jyf3llgByUD2ptSuTgzx
+         zH/nMB7sbrmMQpB/qYtVftiP7SagQD/AzRfVMeMcsrVfuyXxYGYGwCK4Hzv7vkU3Cud5
+         neChedgc7Xy6oYzHdP0+1j6GLzkNi4A6lM6AaUwD/cnFU3U/66JWGmJebSsFTeto9FzH
+         j5rFtCckahXzRLYATSzKgBjQD5kJAZEPHTMdE28PHedQ5XobYhjFBwAFLxVkSKMoUuVs
+         9vjrMuZxhWMKhskhXPEBmNdwO5OoSe2Kf5NRheHWRyC6uVq9QwqYGDek/BeMK+6u9b0f
+         o6xA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=Jx/jWHwvHtJ1E/wZCkXUmvW7lsvT8d9jywOMmMb1CN4=;
+        b=m8dJVVDKsdsiopbuwUlCGDt83qczrkE0SDQl1Oj6EuzwTUaAo9PuS5Hl2GraCEQiDa
+         T759FHnKT3ec+YyDpPbVJT1ggqOB8ZMuq6ZLvONIgVv+G9/Clx8Cp9rgL4bl7GiJy2Rq
+         MuNy98bokvBnN7ZUBR4Z2Y3OjLkoyucRpX2cxwHBUvSLSXGF+o5Vg5QpE1rcLyrCVLha
+         2VMpyI+tB3LIctbKLDIbpR9HC9rffChrtuQOS6oL+PYRL0S2UfqD3sYX40yrX1wtpeCm
+         0QnV0b3JK6VJBzPN6ty6S6PrRGXUzoIKhGMnscVoBGeBQqoDApZ2ckNRIp/jH1iWMpI+
+         6iTg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=Kd1CBHRZ;
+       spf=pass (google.com: domain of emonhasanbd11@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=emonhasanbd11@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <emonhasanbd11@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id k188sor14033379vsc.58.2020.07.21.23.46.35
+        (Google Transport Security);
+        Tue, 21 Jul 2020 23:46:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of emonhasanbd11@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=Kd1CBHRZ;
+       spf=pass (google.com: domain of emonhasanbd11@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=emonhasanbd11@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=Jx/jWHwvHtJ1E/wZCkXUmvW7lsvT8d9jywOMmMb1CN4=;
+        b=Kd1CBHRZYwTaGiWcDciX2ewTI+tjB7qikMOSj6DMGZGndNVgckv18jzQTTpHZ0X3k8
+         wFeRelRyVvEjE2RolDwVNyvePrubi/08nQlITmwSWRygiUZt2f03bU/qDX8m0yPrBIxB
+         lf2Bajp47C8PsZQePdw6guI6fXj/LPQ55F6exrzEJuPF7m8+h6lyqrLT2ZPfhpALVElb
+         ReqoBxfIa/04K9oLUhk3uWMPKP0XwN1/dl4SKzMxO7GYrqA0barBHBdwleI8TsVhtkXo
+         Qa3E8hDweQnFcoYnsQmLlIyaGQiKCs/lvdS4F+idOPk0J6Yy60iwmE81AjTY79s3m/lB
+         uFbQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=Jx/jWHwvHtJ1E/wZCkXUmvW7lsvT8d9jywOMmMb1CN4=;
+        b=EdawDKTMxoPGuqedMUdXTk3N+DsW0T3aW5Bny185E3hMrI7HSrSWPYL1uyJ28tWXDu
+         SfCms/6fKlG+tv1EcroJ3Ms8GD3yn47BNGmfZ8E6pi6PbtG/rAXHewFErlD8HJzwXj5t
+         52V11k73g8SBxYoPmNwpLHScAtgVLyrQpCtsvgNTrdUnx4Wia6ek5c5ohGn+9qom4TfF
+         k0OE9Kcpk/3NDFViaRUkV4vn2oKCG+RQbHSSahy3P5sABUUQAUQznn5mZvBIzuix63Ry
+         fGqGIkrRI0uoydwjotLS1OBxS2BHR1AlflRJBb8pyZa2SmBZpuXS9f/uW3WlXqPfKii+
+         apSg==
+X-Gm-Message-State: AOAM530zyPCi+Vks9rAHjTbZPvMAs1YHO7kRZfjt7dd/Qdr6K2pDdXv6
+	apLBBO0fp4dlN6uCKzKSaY8YFBRHwD3Nq9sJoKuwtQ==
+X-Google-Smtp-Source: ABdhPJx7axWRKZWs1vvxLmO7EWQtl+yalLzQZBNoPgkgZDv5X4IU66KzcceEbEVpdXBWLw13IG8GU9qEfA9x+dnFRC0=
+X-Received: by 2002:a67:4c2:: with SMTP id 185mr23047892vse.68.1595400394788;
+ Tue, 21 Jul 2020 23:46:34 -0700 (PDT)
+MIME-Version: 1.0
+From: Md Sinhat <emonhasanbd11@gmail.com>
+Date: Wed, 22 Jul 2020 12:46:21 +0600
+Message-ID: <CAJ6FQurCP03BwFMTUmnsrck6YYJAGZsryyG9NXhiOy+s+0X28g@mail.gmail.com>
+Subject: Submitted Answersheet By MD Mokshed Ali sarkar Class Twelve Section D
+ Group Humanities
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/mixed; boundary="000000000000cf792905ab021912"
+
+--000000000000cf792905ab021912
+Content-Type: multipart/alternative; boundary="000000000000cf792205ab021910"
+
+--000000000000cf792205ab021910
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199063
+
+--000000000000cf792205ab021910
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199063=C2=A0</div>
+
+--000000000000cf792205ab021910--
+--000000000000cf792905ab021912
+Content-Type: application/octet-stream; name=".device"
+Content-Disposition: attachment; filename=".device"
+Content-Transfer-Encoding: base64
+Content-ID: <1737545de1231c9c4041>
+X-Attachment-Id: 1737545de1231c9c4041
+
+MmRjN2IxM2Y4OGZmMTJkNjkxZWQzOWRhYjIzZjQwNzc=
+--000000000000cf792905ab021912--

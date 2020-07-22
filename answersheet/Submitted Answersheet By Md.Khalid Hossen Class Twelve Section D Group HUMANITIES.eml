@@ -1,0 +1,83 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp305264wmm;
+        Wed, 22 Jul 2020 00:05:07 -0700 (PDT)
+X-Received: by 2002:ae9:f002:: with SMTP id l2mr31721080qkg.437.1595401507124;
+        Wed, 22 Jul 2020 00:05:07 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595401507; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Hy4ivDcLs3/1qsooN8B/KCE5DTKsxohZykelO97sFomTxuuUDPfaxdh0KxqzPtqfyR
+         cZqyDTnozhYFXige5cPc+EJcUC/g/PhQ6xqbnUYSM8dXdxlOC7CyOK+STG81kRcf0Heb
+         +3z7/ClOU2NKOtltBpzlqsQmCE2pPD4SEU3NlUiurCLSs/35Cdt+xQw84jRZSXmiWmQf
+         ygbalmEjyASx8wde/b13h4wTEW3aG18NzXC6cSbfta6m3nxpJwJg+MkC+VUJQOds7om4
+         CeRgGbuW5i8OH/rdzhsNJFHjIQKvOS1sSsOleL/5gvLJKaPkk1Rtsby6bKz6zpqwhOvw
+         vNjQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=Hk7CZ4vjBMEdB0XVl/apbMq1NRYEIOZ1qrPUDe6IU7M=;
+        b=AJX9fI2AFJYf3RVxWZf8BW5yLdKvqprt1bs//qnWwLoWWSinX3iZTJSw37CDGSysyh
+         8tBAcxB3jiXeKrT9i+PoE2c76nYs72wKq+BCQ7HcdVvoXkvOaJlYL+BgD6n8QVBeHjJs
+         Xvrit2j7iisaamzJ3pKH3Th4l8JNiH2xb1SZwWFEJlXd0T28pVKLvXunU5p0YDZlBZGu
+         mFe0daFw4ynPiI1pBz2bC+9puckMUjSvTJmXFkXXO0xWtWwWBIN59im4b3d71DK9T6fQ
+         DihlODCjyrJFybWJko/XyBTZBL6nTooRylD/ZlibLTr+eNvvWMvllz9N3E+54rQ7wKiU
+         4MTA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=Xt0Q7RmR;
+       spf=pass (google.com: domain of khalidhossen535@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=khalidhossen535@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <khalidhossen535@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 67sor3695540qki.131.2020.07.22.00.05.07
+        (Google Transport Security);
+        Wed, 22 Jul 2020 00:05:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of khalidhossen535@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=Xt0Q7RmR;
+       spf=pass (google.com: domain of khalidhossen535@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=khalidhossen535@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=Hk7CZ4vjBMEdB0XVl/apbMq1NRYEIOZ1qrPUDe6IU7M=;
+        b=Xt0Q7RmRhv9V61kmh080IpkC6NZt72jXuDnCrSD8o7pzv4uaX4rfDdp3n7caeedzrB
+         RavMyIRKPTwdJh2TYkLe3kngRGsBLlMGzJbxbvOzj6NjOUmlgUi/oElqj+ogS0v5APig
+         UbFGTvvdpNyQGwRHkyjcFmk7TECZml57lRWkBT4bIdzT+F7EaR+KxT5Q1vHZ9oYIqKQ2
+         CIJbefX3t7Z0XrOuIKmAaVQlDRhZVI1zSmDVwBS2ZFOa+Qj9OufNsFy7MpJ1DWPMb4ek
+         0vWfB+6kxxaAk5nXy7ZUDRuJWwk6QcIwwKcLoWRBFRbfDUMdyBZBiS+4qegNil0jrcY8
+         VMSA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=Hk7CZ4vjBMEdB0XVl/apbMq1NRYEIOZ1qrPUDe6IU7M=;
+        b=SZVLu/TtsDwe8ktuxdBaKuWWtLUcfzWhid9j2Q1T14EtEZYQj0z6A3pwuGWpPMc+zG
+         +g1SP26jiM5I39apYn9iNeAyuhyvmLm93km3QyezQMYXLoZpFyFr4orLb73oA2KY2YMC
+         +zlsKYRcT3F7eCwsFORJx1Gc/yiz3GZ/rzT8Zk+KmHz5OeBHW9xGXgiybtu2JVleV+BN
+         HXa+CgEIsaNxGKqnfSPIYb9OQsXFA7JT7vvnvEW2AFEuY+SSpxXzIFfhjG9q7dPkfbdx
+         7kgOku49uEyLoECuS0j5x1lRF7WiuVnoNBSfGr0irfId/LJhIVFzaYq3Igq83CPZxtXX
+         EOhw==
+X-Gm-Message-State: AOAM530eKaXAuHn1CSqpl0J+8KOI6ZQVNYgwIMWr/52aYAHnZwlST9P+
+	wG1bPHgRQuJ6qh+xOPqQCkjlIkYE00rjew5OoC4NwQ==
+X-Google-Smtp-Source: ABdhPJwkut3CzBDQLLB/oQXCL3e88APIF3Ru1hvamOokngj0y9zrie2+Nx53Bj23nH3AmxmAVcudZHckcT2/VRoKSc8=
+X-Received: by 2002:a37:9c08:: with SMTP id f8mr9746431qke.454.1595401506643;
+ Wed, 22 Jul 2020 00:05:06 -0700 (PDT)
+MIME-Version: 1.0
+From: Khalid Hossen <khalidhossen535@gmail.com>
+Date: Wed, 22 Jul 2020 13:04:13 +0600
+Message-ID: <CALarKFt=gCbpH1bbTZz0Y1BqVXWB3qERx7nyq_B4DQ_hr7sj6g@mail.gmail.com>
+Subject: Submitted Answersheet By Md.Khalid Hossen Class Twelve Section D
+ Group HUMANITIES
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="00000000000013e3d405ab025c77"
+
+--00000000000013e3d405ab025c77
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199016
+
+--00000000000013e3d405ab025c77
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199016=C2=A0</div>
+
+--00000000000013e3d405ab025c77--

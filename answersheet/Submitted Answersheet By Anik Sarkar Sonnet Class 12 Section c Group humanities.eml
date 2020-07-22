@@ -1,0 +1,91 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp296776wmm;
+        Tue, 21 Jul 2020 23:50:29 -0700 (PDT)
+X-Received: by 2002:a17:90a:32cb:: with SMTP id l69mr7661530pjb.205.1595400629233;
+        Tue, 21 Jul 2020 23:50:29 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595400629; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Jbj9++B/5y7M/lWgJRyhDjUCXh8LBJ7slDjMOe+7WMowKsMIK+J3kNsp5VsuctWy0W
+         YbY/g3VVGFLE3SLDisv/xth5Cys8O1FagpcLdIlMP35Xvw1IjsCGYFuUmJh/eNFQjncF
+         OaumN368+1G2Lb8Yc95ejtKu4cNfgnpTTGmYK2Z6K2KX/41gYqukCU3UrKkN0izSbXvt
+         GgHpvzoMJMxc0t8Zb16fOCZ73NMBku6rpoHqU6oZPfRk56OMOFnW3Y/VFuyA2jRp56iM
+         MBHjAWobIDi9N8ZXBcrSBwWvGLOpdzdy26ZBal37tBZuywQ/XEB2P5A+72VO9wQHSOAg
+         UDCw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-language:content-transfer-encoding:mime-version:user-agent
+         :date:message-id:from:subject:cc:to:dkim-signature;
+        bh=xbklWUWB+pTb4PUhVaDkFrqQZ8W8aVyq24PlkW5Y6lM=;
+        b=cJIFm9XIIzdHKYM/GEFJEUnIf5TQBNhuSqj2kBbMmK5e7VF3wvDlTi1t5dgnX2n0TH
+         4n1AnARSRrYvBpRQqGy16qcMd6BAavcQjZNpzsZnI68wccumrA+Hhg28IyvKiwTS2Osp
+         H+OotfkHBMYSa3q+Mj/QQ5JB28IMvvQTWcsKuqsSGKaTm+pGzCvD0xH4diH22yTtJzYU
+         9jEW1Plc6GRobp/hsyBcXgy3Fm1VeXQgnv9wjj/GV/ijU5G3S9P8YYFsUffN4TMM3xJW
+         S/GX2LouSMc4lBrRUGSqOCnR1KviTl678JSZj4j3GNuOBF5S8F0qfPcCHSkf6MtSkFlI
+         BAjw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=fnUsqCRW;
+       spf=pass (google.com: domain of sarkaranik500@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=sarkaranik500@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <sarkaranik500@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id z10sor16368620pfq.87.2020.07.21.23.50.29
+        (Google Transport Security);
+        Tue, 21 Jul 2020 23:50:29 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sarkaranik500@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=fnUsqCRW;
+       spf=pass (google.com: domain of sarkaranik500@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=sarkaranik500@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=to:cc:subject:from:message-id:date:user-agent:mime-version
+         :content-transfer-encoding:content-language;
+        bh=xbklWUWB+pTb4PUhVaDkFrqQZ8W8aVyq24PlkW5Y6lM=;
+        b=fnUsqCRWXjAC4b0aAtTJxX3R6hGoUNwmexsEuuBEtU1x+KYyX6fUGiiwBDWAeELf04
+         ZrgJ/AEweCjjydnXx4t118cO9VetVGH0uOnjJMOc33M1Ffna9i6lf0BNsGIZOIISBp57
+         VfsLdBDSdgMLhQBbNALQ5DiR1soxvpsNUQQZ3RTe10oPg25jd90pZ8lnMhdPh2gChGOa
+         oxI5tiJu0Qb/IwLvt1c1nTUS6ASPHKLtrHuJ/VKspNjWf2/mMUDAQ//qTvFv6UkfVBMz
+         vrZxGX9Hb/miBg9qNPr42+gmG9HaeYEI1hjMYd0hk1xNAaKIikCpXx+tV6TdfquDBbHi
+         9wxg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:to:cc:subject:from:message-id:date:user-agent
+         :mime-version:content-transfer-encoding:content-language;
+        bh=xbklWUWB+pTb4PUhVaDkFrqQZ8W8aVyq24PlkW5Y6lM=;
+        b=uKdR9G+OiP9+dLll82tzAxxAu7SGXtPXNhIsd6aD4eBGPRKZeMMxSptjncgfwMzn9z
+         9jrItyZDW+hbbGhbjCbNCVb7QvCnj6zrkoKHaNuyt+x2Y38wFe+cxy7cSQaKhtp7PYRN
+         iccHhNcltf0pdrJMgKb7qju3OIYh8QPrtdkPiI5KZkkPP0i0RNoULiegm15yJKAG+2h7
+         xsh8FmUFZ8yvHYOZ0Jvmd910/8cb6ph+nN5vP2uybFyMFAUTnb8gomyv818KYlVS6blk
+         Fw/2csnTJyz2dKZ5hLFaKkfjhVzD+0NIX2xGkzyz0BqVekvB3hwTjd/0Pe7WuWu7JDwT
+         qsJQ==
+X-Gm-Message-State: AOAM533GPtaSLLRX9knw90D63qRES54SLbmpt1VBVD/OHDp85VAhgmOe
+	fXggCno3aZp48R51YkqOuClkGw4cQZ1V0g==
+X-Google-Smtp-Source: ABdhPJy1AWNsMfcfpjhXEcBcczTNE736BaLDYSsYDIzWxtjej+z+grxzKVx5f9ui/ffvF8Jjtv5rMQ==
+X-Received: by 2002:a62:f241:: with SMTP id y1mr27345385pfl.136.1595400628692;
+        Tue, 21 Jul 2020 23:50:28 -0700 (PDT)
+Return-Path: <sarkaranik500@gmail.com>
+Received: from [192.168.0.100] ([103.130.173.87])
+        by smtp.gmail.com with ESMTPSA id x13sm21845844pfj.122.2020.07.21.23.50.26
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 21 Jul 2020 23:50:27 -0700 (PDT)
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Subject: Submitted Answersheet By Anik Sarkar Sonnet Class 12 Section c Group
+ humanities
+From: anik sarkar <sarkaranik500@gmail.com>
+Message-ID: <430d931a-62f6-0a21-52dc-a4015c85b581@gmail.com>
+Date: Wed, 22 Jul 2020 12:50:56 +0600
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:78.0) Gecko/20100101
+ Thunderbird/78.0
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Language: en-US
+X-Antivirus: Avast (VPS 200721-10, 07/21/2020), Outbound message
+X-Antivirus-Status: Clean
+
+My Roll Is 199027
+
+-- 
+This email has been checked for viruses by Avast antivirus software.
+https://www.avast.com/antivirus
+

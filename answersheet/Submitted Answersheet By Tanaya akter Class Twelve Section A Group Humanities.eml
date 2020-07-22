@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp300030wmm;
+        Tue, 21 Jul 2020 23:56:21 -0700 (PDT)
+X-Received: by 2002:a5d:4b84:: with SMTP id b4mr31028697wrt.334.1595400981856;
+        Tue, 21 Jul 2020 23:56:21 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595400981; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Ap/B41NoueoD9ZnSSeBNk0P+qjkdPy/0ymswJkdkeZ96Lcngq/H6PnJXgFJD8Ui4uC
+         qIl1fv8t7ijKzLu3ZISIpWCcK3+y+btfL7hQ6D3+ZXKtxZMaGInSPfeUvCzZf8Snk3QP
+         Ws/1ULldm72s7tmRzI7GWp8vW/g38Eb7nthPmlfz1J526GauGWDE5JWoZDmawHkUfyEo
+         zkCNg0TCm00ppkxHngYXCicJiZRBOcKa6tWZD259iZDC3AtUrQcBUv6z/Vl3+A0PIaQh
+         NTd7A9pXRPzi5bNnrqNeSuSNexQ48b5DQ7cxtYvrXPqPCmkf8iY1i6hd51oVyQuvitcX
+         iERw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=XBMrjxgTMBxJkTBC/sCG+eD6OjFkrmjLvrWi7oz6s4M=;
+        b=O2Vetb0mV6+DwM5xy/iTIv4BfFULpZs5LoTY4NAdYdWdxeNGAzOKtfFb1WMGiRY1Rd
+         TuIOA1RJkx5kF+Bme8tUWfMrEEjKKv87kQBWFF9UtTJVF0vquFEXMzcqKnt65xMagHJq
+         rsMDF1SMEwpulap4iIsLQ3sM8fRoRWiilB+szThVbpW6FjQkyUHRb8dYBEBbmRrwfpBJ
+         2AwiivVeqsrM4U1y3iBlEudODDxYP9cTC/QfGS917wQAk97HqXGcO2yxS4co9uJtyyGU
+         UmhxwUbBoBOl/WSpgn6GavV9692aiwuQs20DlJyKgntBH/TawAe28yky1DKneRdTJt3i
+         ZQpQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=TGAWSnKo;
+       spf=pass (google.com: domain of ju2673525@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=ju2673525@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <ju2673525@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id e10sor4176917wrv.24.2020.07.21.23.56.21
+        (Google Transport Security);
+        Tue, 21 Jul 2020 23:56:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ju2673525@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=TGAWSnKo;
+       spf=pass (google.com: domain of ju2673525@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=ju2673525@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=XBMrjxgTMBxJkTBC/sCG+eD6OjFkrmjLvrWi7oz6s4M=;
+        b=TGAWSnKoyjHdzTQBcDXtGF2YAkiyYqDudsGJDaDJiroEnSZUNXNU4Y9WABZQ8puzyI
+         419UyyeVENNm46u8eRnBFISV38af/6sYdwXd638sx1Rtqf/Nir/3NgXkSm+bEopIYvpV
+         fuVcyMUrK44WbZ0Hw+R4dDvXyCr4Tu4eDoZqsGjt2UTnQAAQDRWsR9beh1NSupterP2a
+         y98OGhDBVsYe5WNznq7sqIAY7K6MyNspmsOJzfzjOMm1UAoga/Ked7Hih/q7Rx0S4G0k
+         MFKrijQSilgT5/N/Ev9qgB45c9fBYNA3QeRa90vU+3VZipu1Tt9ONVTzW0dpkXGRMFK9
+         GzoQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=XBMrjxgTMBxJkTBC/sCG+eD6OjFkrmjLvrWi7oz6s4M=;
+        b=aZbdFBtyJEbUWcxrlXpNMdSCuQ/htbBKovJFM+OnsPGhuS3SIhrbYXHZZ/6VtpauPq
+         R28bH3SFDfejlSU1iLxbzYw13N7IhboYrcDuJ0oAgVDuZjnwRqOz7yXDjfl+B4uuXYiQ
+         fChiF3mU920ccg39eUVwoIE7Ft2jmmSiNwqD21phf2nWS+yNJq8oeR1KjJCkXkpNTBf3
+         0+jVZvdEHvzvf1JtVdXPt/ockuZRulI3s5f8ggnruTNd29zy3hkmiVKvxkubFpdIQyf9
+         kehetLF1xelyuYwlJWn5vghERzPHEOzMVbwZVe6CHQVq3wR9XHVnhy9X0WgWhcO8VQYg
+         3DoA==
+X-Gm-Message-State: AOAM530L5DhcaOpejlydHrZmCTjetVeGTSjQdKhfLwtrGYafrs94t/07
+	4CAuntQIxD9biHdhEOkyFb47hv08riCVIP1Ck0eMcA==
+X-Google-Smtp-Source: ABdhPJylG3E0f6oi3bsp5Bc9tkagDuw1Ugw3eBnAodKT9OFudABbMSzsZY2Vkj6/GcqdflOBd3MH16nFrFQm/LcIHpk=
+X-Received: by 2002:adf:e704:: with SMTP id c4mr2311992wrm.81.1595400981191;
+ Tue, 21 Jul 2020 23:56:21 -0700 (PDT)
+MIME-Version: 1.0
+From: Jashim Uddin <ju2673525@gmail.com>
+Date: Wed, 22 Jul 2020 12:56:07 +0600
+Message-ID: <CAKLE+r3kpraA3O-LYFb0Xdnzy9dyjhxVoh0t9dXat-becwovTw@mail.gmail.com>
+Subject: Submitted Answersheet By Tanaya akter Class Twelve Section A Group Humanities
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000c21da805ab023c08"
+
+--000000000000c21da805ab023c08
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199273
+
+--000000000000c21da805ab023c08
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199273=C2=A0</div>
+
+--000000000000c21da805ab023c08--

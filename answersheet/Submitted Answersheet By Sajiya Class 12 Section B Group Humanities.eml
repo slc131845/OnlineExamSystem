@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp307452wmm;
+        Wed, 22 Jul 2020 00:08:27 -0700 (PDT)
+X-Received: by 2002:a17:907:20af:: with SMTP id pw15mr30002748ejb.204.1595401706914;
+        Wed, 22 Jul 2020 00:08:26 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595401706; cv=none;
+        d=google.com; s=arc-20160816;
+        b=dYmU2Cy5tzkZGzTySvkYEGORSpB+VlSoqampVF923MwBW3ZNanDeO0sn+XAE0F7k38
+         4G32AoyMruVtECxTiWi09a+GrJAqn3FEOKXv0fVT7xH14ugB7UBq4odUkGxVFv8XmLg9
+         ThkmXAtqjRdKUygbnAjp2W3ATz55EaROhVfUAkfiE5ieWNBSs55peLXRZIusfQQOBMM8
+         nx+6oZu27fOXRbuE8FguBaMnai8LAYrGy9bE20wRY9JajkY0C4npMyziaEiBdHIiCfi8
+         ca9pzkeBEQwj7K4D1Y1G/W0ff9MGm/MidNkhPWknBpz6GUAN6fLT22nEYxobEmCttl+Z
+         /7uA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=6YhX7k7RPmtuzNNrcQAlCgrQiI9yqMGM83KnyYtaG3Q=;
+        b=IoKe8zvIEqpznUIeqKefq+1h0zlo2of9ZI7EU90NO2rW3YwzwXZkgZ/zjmpdKQjstG
+         JWZlgw+JdBnq2ian6H1IFrId9gKNveVL6Q1O6L0DdtRhkR4k9F1K+EHwqTdodPA1BL3L
+         iZhsbsW9V/Mm+PQ1wNI2tMOYSDze44o03ifhl4oda43tes8uU4XAvQ/kKxsWj5GgnEi7
+         d1xNhSCpeZ1wpqP2Yxcu7AIPRUQoOFhOueoULCtBaBBSQ3k5PGWdjMbsC6ZrKf1PZ4xw
+         KoyByG371HxTaajSgsyyzMJREbb0RX9Z/pL8F+OTtBGWIPEMCHGwBgp8S3RZ3uXPllgc
+         CQ9Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b="Mk0u/JLu";
+       spf=pass (google.com: domain of sajiyaafrinasifa@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=sajiyaafrinasifa@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <sajiyaafrinasifa@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id dt21sor9098808ejc.37.2020.07.22.00.08.26
+        (Google Transport Security);
+        Wed, 22 Jul 2020 00:08:26 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sajiyaafrinasifa@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b="Mk0u/JLu";
+       spf=pass (google.com: domain of sajiyaafrinasifa@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=sajiyaafrinasifa@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=6YhX7k7RPmtuzNNrcQAlCgrQiI9yqMGM83KnyYtaG3Q=;
+        b=Mk0u/JLu7C4Mz30HrJVZmXICllBHV1nzAEakdDVvfcdH1sdfjDwhOAq1tn/WNvpWYO
+         5x5Uv9R4NsWBgLsLjzyPus9ckFREePQ7qk5Tz5rbq5C5JdS4pVe65/5Wd8Ph29ElzmSU
+         Moj+jc4RdWDu8kCOBQqj6tQkS+uScoXrbsh8cKvrLCxx2Ij9GOi1N1djJFak8FUaYck7
+         kTmo3NEtOycZN5AUmjwFWXtPnD+8SnpKKuW/d4KHhGSW/G2eBJ7+X0LxRBVvhUyYjCqW
+         fx2q6Kve4CspME3/gysxIiZ0Jg1/cWPEnhdjtmsCIAuS7RzpXZoyYvbFXBPD1FGKM1gO
+         SKpA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=6YhX7k7RPmtuzNNrcQAlCgrQiI9yqMGM83KnyYtaG3Q=;
+        b=VVnihEmOG8MUPuNt8a3D18s375BWSNcINmt0wvPNLwwIf5dbQyYgaSlbqk65znIFHu
+         Jbmm5rHAcZNy7IvKEVjQyTMLwPYIMYO1SV46yBcgyUZdvfSEMqbOHqt9OGsjTHPpf2+n
+         Dy4Uy581gvu0c4NZFmxcRhHbsJAzXC0z3hSJZvWrCOt3EUYj7tWeQNRZMQ55z3Ige9/m
+         yBjDMKeza9cCr9RtAcHvAnJqELC2rRFirI9Fc2xziI4DnBNqWLgFMIc4I46Mig5GBS4e
+         tTr3KvByW9EMkWuhCbk5OJyHllVHdJDtvc8zb6Qw1U37dFqKFi5++wVJ9cGVNqZn0o6L
+         FenA==
+X-Gm-Message-State: AOAM5311QPBNhaxyRj0GbjznZpARrCoZJsbnL20sn/ExNbJDLNO6HkT7
+	P/vQlVt4dgB76J42byi2jYzJDCzq6ffAjgbdsOZ7rQ==
+X-Google-Smtp-Source: ABdhPJwN0haILjWTwxNnC35rZWj8uT480ElxiwQxKk1OwMhiSPkbc0bR+ytRQ5DuM6hASQWDxobCnVzRgL1ELrzpaT4=
+X-Received: by 2002:a50:e385:: with SMTP id b5mr28884358edm.130.1595401706549;
+ Wed, 22 Jul 2020 00:08:26 -0700 (PDT)
+MIME-Version: 1.0
+From: Sajiya Afrin Asifa <sajiyaafrinasifa@gmail.com>
+Date: Wed, 22 Jul 2020 13:08:12 +0600
+Message-ID: <CALWsfpb95LXjQVQfhBSqM9OhbkrnZi8dvVmvkHCM_RAbyBZ8kQ@mail.gmail.com>
+Subject: Submitted Answersheet By Sajiya Class 12 Section B Group Humanities
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000fe363a05ab026755"
+
+--000000000000fe363a05ab026755
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199260
+
+--000000000000fe363a05ab026755
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199260=C2=A0</div>
+
+--000000000000fe363a05ab026755--

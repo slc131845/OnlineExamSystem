@@ -1,0 +1,81 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp302219wmm;
+        Wed, 22 Jul 2020 00:00:44 -0700 (PDT)
+X-Received: by 2002:a19:7d04:: with SMTP id y4mr7422725lfc.51.1595401244278;
+        Wed, 22 Jul 2020 00:00:44 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595401244; cv=none;
+        d=google.com; s=arc-20160816;
+        b=YwuuZ77IDP3mG5h+Nm6f8WWJg+KTWnzjGcOCB5Suysr/5s00lEQsIHDOLxRhFnhz4P
+         9fVNZ3R8rPULbYPSVyfkBbh6gWou1ECUA9obBhSN6C5G0BGaYw+N9G70pw4SmrzteCGE
+         2ylX7F1lt387nTt1xIisN1/HrESDBfVgSRgwUB5QAoCxGr7Ok9fB4M6y9R8/iFC2pN11
+         AV1a5vbN2z1ik0tpQddupalVj5sAcD9x3/6n13vD6Zsqw3Z50EyWpNKilkttHzJWiVQ5
+         b57m9SeRvHzLglhDPIETtqQqGerqWRqEY4NUg86s6RnxqIlHGjJ5X9B9wKLJTIlOCrX3
+         SD5g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=gQLX1qBoPmtByWyRBS5leG95PFXYd0OAuP5gI2VFFKE=;
+        b=OIY4qhkRZd2xHNNe7Q1/D1i4Yb2hLPERSL1313QrIQ3RypKFBQMf8tP3OTQgIvC50l
+         HkwC/LASzWfdkODPpXMjh9DRbuQ6K+X1NQuowmXeGdrQHXKEhHfTZFbpgaCwWdQrVfPR
+         z9/cx9xVHgTPNTvOqL5S9QCrs5SwiKZ8QXNOdW/iDnZR9L8DpH3AFQnUL7Gh81YGHopK
+         1cPaPYiaKbLXsKNdvgVOUZf1AeFbnDTOpJUceIkMsmRVjKitewABfG+cySsVuRhYY6Fi
+         UlPk292DC/mujMpYk3kp244oDwyPa6Y4lSZ6H3kKhB/BXYKY2tW8VQ6vakDyG1iu0W+H
+         370A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=SVKp80Nz;
+       spf=pass (google.com: domain of jamiulislam782@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=jamiulislam782@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <jamiulislam782@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id l9sor10561600ljo.46.2020.07.22.00.00.44
+        (Google Transport Security);
+        Wed, 22 Jul 2020 00:00:44 -0700 (PDT)
+Received-SPF: pass (google.com: domain of jamiulislam782@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=SVKp80Nz;
+       spf=pass (google.com: domain of jamiulislam782@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=jamiulislam782@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=gQLX1qBoPmtByWyRBS5leG95PFXYd0OAuP5gI2VFFKE=;
+        b=SVKp80NzoTP/ee+s9KblthHAt8rwWmywfkLyhh1pzYzuZk8/kJ2L5MQI88qzwT+Q2j
+         VyTDRDhkdYEd9Fn7nQ5x0QC75f68gv5N2xQj2NONu87TBWN3cnlNHpON6SwWqSdHsgFO
+         mdkN8BsL4rM8OeeJsTn1XzUX/ApgDiALS7qN+i8V0AmCfOTQigoRmOZRZTZWvaWFo+Kx
+         hFLPubyA0Yvc+vLjI3cyEInRbopzy4AwbUPoJPtC+58rhIziKBndjc15ir8k52Xj1cdP
+         8NqWQAuL5Bza50OuNcaB/bKRStsNvrY20O2rp4VGn6oF6fA8xGe323trXK7VV0SYYXGD
+         qUJA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=gQLX1qBoPmtByWyRBS5leG95PFXYd0OAuP5gI2VFFKE=;
+        b=o/gI4eBD6PPRF/LGI0zu+kaKHl2pRUhu5Z+jQP+Nvv9J+uKT2o49ou2N+CiTHlqzx7
+         iTLI/Rz/+1Dab6fQONuXujRA/KOehDSvJj750scY46Dw5q0feAIl0Uwgu4z37/VckRrI
+         xa1GqwOlrneyEMS9lQOBEhDW///0C7qJFZvLjt3Cb/G1gFIoDUGssl10ThF9Hj2yy3et
+         wZtoD1qoyWN4/F6eQrNzn8b68XobIg6kstxEPMg/pYS3pK6vKVS/ubJo0GkcD6a3AH3Q
+         Mscw64dK4qbL+haqKLufhSGu5UkkQE7Iu/Lv8e3yfYIVmxShQk86GFk8FZSutnIvyHFT
+         oL7w==
+X-Gm-Message-State: AOAM533fKQtl5jrNMKhQ9nW3bEGRojQ4T4KPWJYznGKu5lYoW7PUXCj1
+	0wMVLUuqbVkslnH2+JshnlTMkJosSNYRiKK0kk2o
+X-Google-Smtp-Source: ABdhPJw+YVy7YB0zxkalOcVa6gdc8LeeZV+Ay0ZF18LDGbGqzD5hRzSPJsio540tQ8OMhOj8Nw1CfLU4p9B02yttaN8=
+X-Received: by 2002:a2e:8758:: with SMTP id q24mr13363343ljj.109.1595401243686;
+ Wed, 22 Jul 2020 00:00:43 -0700 (PDT)
+MIME-Version: 1.0
+From: Jamiul Islam <jamiulislam782@gmail.com>
+Date: Wed, 22 Jul 2020 13:00:30 +0600
+Message-ID: <CAGeFpoVbD-Ws1c=8FjxgpCRAr4480ogNyKQXU=c1FnKbjBcCVA@mail.gmail.com>
+Subject: Submitted Answersheet By Jamiul islam Class xii Section C Group Humanities
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="00000000000067795305ab024c02"
+
+--00000000000067795305ab024c02
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199070
+
+--00000000000067795305ab024c02
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="auto">My Roll Is 199070</div>
+
+--00000000000067795305ab024c02--

@@ -1,0 +1,99 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp296703wmm;
+        Tue, 21 Jul 2020 23:50:22 -0700 (PDT)
+X-Received: by 2002:a17:902:b207:: with SMTP id t7mr12637499plr.135.1595400622038;
+        Tue, 21 Jul 2020 23:50:22 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595400622; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Q43DHyBB6Yi5A2xPrIkJmeJAQ8e8mZERK1/1H8Yebu6ggGhyzn6SS698bCVSpOe8yt
+         N8eBnhd8O5nkbx2SOY8stdluzLJ970xSMoVzcpyaw75djEo4afip0x6djaTHbxXgtRNr
+         HGiOWpdemW/OuZNGoVoCRjqGWwfoLhLUODU96uV9uMrQif2aAan0AuWlaHX+DkVgtGc8
+         y2EINkvT0WneVqt/m7cWmFobkwW7wLzWEktHAvnJOpXLk1V073X6MqtmP9pueRN3seji
+         fPGVj41r+HaoiLWPUWOIT4M9GdAMsYxHUySffebPROHomguGJMMG+ECG/dsOuwkF3z4e
+         kpzQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:cc:to:from:message-id:subject:date:dkim-signature;
+        bh=FoM6nsEgKkDBGcT60Yr8gAnuyNAmmRbpkR+SZ0PfI8k=;
+        b=PaUKwpGUOi8uTf7AxXAATjC0kNvuwH1+yelzQw3PZPviCFHHh3V6ryO9sNlwYkwYPQ
+         CWg+Umt/rMHe+lDDOy9r8/UGMKCtIMJnHGSDJJkq8SjFQNcir+z/w/e1hIUe+elf64ta
+         ENu5p2cPybRcdT6GDDGOFCN0rlCdh2MltG3ZO9utexRFol3npKpHIaRPfvI7g9ZMMHeJ
+         3CrEAlQVZHuVK1d4k6wp//su5tkDYszlejKxuzESmhykMPogMwX9qTMdNAmyi4Y3EeMO
+         TDcKxXUJ6nY6QcoLwYsCZZqh4pUfvpAjNol+XxoQJHMx9CKsvVrV7K2dXc+wOX7NvUff
+         IOwQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=neimvdSu;
+       spf=pass (google.com: domain of saidurrahman4687@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=saidurrahman4687@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <saidurrahman4687@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id w17sor26437092pfq.64.2020.07.21.23.50.21
+        (Google Transport Security);
+        Tue, 21 Jul 2020 23:50:22 -0700 (PDT)
+Received-SPF: pass (google.com: domain of saidurrahman4687@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=neimvdSu;
+       spf=pass (google.com: domain of saidurrahman4687@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=saidurrahman4687@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=date:subject:message-id:from:to:cc:mime-version;
+        bh=FoM6nsEgKkDBGcT60Yr8gAnuyNAmmRbpkR+SZ0PfI8k=;
+        b=neimvdSu7XNecAi4y2B09qp75NucFSLds/1MyGv30JFaXNF2lEpGZ4INOcVsJBx60X
+         UzEbGiOr7Q8WkHvtS07urTYkD5w9r1kDSxmNl/bg0sGpMzkeJOD60j9VGU+KW2FAn6dx
+         eDZfNKyZbUOK45xQ7kLxgtqZ26H2aezsJTKcMk1xGUhLP0XWRqtATQW78yj1yCh2K0Cf
+         89aDJJKcATmIaTC1/0vUDzEuY/BDlVSSQlmX5palvzc3caPmiIV8cODx9mTDMaMUQPa5
+         nHu5ae4G9FEGUGiXUPh/6Wh246lh0guv86hkzcooiHeC7X4auSywMIkF5SG7qyPU9Eqv
+         rOFA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:date:subject:message-id:from:to:cc:mime-version;
+        bh=FoM6nsEgKkDBGcT60Yr8gAnuyNAmmRbpkR+SZ0PfI8k=;
+        b=Zxl9iii79yGKqiewZyv6RM93jue9ux7r+RuVJ63nBtquzuI6xRMVrZyCVoQNkXmL+z
+         8WgavmgzaxUs4bFcE6ZeYR1nGh8twS34afLbyldsnmuT321tp/SB8ZbkdLCjRYQ/IYY/
+         F8YNci0gBxpr+QB7Wio6S5QUIIx4FYg9zb75GWs5gPg7tKA7M3L2uL3F38sztceBPZ8f
+         ve3Y2ef/KEy4U3I/2xcJn/0aKBt4QMzp4eJcuuonxN3R3AtsPdNhiNRLe3kxSrpt4qOr
+         t/Ub7k5fLa7YlNLuq7CwGFxSj7hHARc9PLzZaaNJpoHF1mWimBSPh05j7naHdVGa5JGL
+         47xQ==
+X-Gm-Message-State: AOAM5302eGAz7L0Ho8IW7L/eox6QzCcYO5bXCwmw9HEWchQ5Cs9emiDy
+	h3lIXK+iBA4wJZMgbo7rlVyy1OwyD2o=
+X-Google-Smtp-Source: ABdhPJzqu8FsmN3/RNisvQu2iRuv2yLRaJ+5SPFnOZrPRJzxQQ+1EpJhBYxntwEe9zIiKu8jZjBTiQ==
+X-Received: by 2002:a62:e712:: with SMTP id s18mr27485361pfh.224.1595400621001;
+        Tue, 21 Jul 2020 23:50:21 -0700 (PDT)
+Return-Path: <saidurrahman4687@gmail.com>
+Received: from [10.80.62.199] ([123.108.246.7])
+        by smtp.gmail.com with ESMTPSA id o129sm23486411pfg.14.2020.07.21.23.50.18
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 21 Jul 2020 23:50:20 -0700 (PDT)
+Date: Wed, 22 Jul 2020 12:50:14 +0600
+Subject: Submitted Answersheet By Md Saywdur Rahman Class Twelve  Section C
+ Group Humanities 
+Message-ID: <l653s76o6fjj4b7048ch0cdu.1595400614559@email.vivo.com>
+From: Personal <saidurrahman4687@gmail.com>
+To: zishanrahman1977 <zishanrahman1977@gmail.com>
+Cc: ictpracticalslc <ictpracticalslc@gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="--_com.android.email_613473429300330"
+
+----_com.android.email_613473429300330
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+TXkgUm9sbCBJcyAxOTkwNTUKCgoKU2VudCBmcm9tIHZpdm8gc21hcnRwaG9uZQ==
+----_com.android.email_613473429300330
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+DQo8aHRtbD4NCiAgICA8aGVhZD4NCiAgICAgICAgPG1ldGEgaHR0cC1l
+cXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7IGNoYXJzZXQ9VVRGLTgiPg0K
+ICAgICAgICA8IS0tPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13
+aWR0aCwgaW5pdGlhbC1zY2FsZT0xIiAvPi0tPg0KICAgICAgICA8dGl0bGU+U3VibWl0dGVkIEFu
+c3dlcnNoZWV0IEJ5IE1kIFNheXdkdXIgUmFobWFuIENsYXNzIFR3ZWx2ZSAgU2VjdGlvbiBDIEdy
+b3VwIEh1bWFuaXRpZXMgPC90aXRsZT4NCiAgICAgICAgPHN0eWxlPmF7dGV4dC1kZWNvcmF0aW9u
+Om5vbmV9PC9zdHlsZT4NCiAgICA8L2hlYWQ+DQogICAgPGJvZHk+DQogICAgICAgIDxkaXYgaWQ9
+InZpdm9Db250YWluZXIiID4NCiAgICAgICAgICAgIDxkaXYgaWQ9InZpdm9Cb2R5Ij5NeSBSb2xs
+IElzIDxhIGhyZWY9dGVsOjE5OTA1NT4xOTkwNTU8L2E+PGJyPgo8YnI+Cjxicj4KPGJyPgpTZW50
+IGZyb20gdml2byBzbWFydHBob25lPC9kaXY+DQogICAgICAgICAgICA8ZGl2IGlkPSJ2aXZvU2ln
+biIgc3R5bGU9Im1hcmdpbi10b3A6IDFlbTsiPjwvZGl2Pg0KICAgICAgICA8L2Rpdj4NCiAgICA8
+L2JvZHk+DQo8L2h0bWw+
+----_com.android.email_613473429300330--
+

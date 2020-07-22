@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp308661wmm;
+        Wed, 22 Jul 2020 00:10:39 -0700 (PDT)
+X-Received: by 2002:a9d:5cc4:: with SMTP id r4mr19746663oti.113.1595401839674;
+        Wed, 22 Jul 2020 00:10:39 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595401839; cv=none;
+        d=google.com; s=arc-20160816;
+        b=n72kfaMdG8gYhIsz5muzZ9nm89BcEbMjah4pAUiaI9sC5wZZu7ttXQInoVTuOtZZsd
+         li5PY8Egc7AOsR3OYKLvcQzNQhTv2om0csMcgYg/8Wr7Yye1YCKJoVMcOQpQBzYXuncP
+         k8c3lpL6CrNF8IpHj2ger7zbQsiWd6W/mQgxDj7xHwx7uBDqMl8zWVjc2ESo0chQSana
+         SmICdYtEfXIxtBsPlijXvz5mmxe+Q0K23qPBS2FqMF+LHZOtBcyjzoc/xVHWcQohy5c3
+         XO31qP905/HmdqnHiF6zuHPnKtgzxMMZNDQxyqBIOD48HJvbqjBD/28BNUx73Hqbxauv
+         Yv5g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=3GQh9UUohrd0/NB7JUWRq+s+Th65PdfHrZMJfXAR1Is=;
+        b=lxrrJ/PCK1kwckHOLqqzKAA94LHghnp3uO9FPV38t+ub79iPEOsVF06tjYLvghArEV
+         XbgG9enCDTfrdyPNK8x4In8QVEmOOxjRwIpM98KX8s7maMCBbOtl+ssTTY14NS8jq/DO
+         IP2BswHhYed4yUg6Zk1tpIpYJN5Ir8R3MMjF6Q3sXk/OJ9sJC1NVHN2KkTFwR0tCcS/7
+         Tc8uF95WNcXvazuzuarCgpqoMPsb+jWKqRKaeOienapq3ipz5WHZyCiQAZ7DJzxEUfQ/
+         aGn3PNj0WL/+m1HFx7xlbO9/XUvQocJcq6Nsex1PtunRbBp0VLnDqk8UX32/kLMORBQs
+         6trw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=a2HbJzcR;
+       spf=pass (google.com: domain of islamsathi267@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=islamsathi267@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <islamsathi267@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id j47sor3184187ota.10.2020.07.22.00.10.39
+        (Google Transport Security);
+        Wed, 22 Jul 2020 00:10:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of islamsathi267@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=a2HbJzcR;
+       spf=pass (google.com: domain of islamsathi267@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=islamsathi267@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=3GQh9UUohrd0/NB7JUWRq+s+Th65PdfHrZMJfXAR1Is=;
+        b=a2HbJzcRqUfBcg+m+QCLa6M1EQKZtxyp7+Dk2MNCm7/KG9f03dJQbgXBgSawtTvCQn
+         gMYkKxdQarBvqeS56GadkOisuDDPAEBy/L37BmmU3A1hLvk7JqUIWuGHvJFyw0bWNSGu
+         /oBghXVSE12qSKRu0/Lb1l8jK2jlqNllvtFOy5Z4VpUi43/Y/OSWmkXQW16WSkxvDFzP
+         UZyskWZ2OltCQN4N0MbrPFwb8MsJ4B4g47nbcFzYspYMHv209Knta19WiwGh4Qc/ecdh
+         2hzVBRt+RkGXx+0/a1FaV9H/b1wA2keFdjhOl2dckqLGaYgcPVLbG6eT3JZLZAi7GFHd
+         rCNA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=3GQh9UUohrd0/NB7JUWRq+s+Th65PdfHrZMJfXAR1Is=;
+        b=iq2I7qfu6/UiBvrNldZTbUQ0m9xg6KpsosCDpTtnucX/eehya8HlEx5NxyUodMDkZt
+         6YUlXL4J+mG/q2IBucXUPcEgdrVAL2LMF93BvP7xrpa/ndugTQfj0w+k3GZ7ylvpLUS0
+         mJNzYEx2MxCOmlPaZtKXjI0J3abSABw/kbc/Hi21CGDI1JQqDNo6Buu+uRbC3izQRzye
+         Xy+UgutsWFHpnYjEh/NHX4SBUm4Hz9l4LLnQiQW16/fNFXPIB6T5pjvr6opKt7R6iTuH
+         ITbZQRu1Lm0/i0ZmJr/YIdhGAYLdlz6zBTIWfeiUBaLMKsfWX4XwK4FH94y5+A49o8fL
+         FL0Q==
+X-Gm-Message-State: AOAM530iZQp5VObV55VsDN9IgHFwiLHGZJ8chvz0PN1Hinuj/QFYijMl
+	sA7v4ApUN5nB/1sVXECbIwoEA9/pid/C0CISRJgQfw==
+X-Google-Smtp-Source: ABdhPJzU8yXY6mkFNPu/qcGPsfrfFTbX9BmcIonpP6zXEaVoHQWVnn5eWUvf8aO7SutZRC1LO6XgUe6ncpXz81JGg2w=
+X-Received: by 2002:a9d:6396:: with SMTP id w22mr26380549otk.189.1595401839236;
+ Wed, 22 Jul 2020 00:10:39 -0700 (PDT)
+MIME-Version: 1.0
+From: Sathi Islam <islamsathi267@gmail.com>
+Date: Wed, 22 Jul 2020 13:10:25 +0600
+Message-ID: <CAEXrTTo6zt3v=_hpaiDCmGDanJQyanTTcz0_JBWq_hErpH+oOw@mail.gmail.com>
+Subject: Submitted Answersheet By Moyori Akter Class Twelve Section A Group Humanities
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000e6daba05ab026faa"
+
+--000000000000e6daba05ab026faa
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199285
+
+--000000000000e6daba05ab026faa
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199285=C2=A0</div>
+
+--000000000000e6daba05ab026faa--

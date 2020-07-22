@@ -1,0 +1,100 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp298366wmm;
+        Tue, 21 Jul 2020 23:52:52 -0700 (PDT)
+X-Received: by 2002:a17:90a:4e0f:: with SMTP id n15mr8986081pjh.126.1595400772114;
+        Tue, 21 Jul 2020 23:52:52 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595400772; cv=none;
+        d=google.com; s=arc-20160816;
+        b=g7/bP7AaVWPoh6TJ5y3MDMZBovBosvn+dmcv5cbGcJaLQdxthTg+xXkMMCG+J72l7E
+         FctwqgdvECojuWmQBA3FktX53PfiKn3zg1732Z5cuuaKbRPl0FIV27tCCESywqmRTSci
+         VgLRi7NbLfkDIxByCVECTYiMH9LqPMuB2iB4kr6jE8la8QSKz6qV+0MSy2fQKDpaaciJ
+         oFONLT6vgVfWwfH2bXVUpRx4fTAG5hB6RGCMf/xvRtFhT2b4wB9EqWOOR62wmN3dmLkl
+         vzBcjF+o3TkP9ULA3v/5rBaZB+NT3ROkKFiyGlT25S1uxQoaEHs/WtCRKKz5yMQchHFz
+         brCA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:cc:to:from:importance:subject:date:savedfromemail
+         :message-id:dkim-signature;
+        bh=W6K8kDC0dTH0GcimvtIFQ0/Mo4qK7cZJhfHq2dCv+Ng=;
+        b=hqnOlosSfVQKApJSzxCgeuwcqWtfrzT7bLn91NJygczQyTnlyWp0fqZTK6ma8SAh4Q
+         7rhaUOw4o04APh7uh+DliXxKetx3R8yBdNSBdqvqV08rQmfDx1uGMKuS/45t+4E4Jtic
+         JhfKhullYSoEms2aPYWsfLZW4oLtX8iQzElDl/80DGjebFQrjkxdBCjOSCyWEt6zsK7f
+         Glz9fTEsGaiLoFlRQkOfN7QWtGmm0OfovQDgkKW4OVWCqfrDzpT/SlmfXVnMat3d5b3m
+         4lvQzcQHal/3VnwmHja2RltYNyMruMS1w4JNAoux06cJ6ahOqaj4dHPd5HgoFIFoIo3P
+         YuHQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=WMtEx7C3;
+       spf=pass (google.com: domain of ak1337333@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=ak1337333@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <ak1337333@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id x7sor28594554plr.47.2020.07.21.23.52.51
+        (Google Transport Security);
+        Tue, 21 Jul 2020 23:52:52 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ak1337333@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=WMtEx7C3;
+       spf=pass (google.com: domain of ak1337333@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=ak1337333@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=message-id:savedfromemail:date:subject:importance:from:to:cc
+         :mime-version;
+        bh=W6K8kDC0dTH0GcimvtIFQ0/Mo4qK7cZJhfHq2dCv+Ng=;
+        b=WMtEx7C3TIT7woukAJsRFwAyXQ3C0/68kD9fLxJeq9T2Bin68gQRQLTwbCbol8j2EB
+         25mSP6qkSLzdFQ/4p/Yc2dk2FF3uB3P4s3Mzx5mhGJxV0Za9gRqaDn3dzK5iYMxFrZrt
+         OTJ72NdpXgdG8O9k12Dbkb6kdKxaOdA0DDbsGJQzwLoHziAWDWuzBsGjmcL8aOEIoKm3
+         /CfeLbDrDmYqIi5nx/y8PoGmNglADhjhUPv0DUiHm3yQZz0+pWqJ/boThrjexfWYJ60W
+         4T89MjPXcKE+6/4khot05HwhCtOfoSC1VlLHcsgcZooF9BkM/yNZU/9RpUysI6DYX+EB
+         TpcQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:message-id:savedfromemail:date:subject
+         :importance:from:to:cc:mime-version;
+        bh=W6K8kDC0dTH0GcimvtIFQ0/Mo4qK7cZJhfHq2dCv+Ng=;
+        b=tKkomH/KP2ePI9l0Iz0UE3Vj9XL4cpLZPTq/jpE99r9RumYo7vrTrBagPRwWe/xb9h
+         t93d9GG31sVJYZ2pn56R/Bm+/2ysCDAgAbM/oOoyIvtqWYNdiFxYeTPJR7dYXG5ds0Qz
+         tPqJEEQLe8abTfU0Nb+8Z0fu6Wfr1DLxQF8Hn+2ULLzsWlieUm/qTjpaHr2dLglasael
+         3ozV8ODeMuJZ7YMHdXasqM5fMLM3FONzN1T/8ee81oF2F8W7/wYP6HMR/PiTxFZIVEH9
+         jpW/bZkqRtOs90kGH5hV4gV/p42Pp0QyxdDhG/1pCQ7BLRVUveMFnZ1zv3GAwKucg2NQ
+         n6LQ==
+X-Gm-Message-State: AOAM533V7LUhnzvZrvTwETYgb0pr2xcQ0cHegieuE0r+ZywmkWkGX+29
+	xEyfRcbrnX/KkRhkZ5KtrHKxpGX0
+X-Google-Smtp-Source: ABdhPJz3yZ9r6js6u7G0+YXGTSPX0/d1GH4Ppu8TVroilk+dkjpRQrcVb2Awta2JLtYNI9MxIH1uRg==
+X-Received: by 2002:a17:902:d881:: with SMTP id b1mr14762775plz.74.1595400771372;
+        Tue, 21 Jul 2020 23:52:51 -0700 (PDT)
+Return-Path: <ak1337333@gmail.com>
+Received: from [192.168.1.107] ([103.99.250.157])
+        by smtp.gmail.com with ESMTPSA id d9sm19904575pgv.45.2020.07.21.23.52.48
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 21 Jul 2020 23:52:50 -0700 (PDT)
+Message-ID: <5f17e242.1c69fb81.14379.b96b@mx.google.com>
+SavedFromEmail: ak1337333@gmail.com
+Date: Wed, 22 Jul 2020 12:52:40 +0600
+Subject: Submitted Answersheet By hossain miah Class twelve Section D Group
+ humanities
+Importance: normal
+From: ak1337333 <ak1337333@gmail.com>
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="--_com.samsung.android.email_405058271822530"
+
+----_com.samsung.android.email_405058271822530
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+TXkgUm9sbCBJcyAxOTkwMDlTZW50IGZyb20gbXkgU2Ftc3VuZyBHYWxheHkgc21hcnRwaG9uZS4=
+
+----_com.samsung.android.email_405058271822530
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGh0bWw+PGhlYWQ+PG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0
+L2h0bWw7IGNoYXJzZXQ9VVRGLTgiPjwvaGVhZD48Ym9keSBkaXI9ImF1dG8iPk15IFJvbGwgSXMg
+MTk5MDA5PGRpdj48YnI+PC9kaXY+PGRpdj48YnI+PC9kaXY+PGRpdj48YnI+PC9kaXY+PGRpdj48
+YnI+PC9kaXY+PGRpdiBpZD0iY29tcG9zZXJfc2lnbmF0dXJlIj48ZGl2IHN0eWxlPSJmb250LXNp
+emU6ODUlO2NvbG9yOiM1NzU3NTciIGRpcj0iYXV0byI+U2VudCBmcm9tIG15IFNhbXN1bmcgR2Fs
+YXh5IHNtYXJ0cGhvbmUuPC9kaXY+PC9kaXY+PGRpdj48YnI+PC9kaXY+PC9ib2R5PjwvaHRtbD4=
+
+----_com.samsung.android.email_405058271822530--
+

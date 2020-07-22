@@ -1,0 +1,83 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp302977wmm;
+        Wed, 22 Jul 2020 00:01:43 -0700 (PDT)
+X-Received: by 2002:a17:90b:70d:: with SMTP id s13mr8460965pjz.161.1595401303324;
+        Wed, 22 Jul 2020 00:01:43 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595401303; cv=none;
+        d=google.com; s=arc-20160816;
+        b=N4ywuXasD02jqj1S8xQTbpLn85bnM/YA5k+hD4shC8ZlXH23J4sLzrReha/V7OII3U
+         tJZD4RUPAseasnC48qEMAm6/95VpQbAAmsOR2W4jqL48/uFkNDmCnSip2QJubvTan3RR
+         b2cAqTBzVmG337AQiNQNiZvumm+St4dg1wFsx7r/lHOO0vEYn92Jc1GcgFcQm9uEtmmZ
+         Pv1uyLuaX3Gd4bCijoDJoNI655UJaIa5+iDr/pa0WJ/NwogbieI88r5Vn/t1vAleWQSy
+         531tkWQIOfEymz+EaCG699RMh+ZHC2euN7H+5ubkmFcXnrXX2UnItg4d1w81yXfQtwpQ
+         LMSw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=bYVKi1RxM850WhLOoewuzit+Vk7kSFH57YFfbW0AYL8=;
+        b=Z58l7P2WHCF9BqZiq9fGVOXkvVmIU6RaQay2B3kBx+IsRqt4a2XXPRVicbOeW5/RIZ
+         GUzDSNdN9tYQrv2O0m3JQ+3NhKsbw/R4SzmAsbyfzMjjmaDk7s4wTkAfOw/cpxJcAEdh
+         M1NQWzSI75SI2mE3aMi36wcapAf2GRUkVLB3Z1sz37Yh5VSB3pqr4yoQnXDT4xmimkJv
+         zHBKpDeLFDALwn7vVzsZ7jLSc2JfADsALBHCbU/Rq6dYIeN6ma+sGRv/WmiRgj6A6AQI
+         ShJ1ZYNRA1mHq/2GLaeunAuX0ZG88Oh2MTEDICwVWLB2V6gXMPErBJImroXcDWXAOhDM
+         8/LQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=mHltY5t9;
+       spf=pass (google.com: domain of hossainmaisha420@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=hossainmaisha420@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <hossainmaisha420@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id br17sor6356940pjb.13.2020.07.22.00.01.43
+        (Google Transport Security);
+        Wed, 22 Jul 2020 00:01:43 -0700 (PDT)
+Received-SPF: pass (google.com: domain of hossainmaisha420@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=mHltY5t9;
+       spf=pass (google.com: domain of hossainmaisha420@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=hossainmaisha420@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=bYVKi1RxM850WhLOoewuzit+Vk7kSFH57YFfbW0AYL8=;
+        b=mHltY5t90J8cZgKWkbCCRZmVfdLVC7+GhrFjB9+YFduXgkDcyJSd81XxhHH21TuERM
+         RfYi9KCWrhfrff7cX4Louaviz/WeoWnEdkPp/tQUTQTcwoE/+vXWLkINCdf19fnH9hxn
+         gg9E4cNJmkKc7miTMsLtfhsKgceHiHv3ELaY+rWzKNMh/uDHIZYgA87FCckId9ozQ/uE
+         Fi7J9hFFPMZefR1Q8k8+Om9l3NT/Veg5K4IsrjD4Zfuxk7OxPBE77gcxZ6zqnBPAyiT8
+         tu2tkGuRCP0EQlnHQHfL27W4uWDtn7GsAEGdzmlAxD6H6DBvRVCMft2hSLeVs2kCgnWu
+         CViw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=bYVKi1RxM850WhLOoewuzit+Vk7kSFH57YFfbW0AYL8=;
+        b=uepyRI1mSkU6ojRS0KXn7hHnOlvUAVKiD+SE/KWcxvpx9xIn+WvgLcaMCee/xvNwCB
+         PdmC1cXnoVrCOSvzct+tTcOfnbBD2W7jsjLNmDBDLuMF3PLJMhrmCofvR8ALeWuc4RDJ
+         TC3y34yMJW1XCFwyYG2whupZkfGFQln+xb+0Rz/y9ug5OCZIkZFSTD8GiREDDzJ7py0H
+         Kvm7lu2Qc5ku3gN0EOqP6K8LzFFDJnmLM2SSeh48UM+JcyMgDfH/DKYTeFEMdLgp3PyD
+         cHz/vj1ZUMWdmTyUo0dmERM0xHG8zMMLO1N38z11PP6s5s0dNp9tu90NgoYmUK3D2s2Z
+         N8+A==
+X-Gm-Message-State: AOAM5331+TILlxeUitKIRTxfMt17RU7zqcr1lPMZ9nNpcjZSZ7y9aFVV
+	epzhSrjxh4ia9BRzZ8in6mWE9OLtcq5r1iXqF2bduzXN
+X-Google-Smtp-Source: ABdhPJwN19RjoYjxaHmdrxuCK+vKhTRDoxiSNAEtiXMt1S3ANSPefGCmov9c56+dpXHTFROpj4CB1CtY/uYEsWlzS+k=
+X-Received: by 2002:a17:90a:ac14:: with SMTP id o20mr8662881pjq.185.1595401302658;
+ Wed, 22 Jul 2020 00:01:42 -0700 (PDT)
+MIME-Version: 1.0
+From: Maisha Hossain <hossainmaisha420@gmail.com>
+Date: Wed, 22 Jul 2020 13:01:29 +0600
+Message-ID: <CANzdOnMFvtkGTfJHnX+8Ru2R9SHMQzTZRg0BEGCNaF4EjhwgZA@mail.gmail.com>
+Subject: Submitted Answersheet By Nusrat Jahan Marisha Class 12 Section B
+ Group Humanities
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000eb50a305ab024f78"
+
+--000000000000eb50a305ab024f78
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199239
+
+--000000000000eb50a305ab024f78
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199239=C2=A0</div>
+
+--000000000000eb50a305ab024f78--

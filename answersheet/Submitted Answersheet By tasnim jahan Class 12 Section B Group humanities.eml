@@ -1,0 +1,185 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp294476wmm;
+        Tue, 21 Jul 2020 23:48:17 -0700 (PDT)
+X-Received: by 2002:a62:2b96:: with SMTP id r144mr27191504pfr.272.1595400497560;
+        Tue, 21 Jul 2020 23:48:17 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595400497; cv=none;
+        d=google.com; s=arc-20160816;
+        b=0dIi+3fAD0P9srYfbH+AvgfZvQu840rTMAIGkzM+ZDpwfFPfWyQwEh87sfW4ECdW6j
+         yxfHOAl0J4CokI3+bHcCePaKuk9I8M7MaYlF4BARr5uKSq0RdVsUmkTt3XfEpgs1hsHL
+         d+2x8b331mZ6pDkG6wF5eE+8wq72Tprb+u9gtH/dy6H4Npqz54/5v3d00vW6Hd2H1SGN
+         6QaeG6UYfvFkUBbS72WQKh0GElkXtVXTy8gOs53RQR0ETIM43JDsTyxwA9cfYAgylF7Y
+         VWz4IiZ0S+JNlb7kMNV+Y8+UJBQZFmzDda6AFd6/HrObQwbMls3L9igkgCRKqEVBEVMx
+         9WrQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=4ql9iRYNpqDx8IBCQSPcMG9GvvbpIV1cq9Bin2ri3U4=;
+        b=O3oNalqA9WAn6IhEPTcNsYCelXqQxIiCOy/fZ+foOZqv40mifmqJ7n/Du/DoiG8PMk
+         lsPGgcZ81Se8tv12CVnkkdzK1Qro7LyPlqwni6F7kyUCcWaMSaW3DFkjvn4BOz5Ia/p6
+         1gh0dbRl1cfqJMqyVZkJMv/iPISPq+MkRgUTpy5WzDQk9/QvymIxJz7mIHgxXCMb1JjH
+         gm3tCf2ZT5PIApnEKB+ckVWxKeouH3BZIokC1KOnig3al/h8l8Akxv3M1IBDjYpCGvwx
+         0N9k8zclOz8Zy0SdTYdiPpzPICEBTxqXHwhXBII4kfQANQ4C4SIfX4zrQ4WLJwRB/lOx
+         FqtQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=EQxtCNDg;
+       spf=pass (google.com: domain of muktasiam18@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=muktasiam18@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <muktasiam18@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 65sor18779745plc.30.2020.07.21.23.48.17
+        (Google Transport Security);
+        Tue, 21 Jul 2020 23:48:17 -0700 (PDT)
+Received-SPF: pass (google.com: domain of muktasiam18@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=EQxtCNDg;
+       spf=pass (google.com: domain of muktasiam18@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=muktasiam18@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=4ql9iRYNpqDx8IBCQSPcMG9GvvbpIV1cq9Bin2ri3U4=;
+        b=EQxtCNDgg8DXxE1hvbsn/Nq65SI/4W7gnHBV4IdE+7k0b1yEtLHoQb8/rqV0g2WIFB
+         AiKmUbNfEqJKvH0wQHFyGt8WyR1uxl0nMDsLMUVRiy4h1RAcF7uYzK1Y2Gf8KS/ku0C1
+         ipaSHLlzlPGy0PbMIXiqe5WP0CA+UmxvateH+gzsdI2HEUkDPJ7DuXftE85muXlvFei1
+         i8H4TDPQ44YHki9Rp/GSL7Ze3RdRkMcNnB2ztl/qCTwsWTPeGtr3iAq2dEzfuBblWRFe
+         D5gwLHFdxz1lTUBG81HXE9JR1LXU4zwrqB4AaWgRVoUpgGR1ZxT1ebqdDEh92ymsRX1n
+         dvjw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=4ql9iRYNpqDx8IBCQSPcMG9GvvbpIV1cq9Bin2ri3U4=;
+        b=UphuRSm7QqmYqWZxqrYL6vAMyM3bvUVtU7w3QVa85QVx9t764EqnbGV7Qam6DVAg2a
+         np7bLF9pcPQ/z1B3dzjaYTk8I0h1FhN4MpVzvpflUmsME490cdcE/Cs7A+zyiR48QFMV
+         gmX5ijjFPzb0El+Z4KiryulJj/QkcSsndRTGmxb0J+NehHgu83p4KprDnYTnrkKM2rO+
+         m9m3n2ebeRhb67DJnNoEH2+42iif+mXjtxVVx8+4tuVtVINR3eoQblrr8QE5hk44pIP0
+         oBV75+ZrxvCMKpZhA44JP84hdtkEtlULACPX4evJxSwq2PONcYrIOn5DM8mTzwKO//Yq
+         HTFw==
+X-Gm-Message-State: AOAM530+WrZBwybSFR2ua42Vwa3zklZsmqP0AOOaLstQ7H+yViEakcmx
+	7zdI7jKsGB01nf7LzgAFgQ+SDTW1ef7vTl8zGrTrpA==
+X-Google-Smtp-Source: ABdhPJxpJaH/n8bnjty1z8PWtPfSOCkawk6HdJ+vMk5mfz8cPt69lsWUMg5mPHQd6VdsLe/Q1kQDRuGfMKF/nC5Bdic=
+X-Received: by 2002:a17:90a:62c1:: with SMTP id k1mr8811777pjs.107.1595400496987;
+ Tue, 21 Jul 2020 23:48:16 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 2002:a17:90a:2fcf:0:0:0:0 with HTTP; Tue, 21 Jul 2020 23:48:15
+ -0700 (PDT)
+Received: by 2002:a17:90a:2fcf:0:0:0:0 with HTTP; Tue, 21 Jul 2020 23:48:15
+ -0700 (PDT)
+From: mukii tae_tae <muktasiam18@gmail.com>
+Date: Tue, 21 Jul 2020 23:48:15 -0700
+Message-ID: <CAFtXynMD+Dj0sg9tOSUKyTp=jruDCDMTwMwh6pfieJUL=iYwzQ@mail.gmail.com>
+Subject: Submitted Answersheet By tasnim jahan Class 12 Section B Group humanities
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/mixed; boundary="000000000000e5d88705ab021f58"
+
+--000000000000e5d88705ab021f58
+Content-Type: multipart/alternative; boundary="000000000000e5d88005ab021f56"
+
+--000000000000e5d88005ab021f56
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199308
+
+--000000000000e5d88005ab021f56
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="auto">My Roll Is 199308</div>
+
+--000000000000e5d88005ab021f56--
+--000000000000e5d88705ab021f58
+Content-Type: text/html; charset="US-ASCII"; name="tasnim jahan 199308 12 Humanities B.html"
+Content-Disposition: attachment; 
+	filename="tasnim jahan 199308 12 Humanities B.html"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: 1672898660885594112-local0
+
+PHN0eWxlPmltZ3sgaGVpZ2h0OiAxMDBweDsgd2lkdGg6IDIwMHB4O30ucXVlc3Rpb257IG1hcmdp
+bi1ib3R0b206IDEwcHg7IHdpZHRoOiA5OSUgIWltcG9ydGFudDt9IGlucHV0W3R5cGUgPSBmaWxl
+XXsgZGlzcGxheTogbm9uZTsgfSBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDY2
+N3B4KXsjdGltZXJ7IHRvcDogMTgwcHggIWltcG9ydGFudDsgZm9udC1zaXplOiAxcmVtOyB9I2V4
+bnVtSGVhZHsgdG9wOiAxNTBweCAhaW1wb3J0YW50OyBmb250LXNpemU6IDFyZW07IH0gaDF7IGRp
+c3BsYXk6IGJsb2NrOyB9IGRpdnsgZGlzcGxheTogYmxvY2sgIWltcG9ydGFudDsgfSAub3B0eyBt
+YXJnaW4tYm90dG9tOiA1cHggfSAucXVlc3Rpb257IHBhZGRpbmctYm90dG9tOiA1cHggfX08L3N0
+eWxlPjxkaXYgaWQ9J2NvbnRlbnQnPjxjZW50ZXI+PGgxIHN0eWxlPSJtYXJnaW4tYm90dG9tOjUw
+cHg7Ij5TYXZhciBMYWJvcmF0b3J5IENvbGxlZ2UgT25saW5lIEV4YW0gU3lzdGVtPGJyPjxicj48
+YnI+UmFuZG9tPGJyPlNob3J0IERlbW88L2gxPjwvY2VudGVyPgoKICAgIDxkaXYgY2xhc3M9InF1
+ZXN0aW9uIiBzdHlsZT0iYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KHRoaXN0bGUs
+IGRhcmtncmV5LCBhenVyZSwgZGFya3NlYWdyZWVuKTsgYmFja2dyb3VuZC1hdHRhY2htZW50OiBm
+aXhlZDsgbWFyZ2luLWJvdHRvbTogMTBweDsiPjxoMSBzdHlsZT0iZGlzcGxheTpibG9jazsiPjE8
+L2gxPjxpbWcgY2xhc3M9ImltYWdlcyI+PGlucHV0IG9uY2hhbmdlPSJkaXNwbGF5aW1nKHRoaXMs
+MSkiIGNsYXNzPSJpbWciIHR5cGU9ImZpbGUiIG5hbWU9ImltYWdlW10iIHN0eWxlPSJkaXNwbGF5
+OiBub25lOyI+PGJyPjxkaXYgY29udGVudGVkaXRhYmxlPSJmYWxzZSIgc3R5bGU9InJlc2l6ZTog
+bm9uZTsgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7IG92ZXJmbG93OiBhdXRvOyBkaXNwbGF5OiBp
+bmxpbmUtYmxvY2s7IGhlaWdodDogODBweDsgd2lkdGg6IDk5JTsgcGFkZGluZzogM3B4OyBiYWNr
+Z3JvdW5kOiB0cmFuc3BhcmVudDsiIG5hbWU9InFbXSI+V3JpdGUgUXVlc3Rpb248L2Rpdj48YnI+
+PGJyPiAgICA8aW5wdXQgdHlwZT0icmFkaW8iIHZhbHVlPSJBIiBuYW1lPSJjaGVja2JveDFbXSIg
+bmV4dHJhbmRvbXByb2dyZXNzPSI2NSIgY2hlY2tlZD0iY2hlY2tlZCI+IDxkaXYgY29udGVudGVk
+aXRhYmxlPSJmYWxzZSIgc3R5bGU9InJlc2l6ZTogbm9uZTsgYm9yZGVyOiAxcHggc29saWQgYmxh
+Y2s7IG92ZXJmbG93OiBhdXRvOyBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IGhlaWdodDogNTBweDsg
+d2lkdGg6IDE1MHB4OyBwYWRkaW5nOiAzcHg7IiBjbGFzcz0ib3B0IiBuYW1lPSJvcHRpb24xW10i
+PldyaXRlIE9wdGlvbjwvZGl2PjxpbnB1dCBvbmNoYW5nZT0iZGlzcGxheWltZzEodGhpcywxLDAp
+IiBjbGFzcz0iaW1nIiB0eXBlPSJmaWxlIiBuYW1lPSJpbWFnZVtdIiBzdHlsZT0iZGlzcGxheTog
+bm9uZTsiPiAgICA8aW5wdXQgdHlwZT0icmFkaW8iIHZhbHVlPSJCIiBuYW1lPSJjaGVja2JveDFb
+XSIgbmV4dHJhbmRvbXByb2dyZXNzPSI2NSIgZGlzYWJsZWQ9IiI+IDxkaXYgY29udGVudGVkaXRh
+YmxlPSJmYWxzZSIgc3R5bGU9InJlc2l6ZTogbm9uZTsgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7
+IG92ZXJmbG93OiBhdXRvOyBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IGhlaWdodDogNTBweDsgd2lk
+dGg6IDE1MHB4OyBwYWRkaW5nOiAzcHg7IiBjbGFzcz0ib3B0IiBuYW1lPSJvcHRpb24xW10iPldy
+aXRlIE9wdGlvbjwvZGl2PjxpbnB1dCBvbmNoYW5nZT0iZGlzcGxheWltZzEodGhpcywxLDEpIiBj
+bGFzcz0iaW1nIiB0eXBlPSJmaWxlIiBuYW1lPSJpbWFnZVtdIiBzdHlsZT0iZGlzcGxheTogbm9u
+ZTsiPjxicj4gICAgPGlucHV0IHR5cGU9InJhZGlvIiB2YWx1ZT0iQyIgbmFtZT0iY2hlY2tib3gx
+W10iIG5leHRyYW5kb21wcm9ncmVzcz0iNjUiIGRpc2FibGVkPSIiPiA8ZGl2IGNvbnRlbnRlZGl0
+YWJsZT0iZmFsc2UiIHN0eWxlPSJyZXNpemU6IG5vbmU7IGJvcmRlcjogMXB4IHNvbGlkIGJsYWNr
+OyBvdmVyZmxvdzogYXV0bzsgZGlzcGxheTogaW5saW5lLWJsb2NrOyBoZWlnaHQ6IDUwcHg7IHdp
+ZHRoOiAxNTBweDsgcGFkZGluZzogM3B4OyIgY2xhc3M9Im9wdCIgbmFtZT0ib3B0aW9uMVtdIj5X
+cml0ZSBPcHRpb248L2Rpdj48aW5wdXQgb25jaGFuZ2U9ImRpc3BsYXlpbWcxKHRoaXMsMSwyKSIg
+Y2xhc3M9ImltZyIgdHlwZT0iZmlsZSIgbmFtZT0iaW1hZ2VbXSIgc3R5bGU9ImRpc3BsYXk6IG5v
+bmU7Ij4gICAgPGlucHV0IHR5cGU9InJhZGlvIiB2YWx1ZT0iRCIgbmFtZT0iY2hlY2tib3gxW10i
+IG5leHRyYW5kb21wcm9ncmVzcz0iNjUiIGRpc2FibGVkPSIiPiA8ZGl2IGNvbnRlbnRlZGl0YWJs
+ZT0iZmFsc2UiIHN0eWxlPSJyZXNpemU6IG5vbmU7IGJvcmRlcjogMXB4IHNvbGlkIGJsYWNrOyBv
+dmVyZmxvdzogYXV0bzsgZGlzcGxheTogaW5saW5lLWJsb2NrOyBoZWlnaHQ6IDUwcHg7IHdpZHRo
+OiAxNTBweDsgcGFkZGluZzogM3B4OyIgY2xhc3M9Im9wdCIgbmFtZT0ib3B0aW9uMVtdIj5Xcml0
+ZSBPcHRpb248L2Rpdj48aW5wdXQgb25jaGFuZ2U9ImRpc3BsYXlpbWcxKHRoaXMsMSwzKSIgY2xh
+c3M9ImltZyIgdHlwZT0iZmlsZSIgbmFtZT0iaW1hZ2VbXSIgc3R5bGU9ImRpc3BsYXk6IG5vbmU7
+Ij48L2Rpdj48ZGl2IGNsYXNzPSJxdWVzdGlvbiIgc3R5bGU9ImJhY2tncm91bmQtaW1hZ2U6IGxp
+bmVhci1ncmFkaWVudChza3libHVlLCBsaWdodHN0ZWVsYmx1ZSwgc2t5Ymx1ZSwgbGlnaHRjeWFu
+KTsgYmFja2dyb3VuZC1hdHRhY2htZW50OiBmaXhlZDsgbWFyZ2luLWJvdHRvbTogMTBweDsiPjxo
+MSBzdHlsZT0iZGlzcGxheTpibG9jazsiPjI8L2gxPjxpbWcgY2xhc3M9ImltYWdlcyI+PGlucHV0
+IG9uY2hhbmdlPSJkaXNwbGF5aW1nKHRoaXMsMikiIGNsYXNzPSJpbWciIHR5cGU9ImZpbGUiIG5h
+bWU9ImltYWdlW10iIHN0eWxlPSJkaXNwbGF5OiBub25lOyI+PGJyPjxkaXYgY29udGVudGVkaXRh
+YmxlPSJmYWxzZSIgc3R5bGU9InJlc2l6ZTogbm9uZTsgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7
+IG92ZXJmbG93OiBhdXRvOyBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IGhlaWdodDogODBweDsgd2lk
+dGg6IDk5JTsgcGFkZGluZzogM3B4OyBiYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDsiIG5hbWU9InFb
+XSI+V3JpdGUgUXVlc3Rpb248L2Rpdj48YnI+PGJyPiAgICA8aW5wdXQgdHlwZT0icmFkaW8iIHZh
+bHVlPSJBIiBuYW1lPSJjaGVja2JveDJbXSIgbmV4dHJhbmRvbXByb2dyZXNzPSI2NSIgZGlzYWJs
+ZWQ9IiI+IDxkaXYgY29udGVudGVkaXRhYmxlPSJmYWxzZSIgc3R5bGU9InJlc2l6ZTogbm9uZTsg
+Ym9yZGVyOiAxcHggc29saWQgYmxhY2s7IG92ZXJmbG93OiBhdXRvOyBkaXNwbGF5OiBpbmxpbmUt
+YmxvY2s7IGhlaWdodDogNTBweDsgd2lkdGg6IDE1MHB4OyBwYWRkaW5nOiAzcHg7IiBjbGFzcz0i
+b3B0IiBuYW1lPSJvcHRpb24yW10iPldyaXRlIE9wdGlvbjwvZGl2PjxpbnB1dCBvbmNoYW5nZT0i
+ZGlzcGxheWltZzEodGhpcywyLDApIiBjbGFzcz0iaW1nIiB0eXBlPSJmaWxlIiBuYW1lPSJpbWFn
+ZVtdIiBzdHlsZT0iZGlzcGxheTogbm9uZTsiPiAgICA8aW5wdXQgdHlwZT0icmFkaW8iIHZhbHVl
+PSJCIiBuYW1lPSJjaGVja2JveDJbXSIgbmV4dHJhbmRvbXByb2dyZXNzPSI2NSIgZGlzYWJsZWQ9
+IiI+IDxkaXYgY29udGVudGVkaXRhYmxlPSJmYWxzZSIgc3R5bGU9InJlc2l6ZTogbm9uZTsgYm9y
+ZGVyOiAxcHggc29saWQgYmxhY2s7IG92ZXJmbG93OiBhdXRvOyBkaXNwbGF5OiBpbmxpbmUtYmxv
+Y2s7IGhlaWdodDogNTBweDsgd2lkdGg6IDE1MHB4OyBwYWRkaW5nOiAzcHg7IiBjbGFzcz0ib3B0
+IiBuYW1lPSJvcHRpb24yW10iPldyaXRlIE9wdGlvbjwvZGl2PjxpbnB1dCBvbmNoYW5nZT0iZGlz
+cGxheWltZzEodGhpcywyLDEpIiBjbGFzcz0iaW1nIiB0eXBlPSJmaWxlIiBuYW1lPSJpbWFnZVtd
+IiBzdHlsZT0iZGlzcGxheTogbm9uZTsiPjxicj4gICAgPGlucHV0IHR5cGU9InJhZGlvIiB2YWx1
+ZT0iQyIgbmFtZT0iY2hlY2tib3gyW10iIG5leHRyYW5kb21wcm9ncmVzcz0iNjUiIGRpc2FibGVk
+PSIiPiA8ZGl2IGNvbnRlbnRlZGl0YWJsZT0iZmFsc2UiIHN0eWxlPSJyZXNpemU6IG5vbmU7IGJv
+cmRlcjogMXB4IHNvbGlkIGJsYWNrOyBvdmVyZmxvdzogYXV0bzsgZGlzcGxheTogaW5saW5lLWJs
+b2NrOyBoZWlnaHQ6IDUwcHg7IHdpZHRoOiAxNTBweDsgcGFkZGluZzogM3B4OyIgY2xhc3M9Im9w
+dCIgbmFtZT0ib3B0aW9uMltdIj5Xcml0ZSBPcHRpb248L2Rpdj48aW5wdXQgb25jaGFuZ2U9ImRp
+c3BsYXlpbWcxKHRoaXMsMiwyKSIgY2xhc3M9ImltZyIgdHlwZT0iZmlsZSIgbmFtZT0iaW1hZ2Vb
+XSIgc3R5bGU9ImRpc3BsYXk6IG5vbmU7Ij4gICAgPGlucHV0IHR5cGU9InJhZGlvIiB2YWx1ZT0i
+RCIgbmFtZT0iY2hlY2tib3gyW10iIG5leHRyYW5kb21wcm9ncmVzcz0iNjUiIGNoZWNrZWQ9ImNo
+ZWNrZWQiPiA8ZGl2IGNvbnRlbnRlZGl0YWJsZT0iZmFsc2UiIHN0eWxlPSJyZXNpemU6IG5vbmU7
+IGJvcmRlcjogMXB4IHNvbGlkIGJsYWNrOyBvdmVyZmxvdzogYXV0bzsgZGlzcGxheTogaW5saW5l
+LWJsb2NrOyBoZWlnaHQ6IDUwcHg7IHdpZHRoOiAxNTBweDsgcGFkZGluZzogM3B4OyIgY2xhc3M9
+Im9wdCIgbmFtZT0ib3B0aW9uMltdIj5Xcml0ZSBPcHRpb248L2Rpdj48aW5wdXQgb25jaGFuZ2U9
+ImRpc3BsYXlpbWcxKHRoaXMsMiwzKSIgY2xhc3M9ImltZyIgdHlwZT0iZmlsZSIgbmFtZT0iaW1h
+Z2VbXSIgc3R5bGU9ImRpc3BsYXk6IG5vbmU7Ij48L2Rpdj48aW5wdXQgaWQ9Im1haWwiIHR5cGU9
+ImVtYWlsIiB2YWx1ZT0icml5YWQzMDMwMzBAZ21haWwuY29tIiBzdHlsZT0iZGlzcGxheTogbm9u
+ZTsiPjxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0idGltZSIgdmFsdWU9IjI6MCIgc3R5bGU9ImRpc3Bs
+YXk6IG5vbmU7Ij48aW5wdXQgaWQ9ImV4bnVtIiB0eXBlPSJ0ZXh0IiB2YWx1ZT0iMSIgc3R5bGU9
+ImRpc3BsYXk6IG5vbmU7Ij48L2Rpdj4=
+--000000000000e5d88705ab021f58--

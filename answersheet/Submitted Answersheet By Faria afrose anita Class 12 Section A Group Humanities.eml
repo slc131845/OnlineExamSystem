@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp302947wmm;
+        Wed, 22 Jul 2020 00:01:41 -0700 (PDT)
+X-Received: by 2002:a1c:1fc2:: with SMTP id f185mr7244018wmf.0.1595401301117;
+        Wed, 22 Jul 2020 00:01:41 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595401301; cv=none;
+        d=google.com; s=arc-20160816;
+        b=TJv788PuEeKtnOGQ/YKQkjfQqsYButEmqDEhJDMLEqE4VFeLK6IqdvHnKHQdnVHX43
+         coRlOZlGDLMZVO0VVLf32SmSq0HtDf3r6qnvoJ2hTkguNwSM3PVUyOVTq6gg2dxvxZky
+         hAJtqWrwSE/V16vCTOq6Agfnyv305f+24L7FZeYKYOlt/tLTy0fyISEjj+1ImqE6c4pG
+         rsk4MbaD4bLF/GBqah/G7wqLXk1xdlx2quT8ckMD0ffPNz/RYEGaJJnoqjIWQXuui/+V
+         WwtISyYDijo2mjt1BkBHmVtrQAxLUoJTmUYUQX62rGysZvV3+p173O9cIq4BB1fWLb00
+         g7Mw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=OpoHyMJ9cTDy/B8UmyBVBnedyT7BrWa1TMbFXRHUrtg=;
+        b=rj+b54sOXo6jqyufUHp6NevUApxbOBbUioCbn/HumHWqGaUHhOxjpbrVQwYM2sNZf0
+         MEB+hYs6DEtMcnhi8zU2msu/0edvqxbzXtlOlxoMNtvEki1ciFYzObmeB/R6JtGq51lQ
+         aCcV2ij3e5yAspSwHBW+6ymRbNedgJl6Q5cu9W+RnOOtKznLkwT8+80AmvnT6E+fviFr
+         YP5OvG9y4LRtcaeGR9B3J9bF+v7ggDyFWfajPDc2AQVAjcyDDzSYc76oJcupztqrs0Ed
+         AHyt4vdHY2gdUqFXv30dePs5radJGKFmALVhwed2Fr6U82gHAz+7jVn+mcWef3NnclVr
+         c+rg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=ijTqmBSa;
+       spf=pass (google.com: domain of fariaafrose3@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=fariaafrose3@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <fariaafrose3@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 74sor3057004wma.23.2020.07.22.00.01.40
+        (Google Transport Security);
+        Wed, 22 Jul 2020 00:01:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of fariaafrose3@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=ijTqmBSa;
+       spf=pass (google.com: domain of fariaafrose3@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=fariaafrose3@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=OpoHyMJ9cTDy/B8UmyBVBnedyT7BrWa1TMbFXRHUrtg=;
+        b=ijTqmBSabnPi6Na9oivZhzrin9uEZriyGPgGPI1Up7dEampp/TfsbQDNpePEmeDfGF
+         OMWfXd57UinTQV8UAs/ty2pI5Y6uMRmuzPE3sMB9Vo9++sok8SL6Nl8LLnFOMyJII4zN
+         qWt/huZjKjbGhgOmp82z5K4RtQ6oe4oLp0m9r9KLmGiEy6D7FnbaKwIhtHSzm6ZLa2wV
+         VA7kciB0Q9kTsT41WatBo17EbgLFsV+YKL2ZhiDDEZ/12CJHM269uav2ttT5f0b6yaYI
+         6UCr6LsATs+/JmbmytIOIQUMHvH2BVELZctXFJ7FXCWEDAnxL7s/OYE45Zp32HCyfUr3
+         1TNA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=OpoHyMJ9cTDy/B8UmyBVBnedyT7BrWa1TMbFXRHUrtg=;
+        b=tU7DLyLENqO1FyQzb3Tic7YcEJe6Qe8jtP5AvjXrfFBmiL5tl794rimaUjxxU7FLB6
+         ho/KujqDEdQbOSXzIqJp065wXQY7qBpHS8diS7XLyfCygJuMdqkd1Ou9ksvGKKgYkHR5
+         zEQIVSxn56KhSUXtYMA4gsW+tlhLVza2aJtCNzdahCw3fCoGLal8ZY13sHAS9gJRdHN7
+         D/FL0PoQHFIw27+Gnz6sQToOlBMRqVl5ofwwlZBWmEieZbCC+uxiGgfclX+l/W3zR4cU
+         bg5NtNBlWUkwAvVOhTVkM2w7EKTu8JbNSet6m8kc4YaQJSdMm4OJOP25RJIqAF4LhFzS
+         ymcQ==
+X-Gm-Message-State: AOAM533v3mePLNbXbGwJbpmVHywBwCtpDf0gfb2QCfk4lPllTtbTxzPF
+	Fn1nugPDb8dlDfTBnyt/ffkMxRPzJXM00UsZD3jAFQ==
+X-Google-Smtp-Source: ABdhPJzJk8XXRS3OS4oL56dJAeKB8IM8tOebYiO+eKDkkuYfbieLcbSpTxb/F5s0jXKvPUcmTXUEo8b/J7heImWBRXM=
+X-Received: by 2002:a7b:cb92:: with SMTP id m18mr7020766wmi.94.1595401300568;
+ Wed, 22 Jul 2020 00:01:40 -0700 (PDT)
+MIME-Version: 1.0
+From: Faria Afrose <fariaafrose3@gmail.com>
+Date: Wed, 22 Jul 2020 13:01:25 +0600
+Message-ID: <CAPASsp3edHMHTxybH6R1kZ7GwL+bTs=JjWdWk8+pHchVnNz5Ww@mail.gmail.com>
+Subject: Submitted Answersheet By Faria afrose anita Class 12 Section A Group Humanities
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000cb6daa05ab024ffb"
+
+--000000000000cb6daa05ab024ffb
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199202
+
+--000000000000cb6daa05ab024ffb
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199202=C2=A0</div>
+
+--000000000000cb6daa05ab024ffb--

@@ -1,0 +1,81 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp296708wmm;
+        Tue, 21 Jul 2020 23:50:22 -0700 (PDT)
+X-Received: by 2002:a02:7419:: with SMTP id o25mr35787021jac.4.1595400622451;
+        Tue, 21 Jul 2020 23:50:22 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595400622; cv=none;
+        d=google.com; s=arc-20160816;
+        b=K4HgR1ttr09v0dRgKslTjVrvWmBssBgMGTDZ028PFKTRMMCEUCGWa+/Rh2OeOTZWBh
+         LgZQmg7TGLNCjvjDnUPBvIsJEqAIpPpnLL6CzvCp4c8fJyVkTwetTxEoWI5A/q+/TmlU
+         lrAAcyF9ZtEdq+IlVgspemXVV07pNoF+VvtotlCdzj9vpfimaXPQJ0v9zIFxyQPIMkkk
+         XFPXwDSok/WEsIx+6vFP5g7CIIt31AJlroZUgNV8Mf1xMxcwtrIRat1vCfiwDab3+7Nr
+         mTFpqEvceYtS2kd26QTf0hr8x6BYEubISpoZBcZmv78ZIYq97p4ua4MkNg2LkhNpVTUY
+         /d1Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=abflXkaBRkRAvffTmP7f3Xy0ltxj78v+QjMJnKkd4Ss=;
+        b=AZVQrj6p8tKWQ6WozTTjjSoAdXEW+eGy7CH/yzdqdC8XBUrnZA5Tva5wVHITd8Rced
+         rKNmA50F4VCOt4CNq9/K4jXSLam8WWCRa6ZWU9pMpIgZtB8sa4VTconcvpO4Sz/3PYkO
+         JwmokfW5PWWV4WeoULYl8NM0XrZQ3Gdw20FZypiZlksRaURHnLYFq05NcnPjpRMgXYiC
+         NSgDlkfkQNqCG4w9VTWegJooGanHuNj/3p2brBp6X4g+gg1ttfNyMcYFMA3SL8m/R0tI
+         Lc4g7Ak5APvWO/VLybjeIlLjgxiFb+e4gzzXhCAoghgXJHcaAQ3UvmEqyzapBprtlUtB
+         YibA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=m0HsZWM+;
+       spf=pass (google.com: domain of sk8233026@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=sk8233026@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <sk8233026@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id n16sor17749813ilq.20.2020.07.21.23.50.22
+        (Google Transport Security);
+        Tue, 21 Jul 2020 23:50:22 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sk8233026@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=m0HsZWM+;
+       spf=pass (google.com: domain of sk8233026@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=sk8233026@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=abflXkaBRkRAvffTmP7f3Xy0ltxj78v+QjMJnKkd4Ss=;
+        b=m0HsZWM+/wGVyLX0THd4ERbVuKs0EYMdiaAx1DOCUU45Mreewh1QDm+pgwTz1YNTV7
+         r29U0IkR6rtLL61Pl+cyfGvSVMVxprXyA7pvdfX/P9wlCaPsjumPtbUin2ILL/7b3Yuv
+         /a2kQRm2LaiupEptAyN7t4jtIR2lXTRYsAvLmi92qk1ml6oGROMElvrLQttMoqcIgxjN
+         aPKwnIza0nvGtYVZ1wplZxsWNX3cwVQpBwzBwIZgHCPZEPCMtWO4z9H6EWvZTUgfYXSm
+         CVkLB3I/MkAOUBN4sQ4HYbCXLZJ6MA0dQmL7ygQfNddJ7WTpogc79xpi0D8/UskYUBYh
+         Ddqw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=abflXkaBRkRAvffTmP7f3Xy0ltxj78v+QjMJnKkd4Ss=;
+        b=Dn+ASmp5oiv9l2SEf2ug2uXxoEn6QXFnnK0TCEubYTFWf+/4HIoUoDqNU63Y11qCFM
+         vKM9Ks9rjdlNGOUw/LU7MnPL0gUa9XeD3pV59DepVtjBnfG3PLig7qpVhiW1goPrW8ek
+         IuP81ah4qehW28kXBSgymcsX13jbTLdEv58aTPQ5QJ7fiLyWOVQ0pamwz2ZRa6xslU9C
+         ZRBScgmjGIB9g1hx2rx/GLx/Oz4aOmog5wSD7QRgn+5v+VQUbR+zs6EGdoLEiv22SvGe
+         EBU894u9M+WW1i6YDHRdRBDIHtbXL9Ba538PSJEpgsPmYkRRdaflkso1qhOAMBbEgLS8
+         mQcA==
+X-Gm-Message-State: AOAM530iqtPOJjmAHCgqbXwhKJqoPxab9Gfdgp9Ugwes0RMd0S1yI2wW
+	ibypaB8UW13wYoN8XDMTjDvr2K2gY9Q/OncerUzU
+X-Google-Smtp-Source: ABdhPJxdBDCj2KMvyFBDXofnISzannQtSUtRNhw2k4UiKyeEi2DnUTI1hjfDZeqAX9nhw55uLMaIQuSPZ5rJuHoO7NA=
+X-Received: by 2002:a92:db06:: with SMTP id b6mr33808484iln.228.1595400621933;
+ Tue, 21 Jul 2020 23:50:21 -0700 (PDT)
+MIME-Version: 1.0
+From: Sojib Khan <sk8233026@gmail.com>
+Date: Wed, 22 Jul 2020 12:50:05 +0600
+Message-ID: <CAHfs_9Fu-O7AbhMGjUZgpD4hFikFy3QnGqCsR8hCp9ofdOPkPg@mail.gmail.com>
+Subject: Submitted Answersheet By Sojib Mia Class Twelve Section D Group Humanities
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000005848ed05ab022788"
+
+--0000000000005848ed05ab022788
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199078
+
+--0000000000005848ed05ab022788
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="auto">My Roll Is 199078</div>
+
+--0000000000005848ed05ab022788--

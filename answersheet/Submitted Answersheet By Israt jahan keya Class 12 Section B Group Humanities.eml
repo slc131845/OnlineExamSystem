@@ -1,0 +1,82 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp295230wmm;
+        Tue, 21 Jul 2020 23:49:40 -0700 (PDT)
+X-Received: by 2002:a2e:6a12:: with SMTP id f18mr13735029ljc.392.1595400580744;
+        Tue, 21 Jul 2020 23:49:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595400580; cv=none;
+        d=google.com; s=arc-20160816;
+        b=C/V4lp7xMjDtwqMPbVAZsgYYxIqeTBBHW58gTsQ4XZZKXXnZcGjn89Tf8nTzc6XYm0
+         inSgsnzwEg2bCwLE/xwuDKYBEmE0+pnrCaQwHSSSxst3675HQYnrMi5IJkBIegRtkNJY
+         d9t25q1Ox1JuKe/GBcaA3ZW1M63xRwJhetAmrGb61/CCh7avQAS2nTY4Dg7vtkwYi5Fj
+         z8n4VafT87saJXCQa2qvaNoqCQyTR7ADwNjjLOD/3yJvvvBoeusHlWWCkGjb423CIwZT
+         KI+TNOqI06mFCQ/3jRJiwA8VQtHR3vSO6xyFySD/SQfnWJxr//S8GOwSSNpiGZctLLRn
+         WFUA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=BKDlxrYz2d62vkI24BNla+3eZxZjLmNoo9UhD5I5kiU=;
+        b=VLTSOIvbL7goUjhW2JVD9lNsVqci4oGAcTBUIQJKqqtFRcHLseccWougeeQRWk5Snj
+         rZqOb6lk00efQ4RhI8nvfKsGiRTywjqH9PMT2c9rWxg3KMY/zxkvv4YVhKJ9nHWg+ZO6
+         Fl/lXd0rUvyTAG+2COxQ/GXuV7wfdWeqiwALjc1pcA908zYJb0AdaE6/ky/J1tW2umeL
+         kOJerdtM8rUYUrW08Wj44z+0AFAWAGPemRbGviqp1RIBq4296K/X12WBeGllNIWIWyag
+         NUnv/8/fbvitFnV/qBKa+B2VWFOSPXAgrX4yB5TdRrXx+UC0etb+jsVHZmZv6UhO3XmC
+         4rjw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=vbrLJ6zI;
+       spf=pass (google.com: domain of keyatuhin9011@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=keyatuhin9011@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <keyatuhin9011@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id y14sor1215573ljk.9.2020.07.21.23.49.40
+        (Google Transport Security);
+        Tue, 21 Jul 2020 23:49:40 -0700 (PDT)
+Received-SPF: pass (google.com: domain of keyatuhin9011@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=vbrLJ6zI;
+       spf=pass (google.com: domain of keyatuhin9011@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=keyatuhin9011@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=BKDlxrYz2d62vkI24BNla+3eZxZjLmNoo9UhD5I5kiU=;
+        b=vbrLJ6zILOVkzC+0ZYrnOUv1db3CmCqgA70MHlekx+RBmSDPmkJG6682YsXGw54M2B
+         sqagu7l5nnbjsTmwI1vTRy1PW6ofetEFN0ubFT9DYMu1bJqztKDIdVsDm6kz2AFzmFyT
+         e3pnLJjyVYLS5ncYv2OiIOT6kSa0jTmgS0rOrZVI9NqR/7GVTJqBv0dfWRLkI07gCyD6
+         fc5NxebuZgWPs7k1z3ZPD+pWb55J0jHZX/idCBEZDK+60i2aKRlH7jjclKSgPcI2GZLt
+         T+UGtGZWenFFXpWPFEaOtjRHbIzUlCrekg3A6CBXJ+ZInxl96MWcK8qqAvOs4KxoNelV
+         2uGw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=BKDlxrYz2d62vkI24BNla+3eZxZjLmNoo9UhD5I5kiU=;
+        b=tqlmb6II7SM+tGrcQauRZ/9Fos7GVLyYKlGOabYD3E/Dz9GS3zqDEmkYqhcl+haZkg
+         SEMvO7JHwXViznu89RnwDZHxkfcN1b4mmujKxY0Ts6EDReO4rVJNzmh/HaxmH+j75OaF
+         TOI54X3xisZFjyycenoIYKUr+RKM3IGs8sOnTZTT69tLs5atoG5hjQZcNOcS7SFwQs9Q
+         dt7P7/ekngcyudWwqszhCZOh3e0rVdxeplz5Ioduun3I5mqA6TvsKAo22msf9Ju1f7CT
+         0lgwMOD8JTQ7mY0/0YbHe7M0GsrHuTSWKahD0s/2NNCTFjLUa4SNE7iMDqfuApUlJ/Em
+         vSzw==
+X-Gm-Message-State: AOAM532g7YrbR6jL1eRxvarFKHjtTUE/KypLsr+QbPEs5NUjSXmIxIKF
+	TheaUhXQvyVNgxBX5mp1S9I04EzEa4V0qbOAlH7bDQ==
+X-Google-Smtp-Source: ABdhPJzjn7CTcr9wmOqyHRJZsxhbn+IoTERlkc2TopzFhq33j9ceQQNvhnMp9szXbAkoeF6mTYY4RW1zlrq1cWNz2Jo=
+X-Received: by 2002:a2e:2a81:: with SMTP id q123mr14732072ljq.229.1595400579917;
+ Tue, 21 Jul 2020 23:49:39 -0700 (PDT)
+MIME-Version: 1.0
+From: Keya Moni <keyatuhin9011@gmail.com>
+Date: Wed, 22 Jul 2020 12:49:25 +0600
+Message-ID: <CAJyW_EGrnQK27NavE6vQKj214MOyv_yr43cAv9AJaLs4ij_3Uw@mail.gmail.com>
+Subject: Submitted Answersheet By Israt jahan keya Class 12 Section B Group Humanities
+To: zishanrahman1977@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000d72a4905ab022416"
+
+--000000000000d72a4905ab022416
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 199219
+
+--000000000000d72a4905ab022416
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 199219=C2=A0</div>
+
+--000000000000d72a4905ab022416--

@@ -1,0 +1,84 @@
+Delivered-To: zishanrahman1977@gmail.com
+Received: by 2002:a1c:26c6:0:0:0:0:0 with SMTP id m189csp304064wmm;
+        Wed, 22 Jul 2020 00:03:20 -0700 (PDT)
+X-Received: by 2002:a17:902:b193:: with SMTP id s19mr24866024plr.246.1595401400152;
+        Wed, 22 Jul 2020 00:03:20 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1595401400; cv=none;
+        d=google.com; s=arc-20160816;
+        b=0sF2TIqngQUrbZ+I2jhGw3bb4mNTrMEwyiNbQ+SKv/bOesPJjICqRb1W/0/wvQ799y
+         ZFyFyk9VjO8hVMLr0YwMeuMQuayFQXUPCYg9bVuHRHayZW3+Ow112ccDP46M7uwwYewH
+         JLK79JEMV/ZpEYb9lw9bbARGfojl4en19oD4pG12/E9koZi2D7GoB9wNwaXH9/iJ8w0+
+         PjiB+1kW7vMEwzfS+ERyQTZS2HtRcVrRkPLTYFEO8XLqESAwwfUtMtg7wATG1jmJuRcf
+         9mpnxPd3ORIoj+7/EIaWTW6dKDw71YdacTdSQV8nSpcWZkhLLKY9kSJ2jjBOATC+C9Nx
+         44aA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:cc:message-id:subject:date:mime-version:from
+         :content-transfer-encoding:dkim-signature;
+        bh=IVhMOWpCqdMMoMaihSKprLMIEMbOtnJsy7YYAu0rz+g=;
+        b=wwNb4hlzaqb72bn5Ms6JTMBMFhGP/0S9ITTcLKD1F6eUUDmj6qqLIsFcIRnRiKS4aR
+         cu54ZK+WQdyio4A3iTPWGjHFlpQrlF9BB3lhA5BC2F9tXfOdLuTOitRVbXOeFn5K+qAv
+         SXLLrvDvmo9liiLh9wVt/weU/Ag3WnBHuzCpq8Lzk0X00jGwRDVMHyzGtXtPKUEswTU8
+         BXfR906X5HF+R+Rnt3k3LAltx4h/NAVkdtuhdc21JNz+vE7V2VgBhqdOi2urqNkhEfM+
+         mdUxq82JvSkTW4UwS8MQijx61K+kzI+jXd17E9vS2po5jD5WPIzXOTanb05dw7mK8zTT
+         qY3w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=YgA7QEMb;
+       spf=pass (google.com: domain of imrujdian07@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=imrujdian07@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <imrujdian07@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id v12sor26674888pfu.62.2020.07.22.00.03.19
+        (Google Transport Security);
+        Wed, 22 Jul 2020 00:03:20 -0700 (PDT)
+Received-SPF: pass (google.com: domain of imrujdian07@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=YgA7QEMb;
+       spf=pass (google.com: domain of imrujdian07@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=imrujdian07@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=content-transfer-encoding:from:mime-version:date:subject:message-id
+         :cc:to;
+        bh=IVhMOWpCqdMMoMaihSKprLMIEMbOtnJsy7YYAu0rz+g=;
+        b=YgA7QEMbK+KHooCysFjZ/tSv9D96SxnF6tjITXw88PbDFWWdHAgTJm++gtZq6EzSr1
+         id4F9HiiUZs2l+9C0ukbvXue5eElKwAnu5IVkFFOVpN/5bf1sPipEiAaGXRmn7NjNWmV
+         PnlCiWswcqM5xZdrhybhuA8+VFAwCxz41oWwROjkaZf/PJzCW7rOHK33L52H3gQzLBFc
+         25hRsTfOYUyLygHOL6jh4gBsTSO4U8Gr0Afmzt2KCngHSiqUUIIDM68YhefVjccHliYJ
+         Y2gYjtkmLXFvbESddGTiqD10P8oaN7a3PtNGbvWgQ4cgZiyKyvgFL95rEzo42vU3Om7V
+         UdtA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:content-transfer-encoding:from:mime-version:date
+         :subject:message-id:cc:to;
+        bh=IVhMOWpCqdMMoMaihSKprLMIEMbOtnJsy7YYAu0rz+g=;
+        b=GW6N3NovLArxv2C4lO9VJPsLj1HK9Jmh8DDVjfRRvtDurLi9qk27RnORrYqCWx9ofX
+         SBX55nNMNWu9zEcaGS1Am2pV1Vtd5lCXXmOV6i2caYJeSFsEVj7R2LtUlVGxh46D86P/
+         I9fK9w6MFcqMFddhGKaes1Xeus/ZBsIPIdFU6BX0WbszSDzKgsaDhfB+z4aUA2lBGcdL
+         XiAyvLA9i6EtNJgo6pGG76Ss4q0pKYxxlc0PocmsyyQUxiKz5JA7jrmlkatqtEJVPexg
+         BXAg47IG+1eWS6g6R+O3l3dh7CjwUIKC0/8y8XaXat5kX70pJC/o8vPyI0V4xuKrDd7M
+         C8qg==
+X-Gm-Message-State: AOAM533UQfus/bbsxf/99MTCoyxvAxoVi3H7kTeL7vKlZalkOB9Fpa3G
+	PmyQ78Ux6ijWP0E1y8XTUg4rdwmE
+X-Google-Smtp-Source: ABdhPJxf1qIHVxe948EUVkp+DfV3EfKtCnskEjf12Ztn/5RPVS+a28tJVPw6ajp9L1liL+ng1mo6yA==
+X-Received: by 2002:a05:6a00:1494:: with SMTP id v20mr5216841pfu.303.1595401399464;
+        Wed, 22 Jul 2020 00:03:19 -0700 (PDT)
+Return-Path: <imrujdian07@gmail.com>
+Received: from [10.132.56.15] ([43.245.121.9])
+        by smtp.gmail.com with ESMTPSA id u14sm11327575pgf.51.2020.07.22.00.03.18
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 22 Jul 2020 00:03:18 -0700 (PDT)
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+From: rujdian ruddro <imrujdian07@gmail.com>
+Mime-Version: 1.0 (1.0)
+Date: Wed, 22 Jul 2020 13:03:16 +0600
+Subject: Submitted Answersheet By Rujdian Zaman  Class Twelve  Section C Group Humanities 
+Message-Id: <22D0A403-F75E-4D33-BF61-461C82E7660C@gmail.com>
+Cc: ictpracticalslc@gmail.com
+To: zishanrahman1977@gmail.com
+X-Mailer: iPhone Mail (17F80)
+
+My Roll Is 199058
+
+
+Sent from my iPhone
