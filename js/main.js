@@ -527,7 +527,7 @@ function marks() {
         let h1 = document.createElement("h1");
         let stName = iframe[k].getAttribute("src");
         stName = stName.replace("answersheet/", "").replace(".html", "");
-        h1.innerHTML = stName + ' Obtained Marks: <font style= "color:red;">' + mark + '</font>';
+        h1.innerHTML = k + 1 + ". " + stName + ' Obtained Marks: <font style= "color:red;">' + mark + '</font>';
         document.getElementById("result").appendChild(h1);
         c = 0;
         d = 0;
