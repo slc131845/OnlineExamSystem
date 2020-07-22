@@ -11,6 +11,24 @@ function displayimg(e, i) {
     }
 };
 
+function download2(data, filename, type) {
+    var file = new Blob([data], { type: type });
+    if (window.navigator.msSaveOrOpenBlob)
+        window.navigator.msSaveOrOpenBlob(file, filename);
+    else {
+        var a = document.createElement("a"),
+            url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function () {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }, 0);
+    }
+};
+
 function displayimg1(e, i, j) {
     if (e.files[0]) {
         var reader = new FileReader();
@@ -117,9 +135,16 @@ function save() {
         item.style.background = "lightpink";
         return alert("Enter Email");
     } else {
+        let pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gi;
         let item = document.getElementById("email");
-        item.setAttribute("value", item.value);
-        item.style.background = "white";
+        if (pattern.test(item.value)) {
+            item.setAttribute("value", item.value);
+            item.style.background = "white";
+        } else {
+            let item = document.getElementById("email");
+            item.style.background = "lightpink";
+            return alert("Enter A Valid Email Address");
+        }
     }
     let q_len = document.querySelectorAll("div[name='q[]']");
     for (let i = 0; i < q_len.length; i++) {
@@ -183,19 +208,9 @@ function remove() {
 
 };
 
-function download(filename, text) {
-    var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-    element.setAttribute('download', filename);
-    element.style.display = 'none';
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
-};
-
 function print() {
     let script = '<script>\
-    alert("Please Fill Up Name And Roll First");\
+    alert("Please Fill All The Fields");\
     let imges=document.getElementsByClassName("images");\
     for (let i = 0; i < imges.length; i++){\
         if (imges[i].getAttribute("src")) {\
@@ -252,20 +267,30 @@ function print() {
         time.innerHTML="Exam Ends In: "+min + " : " + sec;\
     }, 1000);\
 };\
-    function download(filename, text) {\
-    var element = document.createElement(\'a\');\
-    element.setAttribute(\'href\', \'data:text/plain;charset=utf-8,\' + encodeURIComponent(text));\
-    element.setAttribute(\'download\', filename);\
-    element.style.display = \'none\';\
-    document.body.appendChild(element);\
-    element.click();\
-    document.body.removeChild(element);\
+function download2(data, filename, type) {\
+    var file = new Blob([data], { type: type });\
+    if (window.navigator.msSaveOrOpenBlob)\
+        window.navigator.msSaveOrOpenBlob(file, filename);\
+    else {\
+        var a = document.createElement("a"),\
+            url = URL.createObjectURL(file);\
+        a.href = url;\
+        a.download = filename;\
+        document.body.appendChild(a);\
+        a.click();\
+        setTimeout(function () {\
+            document.body.removeChild(a);\
+            window.URL.revokeObjectURL(url);\
+        }, 0);\
+    }\
 };\
 function submit() {\
     clearInterval(inter);\
     let name=document.getElementById("name").value;\
     let roll=document.getElementById("roll").value;\
     let cls=document.getElementById("cls").value;\
+    let subname=document.getElementById("subname").innerHTML;\
+    let exname=document.getElementById("exname").innerHTML;\
     let grp=document.getElementById("grp").value;\
     let sec=document.getElementById("sec").value;\
     let mail = document.getElementById("mail").value;\
@@ -281,36 +306,41 @@ for (let i = 0; i < q_len.length; i++) {\
         }\
     }\
 }\
-    let filename=name+" "+roll+" "+cls+" "+grp+" "+sec;\
+    let filename=subname+" "+exname+" "+name+" "+roll+" "+cls+" "+grp+" "+sec;\
     let cont=document.getElementById("cont").innerHTML;\
     let div="<div id=\'content\'>"+cont+"</div>";\
     let style = "<style>img{ height: 100px; width: 200px;}.question{ margin-bottom: 10px; width: 99% !important;} input[type = file]{ display: none; } @media only screen and (max-width: 667px){#timer{ top: 180px !important; font-size: 1rem; }#exnumHead{ top: 150px !important; font-size: 1rem; } h1{ display: block; } div{ display: block !important; } .opt{ margin-bottom: 5px } .question{ padding-bottom: 5px }}</style>";\
     let text=style+div;\
     let context=confirm("Do You Want To Download");\
     if(context===true){\
-        download(filename + ".html", text); \
+        download2(text, filename+".html","text/plain");\
         alert("Download completed");\
     }else{\
         alert("File Not Downloaded");\
     }\
     let sendm=document.createElement("button");\
+    sendm.id="sendmail";\
     sendm.innerHTML="Send Email";\
     sendm.style.fontSize="1.5rem";\
     sendm.onclick=function(){sendMail(mail,name,roll,cls,sec,grp,filename)};\
+    let checkMail=document.getElementById("sendmail");\
+    if(checkMail===null){\
     document.body.appendChild(sendm);\
+    }\
 };\
 function sendMail(mail, name, roll, cls, sec, grp,filename) {\
     alert("Please Attach The File Named "+filename+".html");\
     var link = "mailto:" + mail\
     + "?cc=ictpracticalslc@gmail.com"\
-    + "&subject=" + escape("Submitted Answersheet By " + name + " Class " + cls + " Section " + sec + " Group " + grp) \
+    + "&subject=" + escape("AnswerSheet Submitted By " + name + " Class " + cls + " Section " + sec + " Group " + grp) \
     + "&body=" + escape("My Roll Is " + roll) \
     ; \
-    window.location.href = link; \
-}; \
+    window.location.href = link;\
+};\
 let btn = document.createElement("button"); \
 btn.innerHTML = "Download"; \
 btn.style.fontSize="1.5rem";\
+btn.style.marginRight="5px";\
 btn.onclick = function () { submit() }; \
 document.body.appendChild(btn); \
 let timer = document.createElement("h1"); \
@@ -327,12 +357,17 @@ h1.style.left = "0"; \
 h1.style.top = "30px"; \
 document.body.appendChild(h1); \
 document.body.appendChild(timer); \
-</script > ';
+</script>';
     let input = '<label for="name">Enter Your Name</label> <input type="text" id="name"><br><br>\
     <label for="roll">Enter Your Roll</label> <input type="text" id="roll"><br><br>\
-    <label for="cls">Enter Your Class Name</label> <input type="text" id="cls"><br><br>\
-    <label for="sec">Enter Your Section Name</label> <input type="text" id="sec"><br><br>\
-    <label for="grp">Enter Your Group Name</label> <input type="text" id="grp" placeholder="science/humanities/bussiness"><br><br>';
+    <label for="cls">Enter Your Class Name</label> <input list="clss" type="text" id="cls"><datalist id="clss">\
+    <option value="Nine"><option value="Ten"><option value="Twelve"></datalist><br><br>\
+    <label for="sec">Enter Your Section Name</label> <input list="secs" type="text" id="sec">\
+    <datalist id="secs">\
+    <option value="A"><option value="B"><option value="C"><option value="D"><option value="Edison"><option value="Dalton"></datalist><br><br>\
+    <label for="grp">Enter Your Group Name</label> <input list="grps" type="text" id="grp">\
+    <datalist id="grps">\
+    <option value="Science"><option value="Bussiness"><option value="Humanities"></datalist><br><br>';
     let con = document.getElementById("content");
     let mail = document.getElementById("email").value;
     let int = document.createElement("input");
@@ -359,12 +394,12 @@ document.body.appendChild(timer); \
     let subname = document.getElementById("subName").value;
     let examName = document.getElementById("ExamName").value;
     let className = document.getElementById("className").value;
-    let div = '<center><div><br><br><br><br><br><br><br><br><br><br><br>' + input + '</div></center><div id="cont"><center><h1 style="margin-bottom:50px;">Savar Laboratory College Online Exam System<br><br><br>' + examName + '<br>' + subname + '</h1></center>' + cons + '</div>';
+    let div = '<center><div><br><br><br><br><br><br><br><br><br><br><br>' + input + '</div></center><div id="cont"><center><h1 style="margin-bottom:50px;">Savar Laboratory College Online Exam System<br><br><br><h1 id="exname">' + examName + '</h1><br><h1 id="subname">' + subname + '</h1></h1></center>' + cons + '</div>';
     let style = '<style>img{height: 100px;width:200px;} .question{margin-bottom:10px; width:99% !important;} input[type=file]{display:none;}@media only screen and (max-width:667px){#timer{top:180px !important;font-size:1rem;}#exnumHead{top:150px !important;font-size:1rem;}h1{display:block}div{display:block !important;} .opt{margin-bottom:5px;} .question{padding-bottom:5px;}}</style>';
     let text = style + div + script;
     let teachername = document.getElementById("Teaname").value;
     let filename = teachername + " " + className + " " + subname + " " + examName;
-    download(filename + ".html", text);
+    download2(text, filename + ".html", "text/plain");
     let subHead = document.createElement("h1");
     subHead.setAttribute("id", "subhead");
     subHead.innerHTML = "Upload File To :";
@@ -419,19 +454,22 @@ document.body.appendChild(timer); \
     tenbsbtn.innerHTML = "Ten Bussiness";
     let br1 = document.createElement("br");
     let br2 = document.createElement("br");
-    document.body.appendChild(subHead);
-    document.body.appendChild(combtn);
-    document.body.appendChild(scibtn);
-    document.body.appendChild(bsbtn);
-    document.body.appendChild(hubtn);
-    document.body.appendChild(ninecombtn);
-    document.body.appendChild(br1);
-    document.body.appendChild(br2);
-    document.body.appendChild(ninescibtn);
-    document.body.appendChild(ninebsbtn);
-    document.body.appendChild(tencombtn);
-    document.body.appendChild(tenscibtn);
-    document.body.appendChild(tenbsbtn);
+    let chsubHead = document.getElementById("subhead");
+    if (chsubHead === null) {
+        document.body.appendChild(subHead);
+        document.body.appendChild(combtn);
+        document.body.appendChild(scibtn);
+        document.body.appendChild(bsbtn);
+        document.body.appendChild(hubtn);
+        document.body.appendChild(ninecombtn);
+        document.body.appendChild(br1);
+        document.body.appendChild(br2);
+        document.body.appendChild(ninescibtn);
+        document.body.appendChild(ninebsbtn);
+        document.body.appendChild(tencombtn);
+        document.body.appendChild(tenscibtn);
+        document.body.appendChild(tenbsbtn);
+    }
     if (typeof (Storage) !== "undefined") {
         localStorage.removeItem("count");
         localStorage.removeItem("saveProgress");
@@ -454,12 +492,13 @@ file.addEventListener("change", function (event) {
 });
 
 function marks() {
-    let c = 0, d = 0;
+    let c = 0, d = 0, last = 0;
     let iframe = document.getElementsByClassName('secwin');
     for (let k = 0; k < iframe.length; k++) {
         let innerDoc = iframe[k].contentDocument || iframe[k].contentWindow.document;
         let q_len = innerDoc.querySelectorAll('div[name="q[]"]');
         for (let i = 0; i < q_len.length; i++) {
+            last = k + 1;
             let op_len = innerDoc.querySelectorAll(`div[name="option${i + 1}[]"]`);
             let radio_len = innerDoc.querySelectorAll(`input[name="checkbox${i + 1}[]"]`);
             for (let j = 0; j < op_len.length; j++) {
@@ -493,13 +532,12 @@ function marks() {
         c = 0;
         d = 0;
     }
+    alert(last + " AnswerSheet Are Evaluated");
 };
 
 function downloadResult() {
     let cont = document.getElementById("result").innerHTML;
     let section = prompt("Please Enter Section Name:", "XI SCI A");
     let filename = section ? section : "XI SCI A";
-    download(filename + " Result.html", cont);
+    download2(cont, filename + ".html", "text/plain");
 };
-
-
