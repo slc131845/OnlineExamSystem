@@ -306,7 +306,7 @@ for (let i = 0; i < q_len.length; i++) {\
         }\
     }\
 }\
-    let filename=subname+" "+exname+" "+name+" "+roll+" "+cls+" "+grp+" "+sec;\
+    let filename=roll+" "+name+" "+cls+" "+grp+" "+sec+" "+exname+" "+subname;\
     let cont=document.getElementById("cont").innerHTML;\
     let div="<div id=\'content\'>"+cont+"</div>";\
     let style = "<style>img{ height: 100px; width: 200px;}.question{ margin-bottom: 10px; width: 99% !important;} input[type = file]{ display: none; } @media only screen and (max-width: 667px){#timer{ top: 180px !important; font-size: 1rem; }#exnumHead{ top: 150px !important; font-size: 1rem; } h1{ display: block; } div{ display: block !important; } .opt{ margin-bottom: 5px } .question{ padding-bottom: 5px }}</style>";\
@@ -355,7 +355,14 @@ h1.style.position = "absolute"; \
 h1.setAttribute("id", "exnumHead"); \
 h1.style.left = "0"; \
 h1.style.top = "30px"; \
+let clsName=document.createElement("h1");\
+clsName.innerHTML=`Class: ${document.getElementById("className").value}`;\
+clsName.style.position = "absolute"; \
+clsName.setAttribute("id", "classNameHead"); \
+clsName.style.left = "0"; \
+clsName.style.top = "70px"; \
 document.body.appendChild(h1); \
+document.body.appendChild(clsName); \
 document.body.appendChild(timer); \
 </script>';
     let input = '<label for="name">Enter Your Name</label> <input type="text" id="name"><br><br>\
@@ -390,11 +397,18 @@ document.body.appendChild(timer); \
     exnuminp.setAttribute("value", exnum);
     exnuminp.style.display = "none";
     con.appendChild(exnuminp);
+    let clsName = document.getElementById("className").value;
+    let classNameinp = document.createElement("input");
+    classNameinp.setAttribute("id", "className");
+    classNameinp.type = "text";
+    classNameinp.setAttribute("value", clsName);
+    classNameinp.style.display = "none";
+    con.appendChild(classNameinp);
     let cons = con.innerHTML;
     let subname = document.getElementById("subName").value;
     let examName = document.getElementById("ExamName").value;
     let className = document.getElementById("className").value;
-    let div = '<center><div><br><br><br><br><br><br><br><br><br><br><br>' + input + '</div></center><div id="cont"><center><h1 style="margin-bottom:50px;">Savar Laboratory College Online Exam System<br><br><br><h1 id="exname">' + examName + '</h1><br><h1 id="subname">' + subname + '</h1></h1></center>' + cons + '</div>';
+    let div = '<center><b>Teacher Email Address:  ' + int.value + '</b><div><br><br><br><br><br><br><br><br><br><br><br>' + input + '</div></center><div id="cont"><center><h1 style="margin-bottom:50px;">Savar Laboratory College Online Exam System<br><br><br><h1 id="exname">' + examName + '</h1><br><h1 id="subname">' + subname + '</h1></h1></center>' + cons + '</div>';
     let style = '<style>img{height: 100px;width:200px;} .question{margin-bottom:10px; width:99% !important;} input[type=file]{display:none;}@media only screen and (max-width:667px){#timer{top:180px !important;font-size:1rem;}#exnumHead{top:150px !important;font-size:1rem;}h1{display:block}div{display:block !important;} .opt{margin-bottom:5px;} .question{padding-bottom:5px;}}</style>';
     let text = style + div + script;
     let teachername = document.getElementById("Teaname").value;
@@ -524,6 +538,13 @@ function marks() {
             d = 0;
         }
         let mark = q_len.length - c;
+        let markHead = document.createElement("h1");
+        markHead.innerHTML = `Marks: ${mark}`;
+        markHead.style.position = "absolute";
+        markHead.style.left = "0px";
+        markHead.style.top = "30px";
+        markHead.style.color = "red";
+        iframe[k].contentDocument ? iframe[k].contentDocument.body.childNodes[0].appendChild(markHead) : iframe[k].contentWindow.document.body.childNodes[0].appendChild(markHead);
         let h1 = document.createElement("h1");
         let stName = iframe[k].getAttribute("src");
         stName = stName.replace("answersheet/", "").replace(".html", "");
@@ -533,6 +554,11 @@ function marks() {
         d = 0;
     }
     alert(last + " AnswerSheet Are Evaluated");
+    let downloadZipBtn = document.createElement("button");
+    downloadZipBtn.innerHTML = "Download All Answer Sheets";
+    downloadZipBtn.style.fontSize = "1rem";
+    downloadZipBtn.onclick = function () { downloadAnswer() };
+    document.getElementById("btns").appendChild(downloadZipBtn);
 };
 
 function downloadResult() {
@@ -541,3 +567,21 @@ function downloadResult() {
     let filename = section ? section : "XI SCI A";
     download2(cont, filename + ".html", "text/plain");
 };
+
+function downloadAnswer() {
+    let iframe = document.getElementsByClassName('secwin');
+    let zip = new JSZip();
+    let folder = zip.folder("Result");
+    let section = prompt("Please Enter Section Name:", "XI SCI A");
+    let secName = section ? section : "XI SCI A";
+    for (let i = 0; i < iframe.length; i++) {
+        let innerDoc = iframe[i].contentDocument.body.childNodes[0].innerHTML || iframe[i].contentWindow.document.body.childNodes[0].innerHTML;
+        let filename = iframe[i].getAttribute("src");
+        filename = filename.replace("answersheet/", "").replace(".html", "").replace("_", "").replace("-", "");
+        folder.file(filename + ".html", innerDoc);
+    }
+    zip.generateAsync({ type: "blob" })
+        .then(function (content) {
+            saveAs(content, secName + ".zip");
+        });
+}
