@@ -1,0 +1,99 @@
+Delivered-To: tahidul.juban39@gmail.com
+Received: by 2002:ac8:36bb:0:0:0:0:0 with SMTP id a56csp117418qtc;
+        Wed, 26 Aug 2020 22:33:04 -0700 (PDT)
+X-Received: by 2002:a62:1517:: with SMTP id 23mr494098pfv.311.1598506384654;
+        Wed, 26 Aug 2020 22:33:04 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1598506384; cv=none;
+        d=google.com; s=arc-20160816;
+        b=yfMAHJtqsRrmq2danxarpBudkzJuQ3HhZUAucmd2dZMLs+LKHxdzcNhWaydU19IsbE
+         RpK7MLnHQ8yRD34D2ZPG1vSDAmp7HW+2B9vqzEKqSRGGSR7t2F42U9ZHPMYvxNNfYL+U
+         t4I2xf5jpT1x6YxrxFTO/ygIPsccc7WCwTedZ9d9uXnlLOzts4HeeLYdwbsLccI8pbKq
+         LuS2Gabz8hmai31c0ljUY0jhGUeVYMQfyZpnkZNAB/xrrNpDaYfBB/3oV6JWO19UaSko
+         HbRXHww3WSMUgDkATcDghlIrSRx0MtbBbYHC0iu/wuwTIQJAy8lGwLk/DKW0KLJm+gim
+         Rd1A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:cc:to:from:importance:message-id:subject:date
+         :dkim-signature;
+        bh=WVCTY29oFwWEGXqpl+mN7XeJNLD3IOSbgceZXu+NvwM=;
+        b=pt7hJ9jzh3ugm3Bmdv5SAOJZ364JvMDQHwTr1G6v0HStM9CUtC2ZyJ8SjN6GFE9Zgt
+         Th+9shc7m1EF5sZbxg2KEPunuVifChHTY6EgGuY3LQu4ynsVrsr1uj15a/1iYo/0x6o/
+         5NsdCykMj7r6ezXAq6GZKwjK5jo9c8vszLHyHcFDEuQ4nB8nynVbV0RsiIyn0x1ooQYW
+         YGp4abB8oYu3JNDzUd3C2nhZGEwyrZGOLB9bu8vH2SRqG+sq0QvaUASdDDiPfFp78qNS
+         pVHJJezBMckXbJ31IIKMhoWr+f/JHk6JO757zYgS5OFMD3qW2QBEZq1wYzAnMHEFSHSs
+         08wQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b="QK/FFsvR";
+       spf=pass (google.com: domain of dipudipankar144@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=dipudipankar144@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <dipudipankar144@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id ds4sor523624pjb.14.2020.08.26.22.33.04
+        (Google Transport Security);
+        Wed, 26 Aug 2020 22:33:04 -0700 (PDT)
+Received-SPF: pass (google.com: domain of dipudipankar144@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b="QK/FFsvR";
+       spf=pass (google.com: domain of dipudipankar144@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=dipudipankar144@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=date:subject:message-id:importance:from:to:cc:mime-version;
+        bh=WVCTY29oFwWEGXqpl+mN7XeJNLD3IOSbgceZXu+NvwM=;
+        b=QK/FFsvRzaiVR9xv1AChvh7S4+xYa1cJmdGiBSxm8tIHeE5M+iPTeD4CBfkxgFwhrJ
+         PwHqwfj6/l9SI+9k5OWGT0qYdmu64ezSTf1Zx4BtLmMMn8PXYrxWfcJ/jwWjGKtgwlqM
+         jru1/wYr+FQ8Nx6VW0HSLKB441a9N+MSYGbDrYwpBAkp2bJMpT1HgZ07IBmtx+8JSrcA
+         08CjJuELbwW8zfaKPTQSElxh5bRSQ8EJmz3HggFGCx8HTF2aLGTgODfldfZfK4ZU9RNG
+         CCoOxnXEkmExVQ4Dvpt6+9K54ZwmOqox3LyCMqlZU7fWF78c0SCk8ZeMfqbr08r5uPCZ
+         UUsQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:date:subject:message-id:importance:from:to:cc
+         :mime-version;
+        bh=WVCTY29oFwWEGXqpl+mN7XeJNLD3IOSbgceZXu+NvwM=;
+        b=OsXGrHXmzEOjXdszBPtrwDqnHqhb9BDgGCx9mcWQoSHtSgghTaCw28F/CE94NKS2MP
+         dwOh8VkAC8FgEv1kKIp+SBWTkSR6Pyb95ChxcxK3/wCcg8HeNg/p9rwodvES2m/2+RXl
+         c1s8qlKb0xYFgcuk19BlsD7lpTtiNscdMyn1ZU4gigxakuq5CD+m8InjCs/4W0V1l53d
+         2tH20zajVhe8CrEEsGocXRvcWkkGzeinOPqpGAd3SfbWqKW+vy0BPvKvIn617VQhA4Od
+         0+zemGdFJzyZ3IievpLUy5b5KFLOWM5VNUTRNJWMdkkf3hdMZiVBmPeSbIIvmyGHaCrZ
+         e0pw==
+X-Gm-Message-State: AOAM530/+2/9A8wn75TMO70X3dN1DuI8+QhRcdy8zOt86RmWREzz452O
+	kQ2fH9YU5N/aolZ0R/x1x5g+E2z+P8c=
+X-Google-Smtp-Source: ABdhPJxRBGAWLhWcyk6qdDsEWYwnDw1YKsfxUyWGrJRJMhJjezwLkSIuVVIAGXzfsWkJa0Zy/kN5lQ==
+X-Received: by 2002:a17:90b:28d:: with SMTP id az13mr9835560pjb.206.1598506384099;
+        Wed, 26 Aug 2020 22:33:04 -0700 (PDT)
+Return-Path: <dipudipankar144@gmail.com>
+Received: from [192.168.0.3] ([103.139.196.10])
+        by smtp.gmail.com with ESMTPSA id 203sm1106099pfv.136.2020.08.26.22.33.02
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 26 Aug 2020 22:33:03 -0700 (PDT)
+Date: Thu, 27 Aug 2020 11:36:49 -1000
+Subject: AnswerSheet Submitted By DIGANTA MISTRY Class Nine Section B Group
+ Science
+Message-ID: <7f4fj7jp60g21vaeyui93fxf.1598564209723@email.android.com>
+Importance: normal
+From: dipudipankar144 <dipudipankar144@gmail.com>
+To: tahidul.juban39@gmail.com
+Cc: ictpracticalslc@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="--_com.samsung.android.email_539464957714830"
+
+----_com.samsung.android.email_539464957714830
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+TXkgUm9sbCBJcyBJJ0QgLTIwMTA0MQoKCgpTZW50IGZyb20gbXkgU2Ftc3VuZyBHYWxheHkgc21h
+cnRwaG9uZS4=
+
+----_com.samsung.android.email_539464957714830
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGh0bWw+PGhlYWQ+PG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0
+L2h0bWw7IGNoYXJzZXQ9VVRGLTgiPjwvaGVhZD48Ym9keT5NeSBSb2xsIElzIEknRCAtMjAxMDQx
+PGRpdj48YnI+PC9kaXY+PGRpdj48YnI+PC9kaXY+PGRpdj48YnI+PC9kaXY+PGRpdj48YnI+PC9k
+aXY+PGRpdiBpZD0iY29tcG9zZXJfc2lnbmF0dXJlIj48ZGl2IHN0eWxlPSJmb250LXNpemU6ODUl
+O2NvbG9yOiM1NzU3NTciIGRpcj0iYXV0byI+U2VudCBmcm9tIG15IFNhbXN1bmcgR2FsYXh5IHNt
+YXJ0cGhvbmUuPC9kaXY+PC9kaXY+PC9ib2R5PjwvaHRtbD4=
+
+----_com.samsung.android.email_539464957714830--
+

@@ -1,0 +1,103 @@
+Delivered-To: tahidul.juban39@gmail.com
+Received: by 2002:ac8:36bb:0:0:0:0:0 with SMTP id a56csp126085qtc;
+        Wed, 26 Aug 2020 22:53:15 -0700 (PDT)
+X-Received: by 2002:a05:6402:1b02:: with SMTP id by2mr15042580edb.95.1598507595348;
+        Wed, 26 Aug 2020 22:53:15 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1598507595; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zWto0c2wqRLEktqQfYy7i+4luqZ+AZCxj6lF7W1dUyv2IaQCukzWUxOVB4A5I9BmQz
+         sqBrQeJJIFpzakhVkco1qIwtO/s60Cd3SMInF7WEb/SHKT7rcQIryCtD28Af3/J6mVWs
+         /7+EiWC7bvJQITho1Y5J2+PO1VEw2pBQj/9SlAx0/F7lBfG6wlraaslLsHbQ26QKo0zl
+         vW8HC3kxsBKn/ATB9INWfZl1wTcZmSp75BFQeh8dCh7rCiEkAjG9sF9Q8PH/kqMZen7h
+         ltpnP21qD5Elh6uCuk+QRN6sSFmd/VGovZi5KgsKollNTR6N/HxZPWPdaSYQXeeNm9u8
+         bVhg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=qBKTAA1WOn21ro2epyPAvLgM2WZCqLzRk11rsz+QCuc=;
+        b=Lsx+6SS5QqHCdpOxQ43WHTUH3xKoK5KXfwC/Fil+bHSF5wNAlpBgo19k2kzIUz0DmQ
+         eim+HKItRCpJyLJmY4lfyWmJ26grYGKeXd94P73SouEQPU9w2hVdRlJ9pdpUTrIRN0Eu
+         pDPgwMLKw7Tt0aya0I4+3E1pI4jAaD6wp6HLrRKms8Zt55WS/SJegGZr931ODPsYnLr4
+         kjMJVCknbuIKY64ichIMGzn3CgDeGrQoYY0SK0a78TcThEohRgUttUK10LJ2WfshXmfG
+         wmHB1I/5CTUGekDHAZRgbrS8d7o8z3RIQsF5z9Ck17CbGy6CbSkOL8zE6iT3/i2YTjsc
+         7zww==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=IX8eSSMy;
+       spf=pass (google.com: domain of mdsolimbepary@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=mdsolimbepary@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <mdsolimbepary@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id h4sor184192edq.11.2020.08.26.22.53.15
+        (Google Transport Security);
+        Wed, 26 Aug 2020 22:53:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of mdsolimbepary@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=IX8eSSMy;
+       spf=pass (google.com: domain of mdsolimbepary@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=mdsolimbepary@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=qBKTAA1WOn21ro2epyPAvLgM2WZCqLzRk11rsz+QCuc=;
+        b=IX8eSSMy4oJHGol9vn1TAXT4Ok2ubTuCxV0V8s2Voz0UH22JRLbHcznRDk8gxC13UO
+         eMG/GBgPtrwK2ir+R/OamTcPKDNfWZhH4adjpHxNkAM8zTM/nVaM3BUCZcRJ4WPlCSNl
+         +el2IeLZxiKlU0ch94cjKvRl9P7d1M41VP7yOl36/jplkvVjMulsa5KbfF0CoSk8cZyD
+         trPtEbPFh0Ob6RC8fWil/4Sx2LdQrmwklStua2ueIgc+ttdVhoZjBOQg3XPGgK93hFAm
+         R4pW2r6LGMRnDGk/9P228i6JbRS6ha/jvLXeRuBCqJsZhj2oSrDbV48u8ANWTiynTeNE
+         LvXQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=qBKTAA1WOn21ro2epyPAvLgM2WZCqLzRk11rsz+QCuc=;
+        b=itC2TV+3pGYVyyec9bSzM/JL3l1bqqEK/DAW9eN/6cGpz+zzVLCyn82Fm7JNDxaiF4
+         CTTrrehieVgCnq8DjJk5T2pymAt5OWiNLoTAwS+MeNMe2HrEuhplqKrktY6E2P9dRQqT
+         GbS5bCE1ZLoPtwdkChvT4EYgGtEm/yKBDBDAagXmbbN5L+LhBA4/fvAj+MyihwfZzhdd
+         H0dh+J7xyUfCIx4JhggiVS2tz+6S0boSepXXKwl7PcoaDIPpyjSfisgnktlxoEqudEOA
+         +q2ukPu0Fv0xSiIk5erPvmJKn2rN8KaksGbE50IPuhtViLXfAx4qxQsMA0T58bGynppE
+         782A==
+X-Gm-Message-State: AOAM532GIQi07eF+/DyIAVGbv/8YHHJbmbx9hU/IVDS6hI8m7TLs0W6X
+	U+YDN+f4+a1pR3NffCsWUL/LABlYrUnK72lQOp36n0nQ
+X-Google-Smtp-Source: ABdhPJyDd+hhG+F5zWUng2wPRb607v29xE8OvBgoC84MhsAU6pIPHRMCxQhc1rsj1EK0wEWIztWUdI0qAuEhQ7nvwQw=
+X-Received: by 2002:a50:e70e:: with SMTP id a14mr17676764edn.93.1598507594809;
+ Wed, 26 Aug 2020 22:53:14 -0700 (PDT)
+MIME-Version: 1.0
+From: "Md.Solim Bepary" <mdsolimbepary@gmail.com>
+Date: Thu, 27 Aug 2020 11:53:02 +0600
+Message-ID: <CAPW3Z=FzPjaFTt6Mpy2tq1eSmS1TWMmtOcBEGvdoo-CxSCdW5Q@mail.gmail.com>
+Subject: AnswerSheet Submitted By Tanjuma Akter Tanisa Class NINE Section
+ Adison Group Science
+To: tahidul.juban39@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000005c05da05add58d68"
+
+--0000000000005c05da05add58d68
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is 201062
+  Getting started
+<https://drive.google.com/file/d/0By-zyLKNPj2Xc3RhcnRlcl9maWxl/view?usp=drivesdk>
+
+--0000000000005c05da05add58d68
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is 201062=C2=A0<br><div class=3D"gmail_chip gmail=
+_drive_chip" dir=3D"auto" style=3D"min-height:18px;background-color:rgb(245=
+,245,245);padding:5px;color:rgb(34,34,34);font-family:arial;font-style:norm=
+al;font-weight:bold;font-size:13px;border:1px solid rgb(221,221,221);max-wi=
+dth:375px;margin-top:8px;margin-bottom:8px">
+    <a href=3D"https://drive.google.com/file/d/0By-zyLKNPj2Xc3RhcnRlcl9maWx=
+l/view?usp=3Ddrivesdk" style=3D"display:block;max-width:290px;overflow:hidd=
+en;text-overflow:ellipsis;white-space:nowrap;text-decoration:none;padding:1=
+px 0;border:none" target=3D"_blank">
+        <img style=3D"vertical-align:bottom;border:none" src=3D"https://ssl=
+.gstatic.com/docs/doclist/images/icon_10_pdf_list.png">
+        =C2=A0
+        <span style=3D"color:#15c;text-decoration:none;vertical-align:botto=
+m">Getting started</span>
+    </a>
+    <div class=3D"chip_delete_button">
+        <div class=3D"chip_delete_button_icon"></div>
+    </div>
+</div><div dir=3D"auto"><br></div></div>
+
+--0000000000005c05da05add58d68--

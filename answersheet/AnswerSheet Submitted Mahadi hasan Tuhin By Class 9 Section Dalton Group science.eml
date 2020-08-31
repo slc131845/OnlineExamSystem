@@ -1,0 +1,83 @@
+Delivered-To: tahidul.juban39@gmail.com
+Received: by 2002:ac8:36bb:0:0:0:0:0 with SMTP id a56csp124555qtc;
+        Wed, 26 Aug 2020 22:49:18 -0700 (PDT)
+X-Received: by 2002:ac2:5e34:: with SMTP id o20mr2181624lfg.187.1598507358133;
+        Wed, 26 Aug 2020 22:49:18 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1598507358; cv=none;
+        d=google.com; s=arc-20160816;
+        b=uyzyHrknjyWkldZqpgJh7V18rwjr2KdJET0nM0TYvQA44kjaeXrCoZhZozsz/W5r2a
+         M5mxua054d7kNBDQfaCh5IDrQapmck0UUuzO+ziv0wgDb/6QuWTnBA1yFaRV/gIBdREX
+         s9WXjv3Xty0DWIMdX40zTets38Rc8VERqNdlr9da8JNHkD1sFpMgcsuQ6FZbWGNiI/g3
+         7oNJ8zwKLl1hufBtD/79za4P3StMXte9K5KUkwKTxwN8wLvRmU8z6ZO8mgerbaDJLjkC
+         9kOnyZVCjpdVU7bFbXruj7+SlVtVlBZptGC89qcn4LqIAuLtMKNu3SRDkJhgPXvJc+ek
+         9dVw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=peXS3mDWRsvyQaLXuxnjMBsFVTr+VGSmqb0AMWVcDdw=;
+        b=FzCT9t9CmLj9GxVO0XL5a9Sh+mEJ8G2lQtGVQxvEuQRYlAnfxmrGnBiKqH1R9s4WcQ
+         I29E5rRcswg8c/GfjwaDCQV9Gmbj77dGHzCNUU2KqUG9c3eTiluFw7K0v33QLpx+UbBy
+         akp6mHWckn3UdeAYx8AaOn+xztFV69a6FZwn7tBNx5bONbe2tACVcS8kOJNx708+t2/K
+         HjCctzA7tK09JyNuQIUFxsoODUt76OzsXbUiBL9d6wo5EA+qJ0EfVChbR+u1AP2CIa5C
+         Dr6ZKUfT+IyA5/3MIQ9qHbjpeyDVDu9/nGkW0w/67njF2k33d0JFgpxQn8wf/SAuz7wA
+         pJ1w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b="rqF/qYRl";
+       spf=pass (google.com: domain of sonia01675970745@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sonia01675970745@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <sonia01675970745@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id e4sor427650ljo.42.2020.08.26.22.49.17
+        (Google Transport Security);
+        Wed, 26 Aug 2020 22:49:18 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sonia01675970745@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b="rqF/qYRl";
+       spf=pass (google.com: domain of sonia01675970745@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sonia01675970745@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=peXS3mDWRsvyQaLXuxnjMBsFVTr+VGSmqb0AMWVcDdw=;
+        b=rqF/qYRlGgEYBt0dzkFPrsZluoHIMczncp4/eOwo0l4cZ7jkM0qWnJU/hdLIkdBTkA
+         x65rTBHrM7CPmRgS09E1ECvd+mfuQent3yhuyfsUNNCUSoUo8d4yI1w6D1cakobVU4bS
+         cX1AaJZc7HRcr6b9vqMjgeH94J3fOIVhwcYGCFfUtJFciOF0P59nCea/HCTxc0FvTPWQ
+         1+bPpCxLHjCLINODO0UXvVMluEQA8Q4vItwpxLE9pXs2AhDtg+QvrQn2Tm3WEkDDRi3y
+         E92SltDzejd49z2/B81adZrELnxyxDEa6ur7YX9XMFCAQSwlrY3P6zuFUJ52pwUed5S9
+         13Ww==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=peXS3mDWRsvyQaLXuxnjMBsFVTr+VGSmqb0AMWVcDdw=;
+        b=q+NIJO4bwZbOkFbQetNKzhhJddKKRLBAtNMSl2jGeA16jbEGkDeJgYw98hy5fpd9sh
+         ZtbVnGg5NsgTZ0WnSep0H24haOx3uuFlC2qURMkfzjeSJ0K7ay5E6d7sRj8XyBR5DexR
+         nELqRQ2kFX+t/um3ohJNz/3XenHVK6WcwYfm/79T8hVQJ28APW3I6MFeU5RW4jUPKse4
+         zLHUuIa2mzrS5qS9RC/YfkI5R1ydQDUpHAKWyJdd7QURUdpr1rLIUMg6ScJqYLC61/UR
+         hKViEbAkJR1uBM+nbVoFAXWjOtfNZkZvWIII58bPJOVhZaSPyZPYI9tPGLph7mMHaF9s
+         XjLw==
+X-Gm-Message-State: AOAM533hNOIxXo/Lurjsu9hX0WwII6nTzU7/dT6YPLtgNU+ZHXW0ab+D
+	VSUjqtoJtXm0ksas6TLhFm531c/ofyoGSnzmRbVPnO4k
+X-Google-Smtp-Source: ABdhPJyJjUWMIollAnjdQXLq4QQqXDslaWiI4F0nQKho/qRZZUn36KchLbNXpf/zfCDsTPtr7KLgISNPzjiih340G3g=
+X-Received: by 2002:a2e:8615:: with SMTP id a21mr9234274lji.357.1598507357655;
+ Wed, 26 Aug 2020 22:49:17 -0700 (PDT)
+MIME-Version: 1.0
+From: Mahadi Hasan Tuhin <sonia01675970745@gmail.com>
+Date: Thu, 27 Aug 2020 11:49:05 +0600
+Message-ID: <CANbApuMW=LRS9defzMUT8-A5us8a--wLo879VX+ZO5tGcJ5+vw@mail.gmail.com>
+Subject: AnswerSheet Submitted Mahadi hasan Tuhin By Class 9 Section Dalton
+ Group science
+To: tahidul.juban39@gmail.com
+Cc: ictpracticalslc@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000003953f805add57fce"
+
+--0000000000003953f805add57fce
+Content-Type: text/plain; charset="UTF-8"
+
+My Roll Is  201009
+
+--0000000000003953f805add57fce
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto">My Roll Is=C2=A0 201009</div>
+
+--0000000000003953f805add57fce--
