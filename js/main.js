@@ -369,10 +369,10 @@ document.body.appendChild(timer); \
     let input = '<label for="name">Enter Your Name</label> <input type="text" id="name"><br><br>\
     <label for="roll">Enter Your Roll</label> <input type="text" id="roll"><br><br>\
     <label for="cls">Enter Your Class Name</label> <input list="clss" type="text" id="cls"><datalist id="clss">\
-    <option value="Nine"><option value="Ten"><option value="Twelve"></datalist><br><br>\
+    <option value="Nine"><option value="Ten"><option value="Eleven"><option value="Twelve"></datalist><br><br>\
     <label for="sec">Enter Your Section Name</label> <input list="secs" type="text" id="sec">\
     <datalist id="secs">\
-    <option value="A"><option value="B"><option value="C"><option value="D"><option value="Edison"><option value="Dalton"></datalist><br><br>\
+    <option value="A"><option value="B"><option value="C"><option value="D"><option value="E"><option value="Edison"><option value="Dalton"></datalist><br><br>\
     <label for="grp">Enter Your Group Name</label> <input list="grps" type="text" id="grp">\
     <datalist id="grps">\
     <option value="Science"><option value="Bussiness"><option value="Humanities"></datalist><br><br>';
